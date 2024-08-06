@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://caxk4nani1ncw"]
+[gd_scene load_steps=6 format=3 uid="uid://caxk4nani1ncw"]
 
 [ext_resource type="Script" path="res://assets/player/player.gd" id="1_gwrmj"]
+[ext_resource type="PackedScene" uid="uid://mw5tk1f72870" path="res://assets/reverse_cannon/reverse_cannon.tscn" id="2_r0ka8"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_57xbc"]
 friction = 0.0
@@ -19,12 +20,16 @@ physics_material_override = SubResource("PhysicsMaterial_57xbc")
 max_contacts_reported = 5
 contact_monitor = true
 script = ExtResource("1_gwrmj")
+reverseCannon = NodePath("Camera3D/reverse_cannon")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_sr4fy")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.672052, 0)
+
+[node name="reverse_cannon" parent="Camera3D" instance=ExtResource("2_r0ka8")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.673624, -0.368651, 0)
 
 [node name="floorCheker" type="ShapeCast3D" parent="."]
 transform = Transform3D(0.9, 0, 0, 0, 0.27, 0, 0, 0, 0.9, 0, -0.5, 0)

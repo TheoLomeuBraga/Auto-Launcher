@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://qv3utdkel0op"]
+
+[ext_resource type="Script" path="res://generic_scripts/gun/base_gun.gd" id="1_72csy"]
+
+[node name="BaseGun" type="Node3D"]
+script = ExtResource("1_72csy")
+muzle = NodePath("muzle")
+
+[node name="muzle" type="Node3D" parent="."]
