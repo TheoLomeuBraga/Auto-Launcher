@@ -14,8 +14,12 @@ rough = true
 axis_lock_angular_x = true
 axis_lock_angular_y = true
 axis_lock_angular_z = true
+mass = 100.0
 physics_material_override = SubResource("PhysicsMaterial_57xbc")
+max_contacts_reported = 5
+contact_monitor = true
 script = ExtResource("1_o0xth")
+move_direction = Vector3(1.985, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_sr4fy")
@@ -26,3 +30,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.672052, 0)
 [node name="floorCheker" type="ShapeCast3D" parent="."]
 transform = Transform3D(0.9, 0, 0, 0, 0.27, 0, 0, 0, 0.9, 0, -0.5, 0)
 shape = SubResource("CylinderShape3D_yfv4b")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
