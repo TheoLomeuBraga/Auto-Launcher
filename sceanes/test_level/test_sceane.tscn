@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://bsj1i748mvvkg"]
 
-[ext_resource type="PackedScene" uid="uid://r3xbmat4si26" path="res://assets/player/player.tscn" id="1_o7ury"]
+[ext_resource type="PackedScene" uid="uid://caxk4nani1ncw" path="res://assets/player/player.tscn" id="1_o7ury"]
 
 [sub_resource type="Environment" id="Environment_ntr7l"]
 background_mode = 1
@@ -50,6 +50,15 @@ mesh = SubResource("PlaneMesh_x3kld")
 [node name="StaticBody3D" type="StaticBody3D" parent="cenary/MeshInstance3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="cenary/MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_utfle")
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="cenary"]
+transform = Transform3D(-3.77666e-07, -1, 0, 8.64, -4.37114e-08, 0, 0, 0, 13.92, 3.21593, 7, -1.30661)
+mesh = SubResource("PlaneMesh_x3kld")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="cenary/MeshInstance3D16"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cenary/MeshInstance3D16/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_utfle")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="cenary"]
@@ -155,4 +164,4 @@ mesh = SubResource("BoxMesh_htnh2")
 surface_material_override/0 = SubResource("StandardMaterial3D_j6eb3")
 
 [node name="Player" parent="." instance=ExtResource("1_o7ury")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.58598, 1, 2.84977)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.516683, 1, 2.93917)
