@@ -15,7 +15,7 @@ func _ready():
 	muzle_node = get_node(muzle)
 	_gun_ready()
 
-func reload():
+func reload(no):
 	pass
 
 func shot():

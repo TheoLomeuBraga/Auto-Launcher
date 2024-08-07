@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://ddt1cty7aio7t"]
+
+[ext_resource type="Script" path="res://assets/boost_recharger/boost_recharger.gd" id="1_xmqpm"]
+[ext_resource type="Material" uid="uid://d23my234qsoox" path="res://materials/particle_material.tres" id="2_6uicb"]
+[ext_resource type="SphereMesh" uid="uid://bjipcap6sgvba" path="res://models/sphere.tres" id="3_jrbdt"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_5b32i"]
+radius = 1.0
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_0vtw7"]
+emission_shape = 1
+emission_sphere_radius = 0.1
+direction = Vector3(-1, 0, 0)
+spread = 0.0
+initial_velocity_min = 5.0
+initial_velocity_max = 10.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.1
+scale_max = 0.1
+color = Color(1, 1, 0, 1)
+collision_mode = 2
+
+[node name="BoostRecharger" type="Area3D"]
+script = ExtResource("1_xmqpm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_5b32i")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0.445766, 0)
+material_override = ExtResource("2_6uicb")
+lifetime = 0.1
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_0vtw7")
+draw_pass_1 = ExtResource("3_jrbdt")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,5 +1,6 @@
 extends Node
 
+var player : RigidBody3D
 var mouse_sensitivity := 12.0
 var joystick_sensitivity := 12.0
 

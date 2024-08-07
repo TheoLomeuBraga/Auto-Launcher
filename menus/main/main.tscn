@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwm5mlmafruk2"]
+
+[ext_resource type="Script" path="res://menus/main/main.gd" id="1_1uxwn"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1uxwn")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 768.0
+offset_bottom = 512.0
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Reverse Cannon"
+horizontal_alignment = 1
+
+[node name="MENU_CONTINUE" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "MENU_CONTINUE"
+
+[node name="MENU_NEW_GAME" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "MENU_NEW_GAME"
+
+[node name="MENU_CONFIG" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "MENU_CONFIG"
+
+[node name="MENU_EXIT" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "MENU_EXIT"
+
+[connection signal="pressed" from="VBoxContainer/MENU_CONTINUE" to="." method="_on_menu_continue_pressed"]
+[connection signal="pressed" from="VBoxContainer/MENU_NEW_GAME" to="." method="_on_menu_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/MENU_NEW_GAME" to="." method="_on_menu_new_game_pressed"]
+[connection signal="pressed" from="VBoxContainer/MENU_CONFIG" to="." method="_on_menu_config_pressed"]
+[connection signal="pressed" from="VBoxContainer/MENU_EXIT" to="." method="_on_menu_exit_pressed"]

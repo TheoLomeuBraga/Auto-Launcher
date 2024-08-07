@@ -3,6 +3,10 @@ extends BasicMovement
 @export var gunHand : NodePath
 var gunHandNode : Node3D
 
+func reload():
+	Global.player = self
+	$Camera3D/gun_hand/reverse_cannon.reload(1)
+
 func _ready():
 	gunHandNode = get_node(gunHand)
 	if gunHandNode != null and  gunHandNode.get_child(0) != null:
@@ -40,7 +44,6 @@ func movement_plugin(delta):
 	if in_floor and Input.is_action_just_pressed("jump"):
 		jump(jump_power)
 	
-	print("boost",speed_boost_duration)
 	if speed_boost_duration > 0:
 		speed_boost_duration -= delta
 		sliding_time = 1
@@ -48,6 +51,6 @@ func movement_plugin(delta):
 	else:
 		speed = 3.0
 	
-	$Label.text = "ms: " + str(int(linear_velocity.length()))
+	$VBoxContainer/HBoxContainer/Label.text = "ms: " + str(int(linear_velocity.length()))
 	
 	

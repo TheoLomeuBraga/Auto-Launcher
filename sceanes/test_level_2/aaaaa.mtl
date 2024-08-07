@@ -1,0 +1,3 @@
+newmtl test/stone
+map_Kd textures/test/stone.png
+

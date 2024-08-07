@@ -1,9 +1,10 @@
-[gd_scene load_steps=23 format=3 uid="uid://bsj1i748mvvkg"]
+[gd_scene load_steps=24 format=3 uid="uid://bsj1i748mvvkg"]
 
 [ext_resource type="Texture2D" uid="uid://cj7ksvae5dtkv" path="res://sceanes/test_level/gradient_texture.tres" id="1_7vxe3"]
 [ext_resource type="PackedScene" uid="uid://caxk4nani1ncw" path="res://assets/player/player.tscn" id="1_o7ury"]
 [ext_resource type="PackedScene" uid="uid://b3g7jsxqlxquq" path="res://assets/movement_pads/goo_pad.tscn" id="3_aevos"]
 [ext_resource type="PackedScene" uid="uid://clu8ehfhatrhf" path="res://assets/movement_pads/jump_pad.tscn" id="4_ko3j8"]
+[ext_resource type="PackedScene" uid="uid://ddt1cty7aio7t" path="res://assets/boost_recharger/boost_recharger.tscn" id="5_dsrbs"]
 
 [sub_resource type="Environment" id="Environment_ntr7l"]
 background_mode = 1
@@ -73,6 +74,7 @@ speed_boost_duration = 5
 
 [node name="JumpPad" parent="cenary" instance=ExtResource("4_ko3j8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+jump_redirect = true
 
 [node name="JumpPad3" parent="cenary" instance=ExtResource("4_ko3j8")]
 transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -30.3695, 1, 0)
@@ -281,3 +283,6 @@ shape = SubResource("ConcavePolygonShape3D_ooqp4")
 
 [node name="Player" parent="." instance=ExtResource("1_o7ury")]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 9.51668, 1, -0.0608301)
+
+[node name="BoostRecharger" parent="." instance=ExtResource("5_dsrbs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.38526, 6, 0.696273)
