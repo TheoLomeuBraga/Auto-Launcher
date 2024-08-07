@@ -1,22 +1,42 @@
-[gd_scene load_steps=4 format=3 uid="uid://mw5tk1f72870"]
+[gd_scene load_steps=6 format=3 uid="uid://mw5tk1f72870"]
 
 [ext_resource type="Script" path="res://assets/reverse_cannon/reverse_cannon.gd" id="1_c7neg"]
+[ext_resource type="ArrayMesh" uid="uid://7kgdk8k2s0o2" path="res://assets/reverse_cannon/reverse_cannon_reverse cannon.res" id="2_hrph6"]
+[ext_resource type="SphereMesh" uid="uid://bjipcap6sgvba" path="res://models/sphere.tres" id="3_vm4dx"]
+[ext_resource type="Material" uid="uid://d23my234qsoox" path="res://materials/particle_material.tres" id="3_xhr8d"]
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_jcfhc"]
-bottom_radius = 0.1
-radial_segments = 4
-rings = 1
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fmkow"]
-albedo_color = Color(0, 1, 1, 1)
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_cwjx5"]
+emission_shape = 1
+emission_sphere_radius = 0.1
+direction = Vector3(-1, 0, 0)
+spread = 0.0
+initial_velocity_min = 5.0
+initial_velocity_max = 10.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.1
+scale_max = 0.1
+color = Color(1, 1, 0, 1)
+collision_mode = 2
 
 [node name="reverse_cannon" type="Node3D"]
 script = ExtResource("1_c7neg")
 
 [node name="muzle" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -0.403622, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(-2.44784e-08, -0.7, 0, 0.56, -3.0598e-08, 0, 0, 0, 0.5, 0.516437, 0, 0)
-mesh = SubResource("CylinderMesh_jcfhc")
-surface_material_override/0 = SubResource("StandardMaterial3D_fmkow")
+[node name="reverse cannon" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.25, 0, 0, 0, 0.25, 2.18557e-08, 0, 2.18557e-08, -0.25, 1, -0.333005, 0)
+mesh = ExtResource("2_hrph6")
+skeleton = NodePath("")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -0.309328, 0)
+material_override = ExtResource("3_xhr8d")
+lifetime = 0.1
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_cwjx5")
+draw_pass_1 = ExtResource("3_vm4dx")
+
+[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.802549, -0.296387, 0.0438232)
+size = Vector3(0.566528, 0.592773, 0.574951)

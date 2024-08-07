@@ -20,7 +20,7 @@ physics_material_override = SubResource("PhysicsMaterial_57xbc")
 max_contacts_reported = 5
 contact_monitor = true
 script = ExtResource("1_gwrmj")
-reverseCannon = NodePath("Camera3D/reverse_cannon")
+gunHand = NodePath("Camera3D/gun_hand")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_sr4fy")
@@ -28,11 +28,18 @@ shape = SubResource("CapsuleShape3D_sr4fy")
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.672052, 0)
 
-[node name="reverse_cannon" parent="Camera3D" instance=ExtResource("2_r0ka8")]
+[node name="gun_hand" type="Node3D" parent="Camera3D"]
+
+[node name="reverse_cannon" parent="Camera3D/gun_hand" instance=ExtResource("2_r0ka8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.673624, -0.368651, 0)
 
 [node name="floorCheker" type="ShapeCast3D" parent="."]
 transform = Transform3D(0.9, 0, 0, 0, 0.27, 0, 0, 0, 0.9, 0, -0.5, 0)
 shape = SubResource("CylinderShape3D_yfv4b")
+
+[node name="Label" type="Label" parent="."]
+offset_top = 625.0
+offset_right = 40.0
+offset_bottom = 648.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

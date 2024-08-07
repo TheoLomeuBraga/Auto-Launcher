@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dn1cfn1ygx8s7"
+path.s3tc="res://.godot/imported/reverse_cannon_reverse cannon.png-85dc1992d440a4a3bccc68af003f5b75.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "b8ed88c703ab2f4b64e7a991816a1571"
+}
+
+[deps]
+
+source_file="res://assets/reverse_cannon/reverse_cannon_reverse cannon.png"
+dest_files=["res://.godot/imported/reverse_cannon_reverse cannon.png-85dc1992d440a4a3bccc68af003f5b75.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
