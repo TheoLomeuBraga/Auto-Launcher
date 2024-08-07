@@ -1,7 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://bsj1i748mvvkg"]
+[gd_scene load_steps=23 format=3 uid="uid://bsj1i748mvvkg"]
 
 [ext_resource type="Texture2D" uid="uid://cj7ksvae5dtkv" path="res://sceanes/test_level/gradient_texture.tres" id="1_7vxe3"]
 [ext_resource type="PackedScene" uid="uid://caxk4nani1ncw" path="res://assets/player/player.tscn" id="1_o7ury"]
+[ext_resource type="PackedScene" uid="uid://b3g7jsxqlxquq" path="res://assets/movement_pads/goo_pad.tscn" id="3_aevos"]
+[ext_resource type="PackedScene" uid="uid://clu8ehfhatrhf" path="res://assets/movement_pads/jump_pad.tscn" id="4_ko3j8"]
 
 [sub_resource type="Environment" id="Environment_ntr7l"]
 background_mode = 1
@@ -44,12 +46,19 @@ albedo_texture = ExtResource("1_7vxe3")
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_nwti5"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_hpel1"]
+[sub_resource type="BoxMesh" id="BoxMesh_u4k3g"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_htnh2"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yjr6r"]
+albedo_color = Color(1, 0, 0, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j6eb3"]
-albedo_color = Color(0, 1, 0, 1)
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_1a7c6"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oqqdl"]
+albedo_color = Color(0, 0, 1, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ooqp4"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
 [node name="Node3D" type="Node3D"]
 
@@ -57,6 +66,18 @@ albedo_color = Color(0, 1, 0, 1)
 environment = SubResource("Environment_ntr7l")
 
 [node name="cenary" type="Node3D" parent="."]
+
+[node name="GooPad" parent="cenary" instance=ExtResource("3_aevos")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0283637, -4.76837e-07, 0.0383401)
+speed_boost_duration = 5
+
+[node name="JumpPad" parent="cenary" instance=ExtResource("4_ko3j8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="JumpPad3" parent="cenary" instance=ExtResource("4_ko3j8")]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -30.3695, 1, 0)
+jump_direction = Vector3(2.5, 20, 0)
+jump_redirect = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="cenary"]
 transform = Transform3D(96.48, 0, 0, 0, 1, 0, 0, 0, 13.92, 0, 0, -1.30661)
@@ -238,17 +259,25 @@ surface_material_override/0 = SubResource("StandardMaterial3D_51eke")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="cenary/MeshInstance3D2/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_nwti5")
 
-[node name="box" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.58598, 4.705, -1.15023)
-mass = 100.0
-linear_velocity = Vector3(0, 0, 20)
+[node name="MeshInstance3D19" type="MeshInstance3D" parent="cenary"]
+transform = Transform3D(1.00043, 0, 0, 0, 11.7929, 0, 0, 0, 5.23377, -31, 5, 0)
+mesh = SubResource("BoxMesh_u4k3g")
+surface_material_override/0 = SubResource("StandardMaterial3D_yjr6r")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="box"]
-shape = SubResource("BoxShape3D_hpel1")
+[node name="StaticBody3D" type="StaticBody3D" parent="cenary/MeshInstance3D19"]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="box"]
-mesh = SubResource("BoxMesh_htnh2")
-surface_material_override/0 = SubResource("StandardMaterial3D_j6eb3")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cenary/MeshInstance3D19/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_1a7c6")
+
+[node name="MeshInstance3D20" type="MeshInstance3D" parent="cenary"]
+transform = Transform3D(10.7146, 0, 0, 0, 1.17929, 0, 0, 0, 5.23377, -20, 8, 0)
+mesh = SubResource("BoxMesh_u4k3g")
+surface_material_override/0 = SubResource("StandardMaterial3D_oqqdl")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="cenary/MeshInstance3D20"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cenary/MeshInstance3D20/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_ooqp4")
 
 [node name="Player" parent="." instance=ExtResource("1_o7ury")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.516683, 1, 2.93917)
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 9.51668, 1, -0.0608301)

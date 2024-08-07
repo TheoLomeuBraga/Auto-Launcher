@@ -26,11 +26,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -0.403622, 0)
 
 [node name="reverse cannon" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.25, 0, 0, 0, 0.25, 2.18557e-08, 0, 2.18557e-08, -0.25, 1, -0.333005, 0)
+layers = 2
 mesh = ExtResource("2_hrph6")
 skeleton = NodePath("")
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -0.309328, 0)
+layers = 2
 material_override = ExtResource("3_xhr8d")
 lifetime = 0.1
 local_coords = true

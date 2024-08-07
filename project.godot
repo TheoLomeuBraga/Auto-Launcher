@@ -21,6 +21,8 @@ Global="*res://Global.gd"
 
 [display]
 
+window/size/viewport_width=768
+window/size/viewport_height=512
 window/stretch/mode="canvas_items"
 window/stretch/aspect="ignore"
 

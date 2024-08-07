@@ -24,7 +24,12 @@ func look_around(delta):
 
 @export var jump_power := 6.0
 
+var speed_boost_duration := 0.0
+func boost_speed_for(seconds):
+	speed_boost_duration = seconds
 
+func _process(delta):
+	$Camera3D/gun_hand/SubViewportContainer/SubViewport/Camera3D.global_transform = $Camera3D.global_transform
 
 func movement_plugin(delta):
 	if gunHandNode != null and  gunHandNode.get_child(0) != null and Input.is_action_just_pressed("shot"):
@@ -34,6 +39,14 @@ func movement_plugin(delta):
 	look_around(delta)
 	if in_floor and Input.is_action_just_pressed("jump"):
 		jump(jump_power)
+	
+	print("boost",speed_boost_duration)
+	if speed_boost_duration > 0:
+		speed_boost_duration -= delta
+		sliding_time = 1
+		speed = 300.0
+	else:
+		speed = 3.0
 	
 	$Label.text = "ms: " + str(int(linear_velocity.length()))
 	
