@@ -26,14 +26,34 @@ func look_around(delta):
 	if $Camera3D.rotation_degrees.x < -90:
 		$Camera3D.rotation_degrees.x = -90
 
+
 @export var jump_power := 6.0
 
 var speed_boost_duration := 0.0
 func boost_speed_for(seconds):
 	speed_boost_duration = seconds
 
+@export var pause_menu : PackedScene
+var pause_menu_instance : Node
+
+func pause_unpause():
+	Global.is_paused = not Global.is_paused
+	if Global.is_paused :
+		Engine.time_scale = 0
+		pause_menu_instance = pause_menu.instantiate()
+		add_child(pause_menu_instance)
+	else:
+		Engine.time_scale = 1
+		pause_menu_instance.queue_free()
+
 func _process(delta):
 	$Camera3D/gun_hand/SubViewportContainer/SubViewport/Camera3D.global_transform = $Camera3D.global_transform
+	
+	if Input.is_action_just_pressed("pause"):
+		if pause_menu_instance == null or  (pause_menu_instance != null and pause_menu_instance.config_menu_instance == null):
+			pause_unpause()
+		
+	
 
 func movement_plugin(delta):
 	if gunHandNode != null and  gunHandNode.get_child(0) != null and Input.is_action_just_pressed("shot"):

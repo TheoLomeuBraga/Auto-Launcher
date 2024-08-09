@@ -74,7 +74,6 @@ speed_boost_duration = 5
 
 [node name="JumpPad" parent="cenary" instance=ExtResource("4_ko3j8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
-jump_redirect = true
 
 [node name="JumpPad3" parent="cenary" instance=ExtResource("4_ko3j8")]
 transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -30.3695, 1, 0)

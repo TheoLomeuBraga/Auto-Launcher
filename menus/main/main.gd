@@ -1,9 +1,13 @@
 extends Control
 
 
-# Called when the node enters the scene tree for the first time.
+func focus():
+	Global.load_config()
+	$VBoxContainer/MENU_CONTINUE.grab_focus()
+
+
 func _ready():
-	pass # Replace with function body.
+	focus()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -16,9 +20,11 @@ func _on_menu_continue_pressed():
 func _on_menu_new_game_pressed():
 	get_tree().change_scene_to_file("res://sceanes/test_level/test_sceane.tscn")
 
-var config_menu : PackedScene
+@export var config_menu : PackedScene
+var config_menu_instance : Node
 func _on_menu_config_pressed():
-	pass # Replace with function body.
+	config_menu_instance = config_menu.instantiate()
+	add_child(config_menu_instance)
 
 func _on_menu_exit_pressed():
 	get_tree().quit()
