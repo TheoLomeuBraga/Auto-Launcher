@@ -8,4 +8,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	self.text = str(int(max(0,Global.chalange_time_left)))
+	var total_seconds = max(0, Global.chalange_time_left)
+	var seconds = int(total_seconds)
+	var miliseconsd = (total_seconds - float(seconds)) * 100
+	self.text = "%02d:%02d" % [seconds, miliseconsd]

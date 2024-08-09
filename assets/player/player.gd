@@ -52,6 +52,7 @@ func pause_unpause():
 	
 
 func _process(delta):
+	$boost_goo.visible = speed_boost_duration > 0
 	$Camera3D/gun_hand/SubViewportContainer/SubViewport/Camera3D.global_transform = $Camera3D.global_transform
 	
 	if Input.is_action_just_pressed("pause"):

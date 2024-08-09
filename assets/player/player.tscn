@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://caxk4nani1ncw"]
+[gd_scene load_steps=13 format=3 uid="uid://caxk4nani1ncw"]
 
 [ext_resource type="Script" path="res://assets/player/player.gd" id="1_gwrmj"]
 [ext_resource type="PackedScene" uid="uid://mw5tk1f72870" path="res://assets/reverse_cannon/reverse_cannon.tscn" id="2_r0ka8"]
@@ -9,9 +9,40 @@
 friction = 0.0
 rough = true
 
+[sub_resource type="Environment" id="Environment_ucf66"]
+background_mode = 1
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sr4fy"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_yfv4b"]
+
+[sub_resource type="Shader" id="Shader_u245j"]
+code = "// NOTE: Shader automatically converted from Godot Engine 4.2.2.stable's CanvasItemMaterial.
+
+shader_type canvas_item;
+
+uniform sampler2D screen_texture : hint_screen_texture, repeat_disable, filter_nearest;
+uniform sampler2D goo_texture : filter_nearest;
+
+void fragment() {
+		COLOR = texture(goo_texture, SCREEN_UV);
+}
+
+"
+
+[sub_resource type="Gradient" id="Gradient_dkbx8"]
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 0, 0.384314)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rlkaw"]
+gradient = SubResource("Gradient_dkbx8")
+fill_from = Vector2(1, 0.735043)
+fill_to = Vector2(1, 0.974359)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_133dt"]
+shader = SubResource("Shader_u245j")
+shader_parameter/goo_texture = SubResource("GradientTexture2D_rlkaw")
 
 [node name="Player" type="RigidBody3D"]
 axis_lock_angular_x = true
@@ -24,6 +55,9 @@ contact_monitor = true
 script = ExtResource("1_gwrmj")
 gunHand = NodePath("Camera3D/gun_hand")
 pause_menu = ExtResource("2_spixy")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ucf66")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_sr4fy")
@@ -58,8 +92,14 @@ fov = 90.0
 [node name="AudioListener3D" type="AudioListener3D" parent="Camera3D"]
 
 [node name="floorCheker" type="ShapeCast3D" parent="."]
-transform = Transform3D(0.75, 0, 0, 0, 0.27, 0, 0, 0, 0.75, 0, -0.747775, 0)
+transform = Transform3D(0.75, 0, 0, 0, 0.27, 0, 0, 0, 0.75, 0, -0.551769, 0)
 shape = SubResource("CylinderShape3D_yfv4b")
+
+[node name="boost_goo" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_133dt")
+offset_right = 768.0
+offset_bottom = 512.0
+color = Color(1, 1, 1, 0)
 
 [node name="Label" type="Label" parent="."]
 offset_top = 489.0

@@ -1,17 +1,13 @@
-[gd_scene load_steps=26 format=3 uid="uid://bsj1i748mvvkg"]
+[gd_scene load_steps=24 format=3 uid="uid://bsj1i748mvvkg"]
 
 [ext_resource type="Texture2D" uid="uid://cj7ksvae5dtkv" path="res://sceanes/test_level/gradient_texture.tres" id="1_7vxe3"]
 [ext_resource type="PackedScene" uid="uid://caxk4nani1ncw" path="res://assets/player/player.tscn" id="1_o7ury"]
 [ext_resource type="PackedScene" uid="uid://b3g7jsxqlxquq" path="res://assets/movement_pads/goo_pad.tscn" id="3_aevos"]
 [ext_resource type="PackedScene" uid="uid://clu8ehfhatrhf" path="res://assets/movement_pads/jump_pad.tscn" id="4_ko3j8"]
+[ext_resource type="Script" path="res://generic_scripts/chalange_timer.gd" id="4_rc8sy"]
 [ext_resource type="PackedScene" uid="uid://ddt1cty7aio7t" path="res://assets/boost_recharger/boost_recharger.tscn" id="5_dsrbs"]
 [ext_resource type="PackedScene" uid="uid://bksog7w31x2ou" path="res://assets/end_door/end_door.tscn" id="6_kgdel"]
 [ext_resource type="PackedScene" uid="uid://twr8rw1agar3" path="res://assets/start_button/start_button.tscn" id="7_e2l5b"]
-
-[sub_resource type="Environment" id="Environment_ntr7l"]
-background_mode = 1
-ambient_light_source = 2
-ambient_light_color = Color(1, 1, 1, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_x3kld"]
 
@@ -57,25 +53,37 @@ albedo_color = Color(1, 0, 0, 1)
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_1a7c6"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oqqdl"]
-albedo_color = Color(0, 0, 1, 1)
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ooqp4"]
-data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
-
 [node name="Node3D" type="Node3D"]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_ntr7l")
 
 [node name="cenary" type="Node3D" parent="."]
 
 [node name="GooPad" parent="cenary" instance=ExtResource("3_aevos")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0283637, -4.76837e-07, 0.0383401)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9716, -4.76837e-07, 0.0383401)
 speed_boost_duration = 5
 
-[node name="JumpPad" parent="cenary" instance=ExtResource("4_ko3j8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+[node name="GooPad2" parent="cenary" instance=ExtResource("3_aevos")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4799, -4.76837e-07, -0.135012)
+speed_boost_duration = 5
+
+[node name="GooPad3" parent="cenary" instance=ExtResource("3_aevos")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1728, -4.76837e-07, 0.89229)
+speed_boost_duration = 5
+
+[node name="GooPad4" parent="cenary" instance=ExtResource("3_aevos")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9902, -9.53674e-07, -1.14775)
+speed_boost_duration = 5
+
+[node name="GooPad5" parent="cenary" instance=ExtResource("3_aevos")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.47511, -9.53674e-07, -1.21943)
+speed_boost_duration = 5
+
+[node name="GooPad6" parent="cenary" instance=ExtResource("3_aevos")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.30025, -4.76837e-07, 0.717456)
+speed_boost_duration = 5
+
+[node name="GooPad7" parent="cenary" instance=ExtResource("3_aevos")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.20871, -4.76837e-07, -0.339062)
+speed_boost_duration = 5
 
 [node name="JumpPad3" parent="cenary" instance=ExtResource("4_ko3j8")]
 transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -30.3695, 1, 0)
@@ -272,25 +280,31 @@ surface_material_override/0 = SubResource("StandardMaterial3D_yjr6r")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="cenary/MeshInstance3D19/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_1a7c6")
 
-[node name="MeshInstance3D20" type="MeshInstance3D" parent="cenary"]
-transform = Transform3D(10.7146, 0, 0, 0, 1.17929, 0, 0, 0, 5.23377, -20, 8, 0)
-mesh = SubResource("BoxMesh_u4k3g")
-surface_material_override/0 = SubResource("StandardMaterial3D_oqqdl")
+[node name="Label3D" type="Label3D" parent="cenary"]
+transform = Transform3D(2.98023e-08, 0, 1, 0, 1, 0, -1, 0, 2.98023e-08, -30, 10, 0)
+texture_filter = 0
+outline_modulate = Color(0, 0, 0, 0)
+text = "aaaa"
+font_size = 256
+script = ExtResource("4_rc8sy")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="cenary/MeshInstance3D20"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="cenary/MeshInstance3D20/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_ooqp4")
+[node name="Label3D2" type="Label3D" parent="cenary"]
+transform = Transform3D(5.96046e-08, 0, -1, 0, 1, 0, 1, 0, 5.96046e-08, 11, 20.7202, -1.63054)
+texture_filter = 0
+outline_modulate = Color(0, 0, 0, 0)
+text = "aaaa"
+font_size = 256
+script = ExtResource("4_rc8sy")
 
 [node name="Player" parent="." instance=ExtResource("1_o7ury")]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 21.5167, 1, -0.0608301)
 
 [node name="BoostRecharger" parent="." instance=ExtResource("5_dsrbs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.38526, 6, 0.696273)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.38526, 13, 0.696273)
 
 [node name="EndDoor" parent="." instance=ExtResource("6_kgdel")]
-transform = Transform3D(-1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, -5.17462, 0.115164, 12.7882)
+transform = Transform3D(-4.56956e-08, 0, -1, 0, 1, 0, 1, 0, -4.56956e-08, 12.8254, 14.1152, -1.2118)
 
 [node name="StartButton" parent="." instance=ExtResource("7_e2l5b")]
-transform = Transform3D(5.76205e-08, 0, 1, 0, 1, 0, -1, 0, 5.76205e-08, 15.9175, 1, -1.49792)
-chalange_time = 3
+transform = Transform3D(5.76205e-08, 0, 1, 0, 1, 0, -1, 0, 5.76205e-08, 12.9175, 1, -1.49792)
+chalange_time = 6
