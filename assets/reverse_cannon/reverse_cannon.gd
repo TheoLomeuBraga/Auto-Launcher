@@ -24,5 +24,6 @@ func shot():
 		player.sliding_time = 0.2
 		player.linear_velocity = global_basis.x * (min(max_speed,player.linear_velocity.length()) + power)
 		ammon -= 1
+		$AudioStreamPlayer.play()
 	
 	

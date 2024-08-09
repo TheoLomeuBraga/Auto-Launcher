@@ -11,13 +11,13 @@ func _ready():
 	gunHandNode = get_node(gunHand)
 	if gunHandNode != null and  gunHandNode.get_child(0) != null:
 		gunHandNode.get_child(0).player = self
+		
+	
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func look_around(delta):
 	
-	if Input.is_action_pressed("aim"):
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	else:
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	
 	
 	rotation_degrees.y += (mouse_movement.x * delta) + (Input.get_axis("look_right","look_left") * Global.joystick_sensitivity * delta * 90)
 	$Camera3D.rotation_degrees.x += (mouse_movement.y * delta) + (Input.get_axis("look_down","look_up") * Global.joystick_sensitivity * delta * 90)
@@ -42,9 +42,14 @@ func pause_unpause():
 		Engine.time_scale = 0
 		pause_menu_instance = pause_menu.instantiate()
 		add_child(pause_menu_instance)
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	else:
 		Engine.time_scale = 1
 		pause_menu_instance.queue_free()
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	
+	
+	
 
 func _process(delta):
 	$Camera3D/gun_hand/SubViewportContainer/SubViewport/Camera3D.global_transform = $Camera3D.global_transform
@@ -71,6 +76,6 @@ func movement_plugin(delta):
 	else:
 		speed = 3.0
 	
-	$VBoxContainer/HBoxContainer/Label.text = "ms: " + str(int(linear_velocity.length()))
+	$Label.text = "ms: " + str(int(linear_velocity.length()))
 	
 	

@@ -1,5 +1,7 @@
 extends Node
 
+
+
 var player : RigidBody3D
 
 var is_paused := false
@@ -74,11 +76,16 @@ func load_config():
 			print("error while loading configs")
 			save_config()
 
+var sceane_loading = ""
+func load_sceane(path : String) -> void:
+	sceane_loading = path
+	get_tree().change_scene_to_file("res://menus/loading/loading.tscn")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+var chalange_time_left := 0.0
 func _process(delta):
-	pass
+	chalange_time_left -= delta

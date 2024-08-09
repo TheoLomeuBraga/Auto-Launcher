@@ -18,7 +18,7 @@ func _on_menu_continue_pressed():
 	pass # Replace with function body.
 
 func _on_menu_new_game_pressed():
-	get_tree().change_scene_to_file("res://sceanes/test_level/test_sceane.tscn")
+	Global.load_sceane("res://sceanes/test_level/test_sceane.tscn")
 
 @export var config_menu : PackedScene
 var config_menu_instance : Node

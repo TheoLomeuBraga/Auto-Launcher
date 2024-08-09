@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://mw5tk1f72870"]
+[gd_scene load_steps=7 format=3 uid="uid://mw5tk1f72870"]
 
 [ext_resource type="Script" path="res://assets/reverse_cannon/reverse_cannon.gd" id="1_c7neg"]
 [ext_resource type="ArrayMesh" uid="uid://7kgdk8k2s0o2" path="res://assets/reverse_cannon/reverse_cannon_reverse cannon.res" id="2_hrph6"]
 [ext_resource type="SphereMesh" uid="uid://bjipcap6sgvba" path="res://models/sphere.tres" id="3_vm4dx"]
 [ext_resource type="Material" uid="uid://d23my234qsoox" path="res://materials/particle_material.tres" id="3_xhr8d"]
+[ext_resource type="AudioStream" uid="uid://dj2yyn50pvsdc" path="res://sfx/auto_aunch.ogg" id="5_uqlvh"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_cwjx5"]
 emission_shape = 1
@@ -42,3 +43,8 @@ draw_pass_1 = ExtResource("3_vm4dx")
 [node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.802549, -0.296387, 0.0438232)
 size = Vector3(0.566528, 0.592773, 0.574951)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_uqlvh")
+volume_db = -12.606
+pitch_scale = 0.47

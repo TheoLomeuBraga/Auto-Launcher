@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://bh1qgbae3lneh"]
+
+[ext_resource type="Script" path="res://menus/loading/loading.gd" id="1_s4xir"]
+
+[sub_resource type="Gradient" id="Gradient_o8kui"]
+offsets = PackedFloat32Array(0, 0.258555, 0.779468, 0.992395)
+colors = PackedColorArray(0, 0.529412, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0.529412, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1ndvs"]
+gradient = SubResource("Gradient_o8kui")
+width = 1
+height = 8
+fill_from = Vector2(1, 1)
+
+[node name="Loading" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s4xir")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+offset_right = 768.0
+offset_bottom = 512.0
+texture = SubResource("GradientTexture2D_1ndvs")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 768.0
+offset_bottom = 512.0
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "MENU_LOAD_TITLE"
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer"]
+layout_mode = 2

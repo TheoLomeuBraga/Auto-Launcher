@@ -22,7 +22,7 @@ func _on_button_2_pressed():
 
 
 func _on_button_3_pressed():
-	get_tree().change_scene_to_file("res://menus/main/main.tscn")
+	Global.load_sceane("res://menus/main/main.tscn")
 	Global.is_paused = not Global.is_paused
 	Engine.time_scale = 1
 	

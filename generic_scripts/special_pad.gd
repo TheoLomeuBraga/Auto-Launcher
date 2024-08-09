@@ -19,6 +19,7 @@ func _process(delta):
 func _on_area_3d_body_entered(body):
 	if jump_direction != Vector3.ZERO:
 		if body.has_method("is_basic_movement"):
+			$AudioStreamPlayer3D.play()
 			if jump_redirect:
 				body.linear_velocity = jump_direction
 			else:
