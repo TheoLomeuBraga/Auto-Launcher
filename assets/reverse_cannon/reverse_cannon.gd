@@ -6,17 +6,22 @@ var player : RigidBody3D
 @export var max_speed := 50
 
 var time_next_charge = 0
+
+func reload(no):
+	ammon = 1
+
 func _process(delta):
-	time_next_charge -= delta
+	if player.in_floor:
+		time_next_charge -= delta
+	
 	if player.in_floor and time_next_charge < 0:
-		ammon = 1
-		time_next_charge = 0.25
+		reload(1)
+		time_next_charge = 1.0
 	
 	$GPUParticles3D.visible = ammon > 0
 	
 
-func reload(no):
-	ammon += no
+
 
 var ammon := 1
 func shot():

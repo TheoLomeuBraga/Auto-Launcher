@@ -69,8 +69,16 @@ speed_boost_duration = 5
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1728, -4.76837e-07, 0.89229)
 speed_boost_duration = 5
 
+[node name="GooPad8" parent="cenary" instance=ExtResource("3_aevos")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.1728, -4.76837e-07, 0.89229)
+speed_boost_duration = 5
+
 [node name="GooPad4" parent="cenary" instance=ExtResource("3_aevos")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9902, -9.53674e-07, -1.14775)
+speed_boost_duration = 5
+
+[node name="GooPad9" parent="cenary" instance=ExtResource("3_aevos")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.9902, -9.53674e-07, -1.14775)
 speed_boost_duration = 5
 
 [node name="GooPad5" parent="cenary" instance=ExtResource("3_aevos")]
@@ -78,7 +86,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.47511, -9.53674e-07, -1.219
 speed_boost_duration = 5
 
 [node name="GooPad6" parent="cenary" instance=ExtResource("3_aevos")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.30025, -4.76837e-07, 0.717456)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.34783, -4.76837e-07, 0.537824)
 speed_boost_duration = 5
 
 [node name="GooPad7" parent="cenary" instance=ExtResource("3_aevos")]

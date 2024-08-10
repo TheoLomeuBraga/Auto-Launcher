@@ -58,6 +58,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("pause"):
 		if pause_menu_instance == null or  (pause_menu_instance != null and pause_menu_instance.config_menu_instance == null):
 			pause_unpause()
+	
 		
 	
 
