@@ -1,0 +1,3 @@
+newmtl test/asphalt
+map_Kd textures/test/asphalt.png
+
