@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dj0frhniv780a"]
+
+[ext_resource type="Script" path="res://assets/death_zone/death_zone.gd" id="1_14gvj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2ji3j"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_oo7mb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_37j0r"]
+albedo_color = Color(1, 0, 0, 1)
+
+[node name="DeathZone" type="Area3D"]
+script = ExtResource("1_14gvj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_2ji3j")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_oo7mb")
+surface_material_override/0 = SubResource("StandardMaterial3D_37j0r")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

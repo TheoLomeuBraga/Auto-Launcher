@@ -12,9 +12,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Auto Launcher\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8-bit\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: menus/main/main.tscn
 msgid "Reverse Cannon"
@@ -22,34 +28,33 @@ msgstr ""
 
 #: menus/main/main.tscn
 msgid "MENU_CONTINUE"
-msgstr ""
+msgstr "continue"
 
 #: menus/main/main.tscn
 msgid "MENU_NEW_GAME"
-msgstr ""
+msgstr "new game"
 
-#: menus/main/main.tscn
-#: menus/pause/pause.tscn
+#: menus/main/main.tscn menus/pause/pause.tscn
 msgid "MENU_CONFIG"
-msgstr ""
+msgstr "settings"
 
 #: menus/main/main.tscn
 msgid "MENU_EXIT"
-msgstr ""
+msgstr "exit"
 
 #: localization/localization.gd
 msgid "START_TEXT"
-msgstr ""
+msgstr "--start--"
 
 #: menus/config/config.tscn
 msgid ""
 "MENU_CONFIG_TITLE\n"
 "\n"
-msgstr ""
+msgstr "settings\n"
 
 #: menus/config/config.tscn
 msgid "MENU_CONFIG_MOUSE\n"
-msgstr ""
+msgstr "mouse sensitivity\n"
 
 #: menus/config/config.tscn
 msgid ": ???"
@@ -57,7 +62,7 @@ msgstr ""
 
 #: menus/config/config.tscn
 msgid "MENU_CONFIG_JOYSTICK\n"
-msgstr ""
+msgstr "joystick sensitivity\n"
 
 #: menus/config/config.tscn
 msgid ": ???\n"
@@ -65,32 +70,32 @@ msgstr ""
 
 #: menus/config/config.tscn
 msgid "MENU_CONFIG_VOLUME\n"
-msgstr ""
+msgstr "volume\n"
 
 #: menus/config/config.tscn
 msgid "MENU_CONFIG_FULL_SCREEN\n"
-msgstr ""
+msgstr "full screen\n"
 
 #: menus/config/config.tscn
 msgid "MENU_CONFIG_LANGUAGE"
-msgstr ""
+msgstr "language"
 
 #: menus/config/config.tscn
 msgid "MENU_CONFIG_EXIT\n"
-msgstr ""
+msgstr "back\n"
 
 #: menus/loading/loading.tscn
 msgid "MENU_LOAD_TITLE"
-msgstr ""
+msgstr "loading"
 
 #: menus/pause/pause.tscn
 msgid "MENU_PAUSE_TITLE\n"
-msgstr ""
+msgstr "pause\n"
 
 #: menus/pause/pause.tscn
 msgid "MENU_PAUSE_RESUME"
-msgstr ""
+msgstr "resume"
 
 #: menus/pause/pause.tscn
 msgid "MENU_GO_MAIN_MENU"
-msgstr ""
+msgstr "go to main menu"

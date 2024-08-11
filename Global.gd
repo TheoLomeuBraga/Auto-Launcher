@@ -77,7 +77,7 @@ func load_config():
 			save_config()
 
 var sceane_loading = ""
-func load_sceane(path : String) -> void:
+func load_sceane(path : String = sceane_loading) -> void:
 	sceane_loading = path
 	get_tree().change_scene_to_file("res://menus/loading/loading.tscn")
 

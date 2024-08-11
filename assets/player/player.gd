@@ -63,12 +63,12 @@ func _process(delta):
 	
 
 func movement_plugin(delta):
-	if gunHandNode != null and  gunHandNode.get_child(0) != null and Input.is_action_just_pressed("shot"):
+	if gunHandNode != null and  gunHandNode.get_child(0) != null and Input.is_action_just_pressed("shot") and not Global.is_paused:
 		gunHandNode.get_child(0).shot()
 	
 	move_direction = (basis.z.normalized() * Input.get_axis("walk_foward","walk_back")) + (basis.x.normalized() * Input.get_axis("walk_left","walk_right") )
 	look_around(delta)
-	if in_floor and Input.is_action_just_pressed("jump"):
+	if in_floor and Input.is_action_just_pressed("jump") and not Global.is_paused:
 		jump(jump_power)
 	
 	if speed_boost_duration > 0:
@@ -80,4 +80,5 @@ func movement_plugin(delta):
 	
 	$Label.text = "ms: " + str(int(linear_velocity.length()))
 	
-	
+func fail():
+	Global.load_sceane()

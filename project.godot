@@ -120,6 +120,7 @@ pause={
 
 [internationalization]
 
+locale/translations=PackedStringArray("res://localization/en.mo", "res://localization/pt_BR.mo")
 locale/translations_pot_files=PackedStringArray("res://menus/main/main.tscn", "res://localization/localization.gd", "res://menus/config/config.tscn", "res://menus/loading/loading.tscn", "res://menus/pause/pause.tscn", "res://assets/start_button/start_button.tscn")
 
 [rendering]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bsj1i748mvvkg"]
+[gd_scene load_steps=25 format=3 uid="uid://bsj1i748mvvkg"]
 
 [ext_resource type="Texture2D" uid="uid://cj7ksvae5dtkv" path="res://sceanes/test_level/gradient_texture.tres" id="1_7vxe3"]
 [ext_resource type="PackedScene" uid="uid://caxk4nani1ncw" path="res://assets/player/player.tscn" id="1_o7ury"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ddt1cty7aio7t" path="res://assets/boost_recharger/boost_recharger.tscn" id="5_dsrbs"]
 [ext_resource type="PackedScene" uid="uid://bksog7w31x2ou" path="res://assets/end_door/end_door.tscn" id="6_kgdel"]
 [ext_resource type="PackedScene" uid="uid://twr8rw1agar3" path="res://assets/start_button/start_button.tscn" id="7_e2l5b"]
+[ext_resource type="PackedScene" uid="uid://dj0frhniv780a" path="res://assets/death_zone/death_zone.tscn" id="9_2kt7q"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_x3kld"]
 
@@ -316,3 +317,6 @@ transform = Transform3D(-4.56956e-08, 0, -1, 0, 1, 0, 1, 0, -4.56956e-08, 12.825
 [node name="StartButton" parent="." instance=ExtResource("7_e2l5b")]
 transform = Transform3D(5.76205e-08, 0, 1, 0, 1, 0, -1, 0, 5.76205e-08, 12.9175, 1, -1.49792)
 chalange_time = 6
+
+[node name="DeathZone" parent="." instance=ExtResource("9_2kt7q")]
+transform = Transform3D(4625.84, 0, 0, 0, 1, 0, 0, 0, 3541.72, 8.68156, -6, 9.17902)
