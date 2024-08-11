@@ -24,6 +24,7 @@ func _on_area_3d_body_entered(body):
 				body.linear_velocity = jump_direction
 			else:
 				body.linear_velocity += jump_direction
+				body.linear_velocity.y = jump_direction.y
 			body.sliding_time = 1
 		elif body.has_method("apply_inpulse"):
 			body.apply_inpulse(jump_direction * body.mass)

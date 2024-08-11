@@ -305,6 +305,9 @@ text = "aaaa"
 font_size = 256
 script = ExtResource("4_rc8sy")
 
+[node name="JumpPad" parent="cenary" instance=ExtResource("4_ko3j8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
 [node name="Player" parent="." instance=ExtResource("1_o7ury")]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 21.5167, 1, -0.0608301)
 
