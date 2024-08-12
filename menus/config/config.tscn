@@ -134,5 +134,5 @@ text = "MENU_CONFIG_EXIT
 [connection signal="value_changed" from="CenterContainer/VBoxContainer/HSlider3" to="." method="_on_h_slider_3_value_changed"]
 [connection signal="toggled" from="CenterContainer/VBoxContainer/HBoxContainer/CheckBox" to="." method="_on_check_box_toggled"]
 [connection signal="item_selected" from="CenterContainer/VBoxContainer/OptionButton" to="." method="_on_option_button_item_selected"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/exit" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/exit" to="." method="_on_button_pressed"]

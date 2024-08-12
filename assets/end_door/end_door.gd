@@ -23,3 +23,4 @@ func _process(delta):
 func _on_area_3d_body_entered(body):
 	if body.has_method("is_basic_movement") and next_sceane != "":
 		Global.load_sceane(next_sceane)
+		Global.save_continue_sceane(next_sceane)

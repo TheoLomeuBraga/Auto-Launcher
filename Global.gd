@@ -20,11 +20,41 @@ func get_volume():
 
 var config_folder_path := OS.get_user_data_dir().path_join("Auto Launcher")
 var config_file_path := config_folder_path.path_join("config.cfg")
+var save_file_path := config_folder_path.path_join("save.bin")
+
+func save_continue_sceane(scene):
+	var access := DirAccess.open(config_folder_path)
+	if access == null:
+		DirAccess.make_dir_recursive_absolute(config_folder_path) 
+	
+	var file := FileAccess.open(save_file_path, FileAccess.ModeFlags.WRITE)
+	if file:
+		file.store_var(scene)
+		file.close()
+		
+
+func load_continue_sceane():
+	if not FileAccess.file_exists(save_file_path):
+		print("error while loading no file: ",save_file_path)
+		return ""
+	
+	var file := FileAccess.open(save_file_path, FileAccess.ModeFlags.READ)
+	if file:
+		
+		var pre_sceane_path = file.get_var()
+		
+		file.close()
+		
+		if pre_sceane_path != null:
+			return pre_sceane_path
+	print("error while loading")
+	return ""
 
 func save_config():
 	var access := DirAccess.open(config_folder_path)
 	if access == null:
 		DirAccess.make_dir_recursive_absolute(config_folder_path) 
+	
 	
 	var file := FileAccess.open(config_file_path, FileAccess.ModeFlags.WRITE)
 	if file:
@@ -41,7 +71,6 @@ func save_config():
 func set_language(id):
 	if id == null:
 		id = 0
-	print(id)
 	language = id
 	if id == 0:
 		TranslationServer.set_locale("en_US")

@@ -8,6 +8,8 @@ func focus():
 
 func _ready():
 	focus()
+	$VBoxContainer/MENU_CONTINUE.disabled = Global.load_continue_sceane() == ""
+	print("loaded: ",Global.load_continue_sceane())
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -15,7 +17,7 @@ func _process(delta):
 	pass
 
 func _on_menu_continue_pressed():
-	pass # Replace with function body.
+	Global.load_sceane(Global.load_continue_sceane())
 
 func _on_menu_new_game_pressed():
 	Global.load_sceane("res://sceanes/test_level/test_sceane.tscn")

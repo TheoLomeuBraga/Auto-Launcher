@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b2cay0aiqshpy"]
+
+[ext_resource type="Texture2D" uid="uid://dnyekxs21c2n3" path="res://textures/plates.png" id="1_h0sh8"]
+
+[resource]
+resource_name = "test/steel"
+albedo_texture = ExtResource("1_h0sh8")
+texture_filter = 0
