@@ -1,0 +1,15 @@
+newmtl test/defout_floor_b
+map_Kd textures/test/defout_floor_b.png
+
+newmtl test/goal_texture
+map_Kd textures/test/goal_texture.png
+
+newmtl test/metalic_door
+map_Kd textures/test/metalic_door.png
+
+newmtl test/steel
+map_Kd textures/test/steel.png
+
+newmtl test/wall_2
+map_Kd textures/test/wall_2.png
+

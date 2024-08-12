@@ -71,6 +71,10 @@ func movement_plugin(delta):
 	if in_floor and Input.is_action_just_pressed("jump") and not Global.is_paused:
 		jump(jump_power)
 	
+	print("in_floor",in_floor)
+		
+		
+	
 	if speed_boost_duration > 0:
 		speed_boost_duration -= delta
 		sliding_time = 1

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bst7eabcoo623"
-path="res://.godot/imported/wall_2.png-bd189ca8155310a76654293d0a860faf.ctex"
+uid="uid://dnyekxs21c2n3"
+path="res://.godot/imported/plates.png-3e3fb70e6b4331dd5561673f267b5f32.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/wall_2.png"
-dest_files=["res://.godot/imported/wall_2.png-bd189ca8155310a76654293d0a860faf.ctex"]
+source_file="res://textures/plates.png"
+dest_files=["res://.godot/imported/plates.png-3e3fb70e6b4331dd5561673f267b5f32.ctex"]
 
 [params]
 
@@ -21,7 +21,7 @@ compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

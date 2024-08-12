@@ -315,7 +315,7 @@ transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 21.5167, 1, -0.0608301)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.38526, 13, 0.696273)
 
 [node name="EndDoor" parent="." instance=ExtResource("6_kgdel")]
-transform = Transform3D(-4.56956e-08, 0, -1, 0, 1, 0, 1, 0, -4.56956e-08, 12.8254, 14.1152, -1.2118)
+transform = Transform3D(1, 0, -1.98421e-09, 0, 1, 0, 1.98421e-09, 0, 1, 12.8254, 14.1152, -1.2118)
 
 [node name="StartButton" parent="." instance=ExtResource("7_e2l5b")]
 transform = Transform3D(5.76205e-08, 0, 1, 0, 1, 0, -1, 0, 5.76205e-08, 12.9175, 1, -1.49792)
