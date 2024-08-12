@@ -1,0 +1,3 @@
+newmtl test/grass_1
+map_Kd textures/test/grass_1.png
+

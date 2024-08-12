@@ -62,6 +62,8 @@ func _process(delta):
 		
 	
 
+var rng = RandomNumberGenerator.new()
+
 func movement_plugin(delta):
 	if gunHandNode != null and  gunHandNode.get_child(0) != null and Input.is_action_just_pressed("shot") and not Global.is_paused:
 		gunHandNode.get_child(0).shot()
@@ -70,7 +72,8 @@ func movement_plugin(delta):
 	look_around(delta)
 	if in_floor and Input.is_action_just_pressed("jump") and not Global.is_paused:
 		jump(jump_power)
-		
+		$jump_sfx.pitch_scale = rng.randf_range(0.5,1.2)
+		$jump_sfx.play()
 		
 	
 	if speed_boost_duration > 0:
