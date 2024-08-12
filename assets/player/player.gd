@@ -70,8 +70,6 @@ func movement_plugin(delta):
 	look_around(delta)
 	if in_floor and Input.is_action_just_pressed("jump") and not Global.is_paused:
 		jump(jump_power)
-	
-	print("in_floor",in_floor)
 		
 		
 	
@@ -86,3 +84,4 @@ func movement_plugin(delta):
 	
 func fail():
 	Global.load_sceane()
+	

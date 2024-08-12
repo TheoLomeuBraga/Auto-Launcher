@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1r2xe4gqsg75"
-path.s3tc="res://.godot/imported/steel.png-0c9e2ec76356dbdc607c8bb7587a53d3.s3tc.ctex"
+path="res://.godot/imported/steel.png-0c9e2ec76356dbdc607c8bb7587a53d3.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://textures/steel.png"
-dest_files=["res://.godot/imported/steel.png-0c9e2ec76356dbdc607c8bb7587a53d3.s3tc.ctex"]
+dest_files=["res://.godot/imported/steel.png-0c9e2ec76356dbdc607c8bb7587a53d3.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

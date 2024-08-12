@@ -77,8 +77,10 @@ func load_config():
 			save_config()
 
 var sceane_loading = ""
+var chalange_time_left := 0.0
 func load_sceane(path : String = sceane_loading) -> void:
 	sceane_loading = path
+	chalange_time_left = 0
 	get_tree().change_scene_to_file("res://menus/loading/loading.tscn")
 
 # Called when the node enters the scene tree for the first time.
@@ -86,6 +88,6 @@ func _ready():
 	pass # Replace with function body.
 
 
-var chalange_time_left := 0.0
+
 func _process(delta):
 	chalange_time_left -= delta

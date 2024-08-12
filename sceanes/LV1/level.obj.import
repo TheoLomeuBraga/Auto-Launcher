@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ckvbw1a06xm6o"
-path="res://.godot/imported/aaaaa.obj-f3fcd592b9cf09a88db712fdad3ae609.scn"
+uid="uid://da4y7qymdlaoe"
+path="res://.godot/imported/level.obj-d0edc078ab8ec5dbff219267c02a6271.scn"
 
 [deps]
 
-source_file="res://sceanes/LV1/aaaaa.obj"
-dest_files=["res://.godot/imported/aaaaa.obj-f3fcd592b9cf09a88db712fdad3ae609.scn"]
+source_file="res://sceanes/LV1/level.obj"
+dest_files=["res://.godot/imported/level.obj-d0edc078ab8ec5dbff219267c02a6271.scn"]
 
 [params]
 
@@ -31,9 +31,13 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "materials": {
-"test/asphalt": {
+"test/plates": {
 "use_external/enabled": true,
-"use_external/path": "res://sceanes/LV1/test_asphalt.tres"
+"use_external/path": "res://sceanes/LV1/test_plates.tres"
+},
+"test/wall": {
+"use_external/enabled": true,
+"use_external/path": "res://sceanes/LV1/test_wall.tres"
 }
 }
 }

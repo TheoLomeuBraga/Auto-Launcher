@@ -3,6 +3,7 @@ extends Node3D
 @export var open := true
 @export var next_sceane = ""
 
+#door scale 8x8
 var open_state : float = 0
 func _ready():
 	if Global.chalange_time_left > 0:

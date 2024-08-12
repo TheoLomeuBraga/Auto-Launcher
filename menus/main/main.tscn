@@ -48,7 +48,7 @@ layout_mode = 2
 text = "MENU_EXIT"
 
 [connection signal="pressed" from="VBoxContainer/MENU_CONTINUE" to="." method="_on_menu_continue_pressed"]
-[connection signal="pressed" from="VBoxContainer/MENU_NEW_GAME" to="." method="_on_menu_new_game_pressed"]
 [connection signal="pressed" from="VBoxContainer/MENU_NEW_GAME" to="." method="_on_menu_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/MENU_NEW_GAME" to="." method="_on_menu_new_game_pressed"]
 [connection signal="pressed" from="VBoxContainer/MENU_CONFIG" to="." method="_on_menu_config_pressed"]
 [connection signal="pressed" from="VBoxContainer/MENU_EXIT" to="." method="_on_menu_exit_pressed"]
