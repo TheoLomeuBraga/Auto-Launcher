@@ -1,0 +1,9 @@
+newmtl test/metalic_floor
+map_Kd textures/test/metalic_floor.png
+
+newmtl test/plates
+map_Kd textures/test/plates.png
+
+newmtl test/wall_3
+map_Kd textures/test/wall_3.png
+

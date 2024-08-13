@@ -20,7 +20,7 @@ func _on_menu_continue_pressed():
 	Global.load_sceane(Global.load_continue_sceane())
 
 func _on_menu_new_game_pressed():
-	Global.load_sceane("res://sceanes/test_level/test_sceane.tscn")
+	Global.load_sceane("res://sceanes/LV1/level.tscn")
 
 @export var config_menu : PackedScene
 var config_menu_instance : Node

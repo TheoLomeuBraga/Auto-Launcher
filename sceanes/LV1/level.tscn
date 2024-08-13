@@ -1099,6 +1099,7 @@ shape = SubResource("ConcavePolygonShape3D_h6n3b")
 
 [node name="StartButton" parent="." instance=ExtResource("5_o5c6b")]
 transform = Transform3D(-0.62111, 0, 0, 0, 0.819618, 0, 0, 0, 1, 0, 2, 8)
+chalange_time = 5
 
 [node name="DeathZone" parent="." instance=ExtResource("6_bjrgr")]
 transform = Transform3D(9.6, 0, 0, 0, 1, 0, 0, 0, 8.8, 0.000937653, -6.32333, 15.2)

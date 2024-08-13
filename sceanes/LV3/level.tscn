@@ -1,3 +1,3245 @@
-[gd_scene format=3 uid="uid://bt2uhlnhotc8h"]
+[gd_scene load_steps=71 format=3 uid="uid://bt2uhlnhotc8h"]
+
+[ext_resource type="PackedScene" uid="uid://bksog7w31x2ou" path="res://assets/end_door/end_door.tscn" id="2_ohgbc"]
+[ext_resource type="Material" uid="uid://dhyqrfox8mxbw" path="res://sceanes/LV3/test_wall_3.tres" id="3_ipaq1"]
+[ext_resource type="PackedScene" uid="uid://twr8rw1agar3" path="res://assets/start_button/start_button.tscn" id="4_j7aja"]
+[ext_resource type="Material" uid="uid://d0mor5ub2t2gi" path="res://sceanes/LV3/test_metalic_floor.tres" id="4_lrh0k"]
+[ext_resource type="Material" uid="uid://mkalvo88kbaq" path="res://sceanes/LV3/test_plates.tres" id="5_1h1le"]
+[ext_resource type="PackedScene" uid="uid://caxk4nani1ncw" path="res://assets/player/player.tscn" id="5_b2c7e"]
+[ext_resource type="PackedScene" uid="uid://b3g7jsxqlxquq" path="res://assets/movement_pads/goo_pad.tscn" id="8_rpmtj"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qjw1h"]
+_surfaces = [{
+"aabb": AABB(-9.6, 7.2, 2.4, 9.53674e-06, 6.4, 0.80001),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(-9.6, 7.2, 3.2, 19.2, 6.40001, 1.00136e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(-9.6, 7.2, 2.4, 19.2, 1.00136e-05, 0.80001),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(-9.6, 13.6, 2.4, 19.2, 9.53674e-06, 0.8),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0)
+}, {
+"aabb": AABB(-9.6, 7.2, 2.4, 19.2, 6.4, 1.00136e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(9.6, 7.2, 2.4, 9.53674e-06, 6.40001, 0.80001),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "entity0_brush0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_voggo"]
+resource_name = "entity0_brush0"
+_surfaces = [{
+"aabb": AABB(-9.6, 7.2, 2.4, 9.53674e-06, 6.4, 0.80001),
+"attribute_data": PackedByteArray(0, 0, 67, 68, 255, 31, 67, 68, 0, 0, 0, 0, 255, 31, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(4, 15, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127)
+}, {
+"aabb": AABB(-9.6, 7.2, 3.2, 19.2, 6.40001, 1.00136e-05),
+"attribute_data": PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 67, 68, 255, 255, 67, 68),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(12, 15, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 128, 255, 255, 254, 255, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0, 128, 255, 255, 0, 0, 0, 0, 0, 128, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}, {
+"aabb": AABB(-9.6, 7.2, 2.4, 19.2, 1.00136e-05, 0.80001),
+"attribute_data": PackedByteArray(0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 169, 234, 255, 255, 169, 234),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(12, 6, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 255, 63, 255, 255, 0, 0, 254, 255, 255, 63, 0, 0, 0, 0, 0, 0, 255, 63, 255, 255, 0, 0, 0, 0, 255, 63, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127)
+}, {
+"aabb": AABB(-9.6, 13.6, 2.4, 19.2, 9.53674e-06, 0.8),
+"attribute_data": PackedByteArray(0, 0, 169, 234, 255, 255, 169, 234, 0, 0, 255, 255, 255, 255, 255, 255),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(12, 6, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 255, 255, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}, {
+"aabb": AABB(-9.6, 7.2, 2.4, 19.2, 6.4, 1.00136e-05),
+"attribute_data": PackedByteArray(0, 0, 67, 68, 255, 255, 67, 68, 0, 0, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(12, 15, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}, {
+"aabb": AABB(9.6, 7.2, 2.4, 9.53674e-06, 6.40001, 0.80001),
+"attribute_data": PackedByteArray(0, 0, 0, 0, 255, 31, 0, 0, 0, 0, 67, 68, 255, 31, 67, 68),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "entity0_brush0",
+"primitive": 3,
+"uv_scale": Vector4(4, 15, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 255, 191, 0, 0, 254, 255, 0, 0, 255, 191, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_qjw1h")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_pxcyj"]
+data = PackedVector3Array(-9.6, 7.2, 3.2, -9.6, 7.2, 2.4, -9.6, 13.6, 3.2, -9.6, 13.6, 3.2, -9.6, 7.2, 2.4, -9.6, 13.6, 2.4, -9.6, 13.5999, 3.2, 9.6, 13.5999, 3.2, -9.6, 7.2, 3.2, -9.6, 7.2, 3.2, 9.6, 13.5999, 3.2, 9.6, 7.2, 3.2, -9.6, 7.2, 3.2, 9.6, 7.2, 3.2, -9.6, 7.2, 2.4, -9.6, 7.2, 2.4, 9.6, 7.2, 3.2, 9.6, 7.2, 2.4, -9.6, 13.6, 2.4, 9.6, 13.6, 2.4, -9.6, 13.6, 3.2, -9.6, 13.6, 3.2, 9.6, 13.6, 2.4, 9.6, 13.6, 3.2, -9.6, 7.2, 2.4, 9.6, 7.2, 2.4, -9.6, 13.6, 2.4, -9.6, 13.6, 2.4, 9.6, 7.2, 2.4, 9.6, 13.6, 2.4, 9.6, 13.5999, 3.2, 9.6, 13.5999, 2.4, 9.6, 7.2, 3.2, 9.6, 7.2, 3.2, 9.6, 13.5999, 2.4, 9.6, 7.2, 2.4)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_24q8s"]
+_surfaces = [{
+"aabb": AABB(-9.6, 0, 2.4, 9.53674e-06, 7.2, 0.80001),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(-9.6, 0, 3.2, 6.4, 7.20001, 1.00136e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(-9.6, 0, 2.4, 6.4, 1e-05, 0.80001),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(-9.6, 7.2, 2.4, 6.4, 1.00136e-05, 0.8),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0)
+}, {
+"aabb": AABB(-9.6, 0, 2.4, 6.4, 7.2, 1.00136e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(-3.2, 0, 2.4, 1.00136e-05, 7.20001, 0.80001),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "entity0_brush1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_o7oy7"]
+resource_name = "entity0_brush1"
+_surfaces = [{
+"aabb": AABB(-9.6, 0, 2.4, 9.53674e-06, 7.2, 0.80001),
+"attribute_data": PackedByteArray(0, 0, 145, 164, 255, 31, 145, 164, 0, 0, 0, 0, 255, 31, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(4, 7, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127)
+}, {
+"aabb": AABB(-9.6, 0, 3.2, 6.4, 7.20001, 1.00136e-05),
+"attribute_data": PackedByteArray(0, 0, 0, 0, 84, 85, 0, 0, 0, 0, 145, 164, 84, 85, 145, 164),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(12, 7, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 128, 255, 255, 254, 255, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0, 128, 255, 255, 0, 0, 0, 0, 0, 128, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}, {
+"aabb": AABB(-9.6, 0, 2.4, 6.4, 1e-05, 0.80001),
+"attribute_data": PackedByteArray(0, 0, 255, 255, 84, 85, 255, 255, 0, 0, 169, 234, 84, 85, 169, 234),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(12, 6, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 255, 63, 255, 255, 0, 0, 254, 255, 255, 63, 0, 0, 0, 0, 0, 0, 255, 63, 255, 255, 0, 0, 0, 0, 255, 63, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127)
+}, {
+"aabb": AABB(-9.6, 7.2, 2.4, 6.4, 1.00136e-05, 0.8),
+"attribute_data": PackedByteArray(0, 0, 169, 234, 84, 85, 169, 234, 0, 0, 255, 255, 84, 85, 255, 255),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(12, 6, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 255, 255, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}, {
+"aabb": AABB(-9.6, 0, 2.4, 6.4, 7.2, 1.00136e-05),
+"attribute_data": PackedByteArray(0, 0, 145, 164, 84, 85, 145, 164, 0, 0, 0, 0, 84, 85, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(12, 7, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}, {
+"aabb": AABB(-3.2, 0, 2.4, 1.00136e-05, 7.20001, 0.80001),
+"attribute_data": PackedByteArray(0, 0, 0, 0, 255, 31, 0, 0, 0, 0, 145, 164, 255, 31, 145, 164),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "entity0_brush1",
+"primitive": 3,
+"uv_scale": Vector4(4, 7, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 255, 191, 0, 0, 254, 255, 0, 0, 255, 191, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_24q8s")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_qdaeb"]
+data = PackedVector3Array(-9.6, 0, 3.2, -9.6, 0, 2.4, -9.6, 7.2, 3.2, -9.6, 7.2, 3.2, -9.6, 0, 2.4, -9.6, 7.2, 2.4, -9.6, 7.1999, 3.2, -3.2, 7.1999, 3.2, -9.6, 0, 3.2, -9.6, 0, 3.2, -3.2, 7.1999, 3.2, -3.2, 0, 3.2, -9.6, 0, 3.2, -3.2, 0, 3.2, -9.6, 0, 2.4, -9.6, 0, 2.4, -3.2, 0, 3.2, -3.2, 0, 2.4, -9.6, 7.2, 2.4, -3.2, 7.2, 2.4, -9.6, 7.2, 3.2, -9.6, 7.2, 3.2, -3.2, 7.2, 2.4, -3.2, 7.2, 3.2, -9.6, 0, 2.4, -3.2, 0, 2.4, -9.6, 7.2, 2.4, -9.6, 7.2, 2.4, -3.2, 0, 2.4, -3.2, 7.2, 2.4, -3.2, 7.1999, 3.2, -3.2, 7.1999, 2.4, -3.2, 0, 3.2, -3.2, 0, 3.2, -3.2, 7.1999, 2.4, -3.2, 0, 2.4)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_mrd36"]
+_surfaces = [{
+"aabb": AABB(3.2, 0, 2.4, 1.00136e-05, 7.2, 0.80001),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(3.2, 0, 3.2, 6.4, 7.20001, 1.00136e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(3.2, 0, 2.4, 6.4, 1e-05, 0.80001),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(3.2, 7.2, 2.4, 6.4, 1.00136e-05, 0.8),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0)
+}, {
+"aabb": AABB(3.2, 0, 2.4, 6.4, 7.2, 1.00136e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(9.6, 0, 2.4, 9.53674e-06, 7.20001, 0.80001),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "entity0_brush2",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_6avb8"]
+resource_name = "entity0_brush2"
+_surfaces = [{
+"aabb": AABB(3.2, 0, 2.4, 1.00136e-05, 7.2, 0.80001),
+"attribute_data": PackedByteArray(0, 0, 145, 164, 255, 31, 145, 164, 0, 0, 0, 0, 255, 31, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(4, 7, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127)
+}, {
+"aabb": AABB(3.2, 0, 3.2, 6.4, 7.20001, 1.00136e-05),
+"attribute_data": PackedByteArray(170, 170, 0, 0, 255, 255, 0, 0, 170, 170, 145, 164, 255, 255, 145, 164),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(12, 7, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 128, 255, 255, 254, 255, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0, 128, 255, 255, 0, 0, 0, 0, 0, 128, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}, {
+"aabb": AABB(3.2, 0, 2.4, 6.4, 1e-05, 0.80001),
+"attribute_data": PackedByteArray(170, 170, 255, 255, 255, 255, 255, 255, 170, 170, 169, 234, 255, 255, 169, 234),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(12, 6, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 255, 63, 255, 255, 0, 0, 254, 255, 255, 63, 0, 0, 0, 0, 0, 0, 255, 63, 255, 255, 0, 0, 0, 0, 255, 63, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127)
+}, {
+"aabb": AABB(3.2, 7.2, 2.4, 6.4, 1.00136e-05, 0.8),
+"attribute_data": PackedByteArray(170, 170, 169, 234, 255, 255, 169, 234, 170, 170, 255, 255, 255, 255, 255, 255),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(12, 6, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 255, 255, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}, {
+"aabb": AABB(3.2, 0, 2.4, 6.4, 7.2, 1.00136e-05),
+"attribute_data": PackedByteArray(170, 170, 145, 164, 255, 255, 145, 164, 170, 170, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(12, 7, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}, {
+"aabb": AABB(9.6, 0, 2.4, 9.53674e-06, 7.20001, 0.80001),
+"attribute_data": PackedByteArray(0, 0, 0, 0, 255, 31, 0, 0, 0, 0, 145, 164, 255, 31, 145, 164),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "entity0_brush2",
+"primitive": 3,
+"uv_scale": Vector4(4, 7, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 255, 191, 0, 0, 254, 255, 0, 0, 255, 191, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_mrd36")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_8x2hb"]
+data = PackedVector3Array(3.2, 0, 3.2, 3.2, 0, 2.4, 3.2, 7.2, 3.2, 3.2, 7.2, 3.2, 3.2, 0, 2.4, 3.2, 7.2, 2.4, 3.2, 7.1999, 3.2, 9.6, 7.1999, 3.2, 3.2, 0, 3.2, 3.2, 0, 3.2, 9.6, 7.1999, 3.2, 9.6, 0, 3.2, 3.2, 0, 3.2, 9.6, 0, 3.2, 3.2, 0, 2.4, 3.2, 0, 2.4, 9.6, 0, 3.2, 9.6, 0, 2.4, 3.2, 7.2, 2.4, 9.6, 7.2, 2.4, 3.2, 7.2, 3.2, 3.2, 7.2, 3.2, 9.6, 7.2, 2.4, 9.6, 7.2, 3.2, 3.2, 0, 2.4, 9.6, 0, 2.4, 3.2, 7.2, 2.4, 3.2, 7.2, 2.4, 9.6, 0, 2.4, 9.6, 7.2, 2.4, 9.6, 7.1999, 3.2, 9.6, 7.1999, 2.4, 9.6, 0, 3.2, 9.6, 0, 3.2, 9.6, 7.1999, 2.4, 9.6, 0, 2.4)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_cuw5t"]
+_surfaces = [{
+"aabb": AABB(8.8, 0, -71.2, 9.53674e-06, 12.8, 73.6),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(8.8, 0, 2.4, 0.8, 12.8, 1.00136e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(8.8, 0, -71.2, 0.8, 1e-05, 73.6),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(8.8, 12.8, -71.2, 0.8, 9.53674e-06, 73.6),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0)
+}, {
+"aabb": AABB(8.8, 0, -71.2, 0.8, 12.8, 7.62939e-06),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(9.6, 0, -71.2, 9.53674e-06, 12.8, 73.6),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "entity0_brush3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_tsnje"]
+resource_name = "entity0_brush3"
+_surfaces = [{
+"aabb": AABB(8.8, 0, -71.2, 9.53674e-06, 12.8, 73.6),
+"attribute_data": PackedByteArray(174, 123, 72, 146, 255, 255, 72, 146, 174, 123, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(89, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127)
+}, {
+"aabb": AABB(8.8, 0, 2.4, 0.8, 12.8, 1.00136e-05),
+"attribute_data": PackedByteArray(84, 245, 0, 0, 255, 255, 0, 0, 84, 245, 72, 146, 255, 255, 72, 146),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(12, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 128, 255, 255, 254, 255, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0, 128, 255, 255, 0, 0, 0, 0, 0, 128, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}, {
+"aabb": AABB(8.8, 0, -71.2, 0.8, 1e-05, 73.6),
+"attribute_data": PackedByteArray(84, 245, 90, 135, 255, 255, 90, 135, 84, 245, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(12, 87, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 255, 63, 255, 255, 0, 0, 254, 255, 255, 63, 0, 0, 0, 0, 0, 0, 255, 63, 255, 255, 0, 0, 0, 0, 255, 63, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127)
+}, {
+"aabb": AABB(8.8, 12.8, -71.2, 0.8, 9.53674e-06, 73.6),
+"attribute_data": PackedByteArray(84, 245, 0, 0, 255, 255, 0, 0, 84, 245, 90, 135, 255, 255, 90, 135),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(12, 87, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 255, 255, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}, {
+"aabb": AABB(8.8, 0, -71.2, 0.8, 12.8, 7.62939e-06),
+"attribute_data": PackedByteArray(84, 245, 72, 146, 255, 255, 72, 146, 84, 245, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(12, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}, {
+"aabb": AABB(9.6, 0, -71.2, 9.53674e-06, 12.8, 73.6),
+"attribute_data": PackedByteArray(174, 123, 0, 0, 255, 255, 0, 0, 174, 123, 72, 146, 255, 255, 72, 146),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "entity0_brush3",
+"primitive": 3,
+"uv_scale": Vector4(89, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 255, 191, 0, 0, 254, 255, 0, 0, 255, 191, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_cuw5t")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_erv7i"]
+data = PackedVector3Array(8.8, 0, 2.3989, 8.8, 0, -71.2, 8.8, 12.8, 2.3989, 8.8, 12.8, 2.3989, 8.8, 0, -71.2, 8.8, 12.8, -71.2, 8.8, 12.7998, 2.4, 9.6, 12.7998, 2.4, 8.8, 0, 2.4, 8.8, 0, 2.4, 9.6, 12.7998, 2.4, 9.6, 0, 2.4, 8.8, 0, 2.3989, 9.6, 0, 2.3989, 8.8, 0, -71.2, 8.8, 0, -71.2, 9.6, 0, 2.3989, 9.6, 0, -71.2, 8.8, 12.8, -71.2, 9.6, 12.8, -71.2, 8.8, 12.8, 2.4, 8.8, 12.8, 2.4, 9.6, 12.8, -71.2, 9.6, 12.8, 2.4, 8.8, 0, -71.2, 9.6, 0, -71.2, 8.8, 12.8, -71.2, 8.8, 12.8, -71.2, 9.6, 0, -71.2, 9.6, 12.8, -71.2, 9.6, 12.7998, 2.3989, 9.6, 12.7998, -71.2, 9.6, 0, 2.3989, 9.6, 0, 2.3989, 9.6, 12.7998, -71.2, 9.6, 0, -71.2)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_g8htk"]
+_surfaces = [{
+"aabb": AABB(-9.6, 0, -88, 9.53674e-06, 12.8, 90.4),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(-9.6, 0, 2.4, 0.8, 12.8, 1.00136e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(-9.6, 0, -88, 0.8, 1e-05, 90.4),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(-9.6, 12.8, -88, 0.8, 9.53674e-06, 90.4),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0)
+}, {
+"aabb": AABB(-9.6, 0, -88, 0.8, 12.8, 7.62939e-06),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(-8.8, 0, -88, 9.53674e-06, 12.8, 90.4),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "entity0_brush4",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_hyhb4"]
+resource_name = "entity0_brush4"
+_surfaces = [{
+"aabb": AABB(-9.6, 0, -88, 9.53674e-06, 12.8, 90.4),
+"attribute_data": PackedByteArray(129, 124, 72, 146, 255, 255, 72, 146, 129, 124, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(110, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127)
+}, {
+"aabb": AABB(-9.6, 0, 2.4, 0.8, 12.8, 1.00136e-05),
+"attribute_data": PackedByteArray(0, 0, 0, 0, 170, 10, 0, 0, 0, 0, 72, 146, 170, 10, 72, 146),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(12, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 128, 255, 255, 254, 255, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0, 128, 255, 255, 0, 0, 0, 0, 0, 128, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}, {
+"aabb": AABB(-9.6, 0, -88, 0.8, 1e-05, 90.4),
+"attribute_data": PackedByteArray(0, 0, 236, 133, 170, 10, 236, 133, 0, 0, 0, 0, 170, 10, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(12, 108, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 255, 63, 255, 255, 0, 0, 254, 255, 255, 63, 0, 0, 0, 0, 0, 0, 255, 63, 255, 255, 0, 0, 0, 0, 255, 63, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127)
+}, {
+"aabb": AABB(-9.6, 12.8, -88, 0.8, 9.53674e-06, 90.4),
+"attribute_data": PackedByteArray(0, 0, 0, 0, 170, 10, 0, 0, 0, 0, 236, 133, 170, 10, 236, 133),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(12, 108, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 255, 255, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}, {
+"aabb": AABB(-9.6, 0, -88, 0.8, 12.8, 7.62939e-06),
+"attribute_data": PackedByteArray(0, 0, 72, 146, 170, 10, 72, 146, 0, 0, 0, 0, 170, 10, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(12, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}, {
+"aabb": AABB(-8.8, 0, -88, 9.53674e-06, 12.8, 90.4),
+"attribute_data": PackedByteArray(129, 124, 0, 0, 255, 255, 0, 0, 129, 124, 72, 146, 255, 255, 72, 146),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "entity0_brush4",
+"primitive": 3,
+"uv_scale": Vector4(110, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 255, 191, 0, 0, 254, 255, 0, 0, 255, 191, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_g8htk")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_pwb3w"]
+data = PackedVector3Array(-9.6, 0, 2.3986, -9.6, 0, -88, -9.6, 12.8, 2.3986, -9.6, 12.8, 2.3986, -9.6, 0, -88, -9.6, 12.8, -88, -9.6, 12.7998, 2.4, -8.8, 12.7998, 2.4, -9.6, 0, 2.4, -9.6, 0, 2.4, -8.8, 12.7998, 2.4, -8.8, 0, 2.4, -9.6, 0, 2.3986, -8.8, 0, 2.3986, -9.6, 0, -88, -9.6, 0, -88, -8.8, 0, 2.3986, -8.8, 0, -88, -9.6, 12.8, -88, -8.8, 12.8, -88, -9.6, 12.8, 2.4, -9.6, 12.8, 2.4, -8.8, 12.8, -88, -8.8, 12.8, 2.4, -9.6, 0, -88, -8.8, 0, -88, -9.6, 12.8, -88, -9.6, 12.8, -88, -8.8, 0, -88, -8.8, 12.8, -88, -8.8, 12.7998, 2.3986, -8.8, 12.7998, -88, -8.8, 0, 2.3986, -8.8, 0, 2.3986, -8.8, 12.7998, -88, -8.8, 0, -88)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2h4pr"]
+_surfaces = [{
+"aabb": AABB(-9.6, 12.8, -88, 9.53674e-06, 0.8, 90.4),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(-9.6, 12.8, 2.4, 19.2, 0.80001, 1.00136e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(-9.6, 12.8, -88, 19.2, 9.53674e-06, 90.4),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(-9.6, 13.6, -88, 19.2, 9.53674e-06, 90.4),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0)
+}, {
+"aabb": AABB(-9.6, 12.8, -88, 19.2, 0.8, 7.62939e-06),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(9.6, 12.8, -88, 9.53674e-06, 0.80001, 90.4),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "entity0_brush5",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xtggb"]
+resource_name = "entity0_brush5"
+_surfaces = [{
+"aabb": AABB(-9.6, 12.8, -88, 9.53674e-06, 0.8, 90.4),
+"attribute_data": PackedByteArray(129, 124, 136, 8, 255, 255, 136, 8, 129, 124, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(110, 15, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127)
+}, {
+"aabb": AABB(-9.6, 12.8, 2.4, 19.2, 0.80001, 1.00136e-05),
+"attribute_data": PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 136, 8, 255, 255, 136, 8),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(12, 15, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 128, 255, 255, 254, 255, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0, 128, 255, 255, 0, 0, 0, 0, 0, 128, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}, {
+"aabb": AABB(-9.6, 12.8, -88, 19.2, 9.53674e-06, 90.4),
+"attribute_data": PackedByteArray(0, 0, 236, 133, 255, 255, 236, 133, 0, 0, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(12, 108, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 255, 63, 255, 255, 0, 0, 254, 255, 255, 63, 0, 0, 0, 0, 0, 0, 255, 63, 255, 255, 0, 0, 0, 0, 255, 63, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127)
+}, {
+"aabb": AABB(-9.6, 13.6, -88, 19.2, 9.53674e-06, 90.4),
+"attribute_data": PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 236, 133, 255, 255, 236, 133),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(12, 108, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 255, 255, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}, {
+"aabb": AABB(-9.6, 12.8, -88, 19.2, 0.8, 7.62939e-06),
+"attribute_data": PackedByteArray(0, 0, 136, 8, 255, 255, 136, 8, 0, 0, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(12, 15, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}, {
+"aabb": AABB(9.6, 12.8, -88, 9.53674e-06, 0.80001, 90.4),
+"attribute_data": PackedByteArray(129, 124, 0, 0, 255, 255, 0, 0, 129, 124, 136, 8, 255, 255, 136, 8),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "entity0_brush5",
+"primitive": 3,
+"uv_scale": Vector4(110, 15, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 255, 191, 0, 0, 254, 255, 0, 0, 255, 191, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_2h4pr")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_h7vij"]
+data = PackedVector3Array(-9.6, 12.8, 2.3986, -9.6, 12.8, -88, -9.6, 13.6, 2.3986, -9.6, 13.6, 2.3986, -9.6, 12.8, -88, -9.6, 13.6, -88, -9.6, 13.6, 2.4, 9.6, 13.6, 2.4, -9.6, 12.8, 2.4, -9.6, 12.8, 2.4, 9.6, 13.6, 2.4, 9.6, 12.8, 2.4, -9.6, 12.8, 2.3986, 9.6, 12.8, 2.3986, -9.6, 12.8, -88, -9.6, 12.8, -88, 9.6, 12.8, 2.3986, 9.6, 12.8, -88, -9.6, 13.6, -88, 9.6, 13.6, -88, -9.6, 13.6, 2.4, -9.6, 13.6, 2.4, 9.6, 13.6, -88, 9.6, 13.6, 2.4, -9.6, 12.8, -88, 9.6, 12.8, -88, -9.6, 13.6, -88, -9.6, 13.6, -88, 9.6, 12.8, -88, 9.6, 13.6, -88, 9.6, 13.6, 2.3986, 9.6, 13.6, -88, 9.6, 12.8, 2.3986, 9.6, 12.8, 2.3986, 9.6, 13.6, -88, 9.6, 12.8, -88)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_rj68i"]
+_surfaces = [{
+"aabb": AABB(-3.2, 0, 2.4, 1.00136e-05, 0.8, 0.80001),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(-3.2, 0, 3.2, 6.4, 0.80001, 1.00136e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(-3.2, 0, 2.4, 6.4, 1e-05, 0.80001),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(-3.2, 0.8, 2.4, 6.4, 1.00136e-05, 0.8),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0)
+}, {
+"aabb": AABB(-3.2, 0, 2.4, 6.4, 0.8, 1.00136e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(3.2, 0, 2.4, 1.00136e-05, 0.80001, 0.80001),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "entity0_brush6",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_f5qbx"]
+resource_name = "entity0_brush6"
+_surfaces = [{
+"aabb": AABB(-3.2, 0, 2.4, 1.00136e-05, 0.8, 0.80001),
+"attribute_data": PackedByteArray(0, 0, 255, 255, 255, 31, 255, 255, 0, 0, 255, 191, 255, 31, 255, 191),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(4, 2, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127)
+}, {
+"aabb": AABB(-3.2, 0, 3.2, 6.4, 0.80001, 1.00136e-05),
+"attribute_data": PackedByteArray(0, 0, 255, 191, 255, 255, 255, 191, 0, 0, 255, 255, 255, 255, 255, 255),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(4, 2, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 128, 255, 255, 254, 255, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0, 128, 255, 255, 0, 0, 0, 0, 0, 128, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}, {
+"aabb": AABB(-3.2, 0, 2.4, 6.4, 1e-05, 0.80001),
+"attribute_data": PackedByteArray(0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 169, 234, 255, 255, 169, 234),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(4, 6, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 255, 63, 255, 255, 0, 0, 254, 255, 255, 63, 0, 0, 0, 0, 0, 0, 255, 63, 255, 255, 0, 0, 0, 0, 255, 63, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127)
+}, {
+"aabb": AABB(-3.2, 0.8, 2.4, 6.4, 1.00136e-05, 0.8),
+"attribute_data": PackedByteArray(0, 0, 169, 234, 255, 255, 169, 234, 0, 0, 255, 255, 255, 255, 255, 255),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(4, 6, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 255, 255, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}, {
+"aabb": AABB(-3.2, 0, 2.4, 6.4, 0.8, 1.00136e-05),
+"attribute_data": PackedByteArray(0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 255, 191, 255, 255, 255, 191),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(4, 2, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}, {
+"aabb": AABB(3.2, 0, 2.4, 1.00136e-05, 0.80001, 0.80001),
+"attribute_data": PackedByteArray(0, 0, 255, 191, 255, 31, 255, 191, 0, 0, 255, 255, 255, 31, 255, 255),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "entity0_brush6",
+"primitive": 3,
+"uv_scale": Vector4(4, 2, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 255, 191, 0, 0, 254, 255, 0, 0, 255, 191, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_rj68i")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_mhpww"]
+data = PackedVector3Array(-3.2, 0, 3.2, -3.2, 0, 2.4, -3.2, 0.8, 3.2, -3.2, 0.8, 3.2, -3.2, 0, 2.4, -3.2, 0.8, 2.4, -3.2, 0.8, 3.2, 3.2, 0.8, 3.2, -3.2, 0, 3.2, -3.2, 0, 3.2, 3.2, 0.8, 3.2, 3.2, 0, 3.2, -3.2, 0, 3.2, 3.2, 0, 3.2, -3.2, 0, 2.4, -3.2, 0, 2.4, 3.2, 0, 3.2, 3.2, 0, 2.4, -3.2, 0.8, 2.4, 3.2, 0.8, 2.4, -3.2, 0.8, 3.2, -3.2, 0.8, 3.2, 3.2, 0.8, 2.4, 3.2, 0.8, 3.2, -3.2, 0, 2.4, 3.2, 0, 2.4, -3.2, 0.8, 2.4, -3.2, 0.8, 2.4, 3.2, 0, 2.4, 3.2, 0.8, 2.4, 3.2, 0.8, 3.2, 3.2, 0.8, 2.4, 3.2, 0, 3.2, 3.2, 0, 3.2, 3.2, 0.8, 2.4, 3.2, 0, 2.4)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_r7kn7"]
+_surfaces = [{
+"aabb": AABB(-8.8, 0, -88, 9.53674e-06, 0.8, 90.4),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(-8.8, 0, 2.4, 17.6, 0.80001, 1.00136e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(-8.8, 0, -88, 17.6, 1e-05, 90.4),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/metalic_floor",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(-8.8, 0.8, -88, 17.6, 1.00136e-05, 90.4),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0)
+}, {
+"aabb": AABB(-8.8, 0, -88, 17.6, 0.8, 7.62939e-06),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(8.8, 0, -88, 9.53674e-06, 0.80001, 90.4),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "entity0_brush7",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_hcyet"]
+resource_name = "entity0_brush7"
+_surfaces = [{
+"aabb": AABB(-8.8, 0, -88, 9.53674e-06, 0.8, 90.4),
+"attribute_data": PackedByteArray(129, 124, 255, 255, 255, 255, 255, 255, 129, 124, 255, 191, 255, 255, 255, 191),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(110, 2, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127)
+}, {
+"aabb": AABB(-8.8, 0, 2.4, 17.6, 0.80001, 1.00136e-05),
+"attribute_data": PackedByteArray(0, 0, 255, 191, 255, 255, 255, 191, 0, 0, 255, 255, 255, 255, 255, 255),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(11, 2, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 128, 255, 255, 254, 255, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0, 128, 255, 255, 0, 0, 0, 0, 0, 128, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}, {
+"aabb": AABB(-8.8, 0, -88, 17.6, 1e-05, 90.4),
+"attribute_data": PackedByteArray(0, 0, 236, 133, 255, 255, 236, 133, 0, 0, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/metalic_floor",
+"primitive": 3,
+"uv_scale": Vector4(11, 108, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 255, 63, 255, 255, 0, 0, 254, 255, 255, 63, 0, 0, 0, 0, 0, 0, 255, 63, 255, 255, 0, 0, 0, 0, 255, 63, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127)
+}, {
+"aabb": AABB(-8.8, 0.8, -88, 17.6, 1.00136e-05, 90.4),
+"attribute_data": PackedByteArray(255, 255, 98, 39, 255, 255, 255, 255, 129, 124, 98, 39, 129, 124, 255, 255),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("4_lrh0k"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(110, 13, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 84, 213, 255, 255, 0, 0, 0, 0, 84, 213, 0, 0, 0, 0, 255, 255, 84, 213, 255, 255, 0, 0, 255, 255, 84, 213, 84, 213, 170, 42, 84, 213, 170, 42, 84, 213, 170, 42, 84, 213, 170, 42)
+}, {
+"aabb": AABB(-8.8, 0, -88, 17.6, 0.8, 7.62939e-06),
+"attribute_data": PackedByteArray(0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 255, 191, 255, 255, 255, 191),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(11, 2, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}, {
+"aabb": AABB(8.8, 0, -88, 9.53674e-06, 0.80001, 90.4),
+"attribute_data": PackedByteArray(129, 124, 255, 191, 255, 255, 255, 191, 129, 124, 255, 255, 255, 255, 255, 255),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "entity0_brush7",
+"primitive": 3,
+"uv_scale": Vector4(110, 2, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 255, 191, 0, 0, 254, 255, 0, 0, 255, 191, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_r7kn7")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ldomc"]
+data = PackedVector3Array(-8.8, 0, 2.3986, -8.8, 0, -88, -8.8, 0.8, 2.3986, -8.8, 0.8, 2.3986, -8.8, 0, -88, -8.8, 0.8, -88, -8.8, 0.8, 2.4, 8.8, 0.8, 2.4, -8.8, 0, 2.4, -8.8, 0, 2.4, 8.8, 0.8, 2.4, 8.8, 0, 2.4, -8.8, 0, 2.3986, 8.8, 0, 2.3986, -8.8, 0, -88, -8.8, 0, -88, 8.8, 0, 2.3986, 8.8, 0, -88, -8.8, 0.8, -88, 8.8, 0.8, -88, -8.8, 0.8, 2.4, -8.8, 0.8, 2.4, 8.8, 0.8, -88, 8.8, 0.8, 2.4, -8.8, 0, -88, 8.8, 0, -88, -8.8, 0.8, -88, -8.8, 0.8, -88, 8.8, 0, -88, 8.8, 0.8, -88, 8.8, 0.8, 2.3986, 8.8, 0.8, -88, 8.8, 0, 2.3986, 8.8, 0, 2.3986, 8.8, 0.8, -88, 8.8, 0, -88)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_365xb"]
+_surfaces = [{
+"aabb": AABB(-8.8, 0.8, -88, 9.53674e-06, 12, 0.800003),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(-8.8, 0.8, -87.2, 133.6, 12, 7.62939e-06),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(-8.8, 0.8, -88, 133.6, 1.00136e-05, 0.800003),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(-8.8, 12.8, -88, 133.6, 9.53674e-06, 0.799995),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0)
+}, {
+"aabb": AABB(-8.8, 0.8, -88, 133.6, 12, 7.62939e-06),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(124.8, 0.8, -88, 7.62939e-06, 12, 0.800003),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "entity0_brush8",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_gyxcw"]
+resource_name = "entity0_brush8"
+_surfaces = [{
+"aabb": AABB(-8.8, 0.8, -88, 9.53674e-06, 12, 0.800003),
+"attribute_data": PackedByteArray(213, 254, 36, 137, 255, 255, 36, 137, 213, 254, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(110, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127)
+}, {
+"aabb": AABB(-8.8, 0.8, -87.2, 133.6, 12, 7.62939e-06),
+"attribute_data": PackedByteArray(248, 118, 0, 0, 255, 255, 0, 0, 248, 118, 36, 137, 255, 255, 36, 137),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(156, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 128, 255, 255, 254, 255, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0, 128, 255, 255, 0, 0, 0, 0, 0, 128, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}, {
+"aabb": AABB(-8.8, 0.8, -88, 133.6, 1.00136e-05, 0.800003),
+"attribute_data": PackedByteArray(248, 118, 47, 1, 255, 255, 47, 1, 248, 118, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(156, 108, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 255, 63, 255, 255, 0, 0, 254, 255, 255, 63, 0, 0, 0, 0, 0, 0, 255, 63, 255, 255, 0, 0, 0, 0, 255, 63, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127)
+}, {
+"aabb": AABB(-8.8, 12.8, -88, 133.6, 9.53674e-06, 0.799995),
+"attribute_data": PackedByteArray(248, 118, 0, 0, 255, 255, 0, 0, 248, 118, 47, 1, 255, 255, 47, 1),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(156, 108, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 255, 255, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}, {
+"aabb": AABB(-8.8, 0.8, -88, 133.6, 12, 7.62939e-06),
+"attribute_data": PackedByteArray(248, 118, 36, 137, 255, 255, 36, 137, 248, 118, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(156, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}, {
+"aabb": AABB(124.8, 0.8, -88, 7.62939e-06, 12, 0.800003),
+"attribute_data": PackedByteArray(213, 254, 0, 0, 255, 255, 0, 0, 213, 254, 36, 137, 255, 255, 36, 137),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "entity0_brush8",
+"primitive": 3,
+"uv_scale": Vector4(110, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 255, 191, 0, 0, 254, 255, 0, 0, 255, 191, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_365xb")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_fvu6c"]
+data = PackedVector3Array(-8.8, 0.8, -87.2, -8.8, 0.8, -88, -8.8, 12.8, -87.2, -8.8, 12.8, -87.2, -8.8, 0.8, -88, -8.8, 12.8, -88, -8.8, 12.7998, -87.2, 124.8, 12.7998, -87.2, -8.8, 0.8, -87.2, -8.8, 0.8, -87.2, 124.8, 12.7998, -87.2, 124.8, 0.8, -87.2, -8.8, 0.8, -87.2, 124.8, 0.8, -87.2, -8.8, 0.8, -88, -8.8, 0.8, -88, 124.8, 0.8, -87.2, 124.8, 0.8, -88, -8.8, 12.8, -88, 124.8, 12.8, -88, -8.8, 12.8, -87.2, -8.8, 12.8, -87.2, 124.8, 12.8, -88, 124.8, 12.8, -87.2, -8.8, 0.8, -88, 124.8, 0.8, -88, -8.8, 12.8, -88, -8.8, 12.8, -88, 124.8, 0.8, -88, 124.8, 12.8, -88, 124.8, 12.7998, -87.2, 124.8, 12.7998, -88, 124.8, 0.8, -87.2, 124.8, 0.8, -87.2, 124.8, 12.7998, -88, 124.8, 0.8, -88)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0iu3e"]
+_surfaces = [{
+"aabb": AABB(8.8, 0, -88, 9.53674e-06, 0.8, 15.2),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(8.8, 0, -72.8, 116, 0.80001, 7.62939e-06),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(8.8, 0, -88, 116, 1e-05, 15.2),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/metalic_floor",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(8.8, 0.8, -88, 116, 1.00136e-05, 15.2),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0)
+}, {
+"aabb": AABB(8.8, 0, -88, 116, 0.8, 7.62939e-06),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(124.8, 0, -88, 7.62939e-06, 0.80001, 15.2),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "entity0_brush9",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_10fat"]
+resource_name = "entity0_brush9"
+_surfaces = [{
+"aabb": AABB(8.8, 0, -88, 9.53674e-06, 0.8, 15.2),
+"attribute_data": PackedByteArray(227, 233, 255, 255, 255, 255, 255, 255, 227, 233, 255, 191, 255, 255, 255, 191),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(110, 2, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127)
+}, {
+"aabb": AABB(8.8, 0, -72.8, 116, 0.80001, 7.62939e-06),
+"attribute_data": PackedByteArray(6, 137, 255, 191, 255, 255, 255, 191, 6, 137, 255, 255, 255, 255, 255, 255),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(156, 2, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 128, 255, 255, 254, 255, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0, 128, 255, 255, 0, 0, 0, 0, 0, 128, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}, {
+"aabb": AABB(8.8, 0, -88, 116, 1e-05, 15.2),
+"attribute_data": PackedByteArray(6, 137, 132, 22, 255, 255, 132, 22, 6, 137, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/metalic_floor",
+"primitive": 3,
+"uv_scale": Vector4(156, 108, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 255, 63, 255, 255, 0, 0, 254, 255, 255, 63, 0, 0, 0, 0, 0, 0, 255, 63, 255, 255, 0, 0, 0, 0, 255, 63, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127)
+}, {
+"aabb": AABB(8.8, 0.8, -88, 116, 1.00136e-05, 15.2),
+"attribute_data": PackedByteArray(255, 255, 135, 138, 255, 255, 255, 255, 227, 233, 135, 138, 227, 233, 255, 255),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("4_lrh0k"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(110, 158, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 84, 213, 255, 255, 0, 0, 0, 0, 84, 213, 0, 0, 0, 0, 255, 255, 84, 213, 255, 255, 0, 0, 255, 255, 84, 213, 84, 213, 170, 42, 84, 213, 170, 42, 84, 213, 170, 42, 84, 213, 170, 42)
+}, {
+"aabb": AABB(8.8, 0, -88, 116, 0.8, 7.62939e-06),
+"attribute_data": PackedByteArray(6, 137, 255, 255, 255, 255, 255, 255, 6, 137, 255, 191, 255, 255, 255, 191),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(156, 2, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}, {
+"aabb": AABB(124.8, 0, -88, 7.62939e-06, 0.80001, 15.2),
+"attribute_data": PackedByteArray(227, 233, 255, 191, 255, 255, 255, 191, 227, 233, 255, 255, 255, 255, 255, 255),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "entity0_brush9",
+"primitive": 3,
+"uv_scale": Vector4(110, 2, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 255, 191, 0, 0, 254, 255, 0, 0, 255, 191, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_0iu3e")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_5gqs5"]
+data = PackedVector3Array(8.8, 0, -72.8002, 8.8, 0, -88, 8.8, 0.8, -72.8002, 8.8, 0.8, -72.8002, 8.8, 0, -88, 8.8, 0.8, -88, 8.8, 0.8, -72.8, 124.8, 0.8, -72.8, 8.8, 0, -72.8, 8.8, 0, -72.8, 124.8, 0.8, -72.8, 124.8, 0, -72.8, 8.8, 0, -72.8002, 124.8, 0, -72.8002, 8.8, 0, -88, 8.8, 0, -88, 124.8, 0, -72.8002, 124.8, 0, -88, 8.8, 0.8, -88, 124.8, 0.8, -88, 8.8, 0.8, -72.8, 8.8, 0.8, -72.8, 124.8, 0.8, -88, 124.8, 0.8, -72.8, 8.8, 0, -88, 124.8, 0, -88, 8.8, 0.8, -88, 8.8, 0.8, -88, 124.8, 0, -88, 124.8, 0.8, -88, 124.8, 0.8, -72.8002, 124.8, 0.8, -88, 124.8, 0, -72.8002, 124.8, 0, -72.8002, 124.8, 0.8, -88, 124.8, 0, -88)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1vibf"]
+_surfaces = [{
+"aabb": AABB(10.4, 0.8, -72.8, 9.53674e-06, 12, 0.800011),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(10.4, 0.8, -72, 114.4, 12, 7.62939e-06),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(10.4, 0.8, -72.8, 114.4, 1.00136e-05, 0.800011),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(10.4, 12.8, -72.8, 114.4, 9.53674e-06, 0.800003),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0)
+}, {
+"aabb": AABB(10.4, 0.8, -72.8, 114.4, 12, 7.62939e-06),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(124.8, 0.8, -72.8, 7.62939e-06, 12, 0.800011),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "entity0_brush10",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_sly37"]
+resource_name = "entity0_brush10"
+_surfaces = [{
+"aabb": AABB(10.4, 0.8, -72.8, 9.53674e-06, 12, 0.800011),
+"attribute_data": PackedByteArray(150, 254, 36, 137, 255, 255, 36, 137, 150, 254, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(91, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127)
+}, {
+"aabb": AABB(10.4, 0.8, -72, 114.4, 12, 7.62939e-06),
+"attribute_data": PackedByteArray(170, 138, 0, 0, 255, 255, 0, 0, 170, 138, 36, 137, 255, 255, 36, 137),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(156, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 128, 255, 255, 254, 255, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0, 128, 255, 255, 0, 0, 0, 0, 0, 128, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}, {
+"aabb": AABB(10.4, 0.8, -72.8, 114.4, 1.00136e-05, 0.800011),
+"attribute_data": PackedByteArray(170, 138, 112, 1, 255, 255, 112, 1, 170, 138, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(156, 89, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 255, 63, 255, 255, 0, 0, 254, 255, 255, 63, 0, 0, 0, 0, 0, 0, 255, 63, 255, 255, 0, 0, 0, 0, 255, 63, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127)
+}, {
+"aabb": AABB(10.4, 12.8, -72.8, 114.4, 9.53674e-06, 0.800003),
+"attribute_data": PackedByteArray(170, 138, 0, 0, 255, 255, 0, 0, 170, 138, 112, 1, 255, 255, 112, 1),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(156, 89, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 255, 255, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}, {
+"aabb": AABB(10.4, 0.8, -72.8, 114.4, 12, 7.62939e-06),
+"attribute_data": PackedByteArray(170, 138, 36, 137, 255, 255, 36, 137, 170, 138, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(156, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}, {
+"aabb": AABB(124.8, 0.8, -72.8, 7.62939e-06, 12, 0.800011),
+"attribute_data": PackedByteArray(150, 254, 0, 0, 255, 255, 0, 0, 150, 254, 36, 137, 255, 255, 36, 137),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "entity0_brush10",
+"primitive": 3,
+"uv_scale": Vector4(91, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 255, 191, 0, 0, 254, 255, 0, 0, 255, 191, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_1vibf")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_s7hhg"]
+data = PackedVector3Array(10.4, 0.8, -72, 10.4, 0.8, -72.8, 10.4, 12.8, -72, 10.4, 12.8, -72, 10.4, 0.8, -72.8, 10.4, 12.8, -72.8, 10.4, 12.7998, -72, 124.8, 12.7998, -72, 10.4, 0.8, -72, 10.4, 0.8, -72, 124.8, 12.7998, -72, 124.8, 0.8, -72, 10.4, 0.8, -72, 124.8, 0.8, -72, 10.4, 0.8, -72.8, 10.4, 0.8, -72.8, 124.8, 0.8, -72, 124.8, 0.8, -72.8, 10.4, 12.8, -72.8, 124.8, 12.8, -72.8, 10.4, 12.8, -72, 10.4, 12.8, -72, 124.8, 12.8, -72.8, 124.8, 12.8, -72, 10.4, 0.8, -72.8, 124.8, 0.8, -72.8, 10.4, 12.8, -72.8, 10.4, 12.8, -72.8, 124.8, 0.8, -72.8, 124.8, 12.8, -72.8, 124.8, 12.7998, -72, 124.8, 12.7998, -72.8, 124.8, 0.8, -72, 124.8, 0.8, -72, 124.8, 12.7998, -72.8, 124.8, 0.8, -72.8)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_hmjhb"]
+_surfaces = [{
+"aabb": AABB(9.6, 12.8, -88, 9.53674e-06, 0.8, 15.2),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(9.6, 12.8, -72.8, 115.2, 0.80001, 7.62939e-06),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(9.6, 12.8, -88, 115.2, 9.53674e-06, 15.2),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(9.6, 13.6, -88, 115.2, 9.53674e-06, 15.2),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0)
+}, {
+"aabb": AABB(9.6, 12.8, -88, 115.2, 0.8, 7.62939e-06),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(124.8, 12.8, -88, 7.62939e-06, 0.80001, 15.2),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "entity0_brush11",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xllvk"]
+resource_name = "entity0_brush11"
+_surfaces = [{
+"aabb": AABB(9.6, 12.8, -88, 9.53674e-06, 0.8, 15.2),
+"attribute_data": PackedByteArray(227, 233, 136, 8, 255, 255, 136, 8, 227, 233, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(110, 15, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127)
+}, {
+"aabb": AABB(9.6, 12.8, -72.8, 115.2, 0.80001, 7.62939e-06),
+"attribute_data": PackedByteArray(216, 137, 0, 0, 255, 255, 0, 0, 216, 137, 136, 8, 255, 255, 136, 8),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(156, 15, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 128, 255, 255, 254, 255, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0, 128, 255, 255, 0, 0, 0, 0, 0, 128, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}, {
+"aabb": AABB(9.6, 12.8, -88, 115.2, 9.53674e-06, 15.2),
+"attribute_data": PackedByteArray(216, 137, 132, 22, 255, 255, 132, 22, 216, 137, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(156, 108, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 255, 63, 255, 255, 0, 0, 254, 255, 255, 63, 0, 0, 0, 0, 0, 0, 255, 63, 255, 255, 0, 0, 0, 0, 255, 63, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127)
+}, {
+"aabb": AABB(9.6, 13.6, -88, 115.2, 9.53674e-06, 15.2),
+"attribute_data": PackedByteArray(216, 137, 0, 0, 255, 255, 0, 0, 216, 137, 132, 22, 255, 255, 132, 22),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(156, 108, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 255, 255, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}, {
+"aabb": AABB(9.6, 12.8, -88, 115.2, 0.8, 7.62939e-06),
+"attribute_data": PackedByteArray(216, 137, 136, 8, 255, 255, 136, 8, 216, 137, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(156, 15, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}, {
+"aabb": AABB(124.8, 12.8, -88, 7.62939e-06, 0.80001, 15.2),
+"attribute_data": PackedByteArray(227, 233, 0, 0, 255, 255, 0, 0, 227, 233, 136, 8, 255, 255, 136, 8),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "entity0_brush11",
+"primitive": 3,
+"uv_scale": Vector4(110, 15, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 255, 191, 0, 0, 254, 255, 0, 0, 255, 191, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_hmjhb")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_lujiw"]
+data = PackedVector3Array(9.6, 12.8, -72.8002, 9.6, 12.8, -88, 9.6, 13.6, -72.8002, 9.6, 13.6, -72.8002, 9.6, 12.8, -88, 9.6, 13.6, -88, 9.6, 13.6, -72.8, 124.8, 13.6, -72.8, 9.6, 12.8, -72.8, 9.6, 12.8, -72.8, 124.8, 13.6, -72.8, 124.8, 12.8, -72.8, 9.6, 12.8, -72.8002, 124.8, 12.8, -72.8002, 9.6, 12.8, -88, 9.6, 12.8, -88, 124.8, 12.8, -72.8002, 124.8, 12.8, -88, 9.6, 13.6, -88, 124.8, 13.6, -88, 9.6, 13.6, -72.8, 9.6, 13.6, -72.8, 124.8, 13.6, -88, 124.8, 13.6, -72.8, 9.6, 12.8, -88, 124.8, 12.8, -88, 9.6, 13.6, -88, 9.6, 13.6, -88, 124.8, 12.8, -88, 124.8, 13.6, -88, 124.8, 13.6, -72.8002, 124.8, 13.6, -88, 124.8, 12.8, -72.8002, 124.8, 12.8, -72.8002, 124.8, 13.6, -88, 124.8, 12.8, -88)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_rl2f0"]
+_surfaces = [{
+"aabb": AABB(124, 0.8, -87.2, 7.62939e-06, 12, 14.4),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(124, 0.8, -72.8, 0.800003, 12, 7.62939e-06),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(124, 0.8, -87.2, 0.800003, 1.00136e-05, 14.4),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(124, 12.8, -87.2, 0.800003, 9.53674e-06, 14.4),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0)
+}, {
+"aabb": AABB(124, 0.8, -87.2, 0.800003, 12, 7.62939e-06),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(124.8, 0.8, -87.2, 7.62939e-06, 12, 14.4),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "entity0_brush12",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_6d7dc"]
+resource_name = "entity0_brush12"
+_surfaces = [{
+"aabb": AABB(124, 0.8, -87.2, 7.62939e-06, 12, 14.4),
+"attribute_data": PackedByteArray(219, 234, 36, 137, 255, 255, 36, 137, 219, 234, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(109, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127)
+}, {
+"aabb": AABB(124, 0.8, -72.8, 0.800003, 12, 7.62939e-06),
+"attribute_data": PackedByteArray(44, 255, 0, 0, 255, 255, 0, 0, 44, 255, 36, 137, 255, 255, 36, 137),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(156, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 128, 255, 255, 254, 255, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0, 128, 255, 255, 0, 0, 0, 0, 0, 128, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}, {
+"aabb": AABB(124, 0.8, -87.2, 0.800003, 1.00136e-05, 14.4),
+"attribute_data": PackedByteArray(44, 255, 136, 21, 255, 255, 136, 21, 44, 255, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(156, 107, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 255, 63, 255, 255, 0, 0, 254, 255, 255, 63, 0, 0, 0, 0, 0, 0, 255, 63, 255, 255, 0, 0, 0, 0, 255, 63, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127)
+}, {
+"aabb": AABB(124, 12.8, -87.2, 0.800003, 9.53674e-06, 14.4),
+"attribute_data": PackedByteArray(44, 255, 0, 0, 255, 255, 0, 0, 44, 255, 136, 21, 255, 255, 136, 21),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(156, 107, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 255, 255, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}, {
+"aabb": AABB(124, 0.8, -87.2, 0.800003, 12, 7.62939e-06),
+"attribute_data": PackedByteArray(44, 255, 36, 137, 255, 255, 36, 137, 44, 255, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(156, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}, {
+"aabb": AABB(124.8, 0.8, -87.2, 7.62939e-06, 12, 14.4),
+"attribute_data": PackedByteArray(219, 234, 0, 0, 255, 255, 0, 0, 219, 234, 36, 137, 255, 255, 36, 137),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "entity0_brush12",
+"primitive": 3,
+"uv_scale": Vector4(109, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 255, 191, 0, 0, 254, 255, 0, 0, 255, 191, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_rl2f0")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_l6ww3"]
+data = PackedVector3Array(124, 0.8, -72.8002, 124, 0.8, -87.2, 124, 12.8, -72.8002, 124, 12.8, -72.8002, 124, 0.8, -87.2, 124, 12.8, -87.2, 124, 12.7998, -72.8, 124.8, 12.7998, -72.8, 124, 0.8, -72.8, 124, 0.8, -72.8, 124.8, 12.7998, -72.8, 124.8, 0.8, -72.8, 124, 0.8, -72.8002, 124.8, 0.8, -72.8002, 124, 0.8, -87.2, 124, 0.8, -87.2, 124.8, 0.8, -72.8002, 124.8, 0.8, -87.2, 124, 12.8, -87.2, 124.8, 12.8, -87.2, 124, 12.8, -72.8, 124, 12.8, -72.8, 124.8, 12.8, -87.2, 124.8, 12.8, -72.8, 124, 0.8, -87.2, 124.8, 0.8, -87.2, 124, 12.8, -87.2, 124, 12.8, -87.2, 124.8, 0.8, -87.2, 124.8, 12.8, -87.2, 124.8, 12.7998, -72.8002, 124.8, 12.7998, -87.2, 124.8, 0.8, -72.8002, 124.8, 0.8, -72.8002, 124.8, 12.7998, -87.2, 124.8, 0.8, -87.2)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_6pxrr"]
+_surfaces = [{
+"aabb": AABB(121.6, 0.8, -75.2, 2.4, 12, 2.40001),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(121.6, 0.8, -72.8, 2.4, 12, 7.62939e-06),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(121.6, 0.8, -75.2, 2.4, 1.00136e-05, 2.40001),
+"format": 34896613377,
+"index_count": 3,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 3,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(121.6, 12.8, -75.2, 2.4, 9.53674e-06, 2.40001),
+"format": 34896613377,
+"index_count": 3,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 3,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0)
+}, {
+"aabb": AABB(124, 0.8, -75.2, 7.62939e-06, 12, 2.4),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "entity0_brush13",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xeu4s"]
+resource_name = "entity0_brush13"
+_surfaces = [{
+"aabb": AABB(121.6, 0.8, -75.2, 2.4, 12, 2.40001),
+"attribute_data": PackedByteArray(233, 251, 36, 137, 255, 255, 36, 137, 233, 251, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("5_1h1le"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(94, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 124, 165, 255, 255, 124, 165, 255, 255, 124, 165, 255, 255, 124, 165)
+}, {
+"aabb": AABB(121.6, 0.8, -72.8, 2.4, 12, 7.62939e-06),
+"attribute_data": PackedByteArray(132, 253, 0, 0, 255, 255, 0, 0, 132, 253, 36, 137, 255, 255, 36, 137),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(155, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 128, 255, 255, 254, 255, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0, 128, 255, 255, 0, 0, 0, 0, 0, 128, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}, {
+"aabb": AABB(121.6, 0.8, -75.2, 2.4, 1.00136e-05, 2.40001),
+"attribute_data": PackedByteArray(132, 253, 44, 4, 255, 255, 44, 4, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 3,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(155, 92, 0, 0),
+"vertex_count": 3,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 255, 63, 255, 255, 0, 0, 254, 255, 255, 63, 255, 255, 0, 0, 0, 0, 255, 63, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127)
+}, {
+"aabb": AABB(121.6, 12.8, -75.2, 2.4, 9.53674e-06, 2.40001),
+"attribute_data": PackedByteArray(132, 253, 44, 4, 255, 255, 0, 0, 255, 255, 44, 4),
+"format": 34896613399,
+"index_count": 3,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(155, 92, 0, 0),
+"vertex_count": 3,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 254, 255, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}, {
+"aabb": AABB(124, 0.8, -75.2, 7.62939e-06, 12, 2.4),
+"attribute_data": PackedByteArray(255, 255, 36, 137, 233, 251, 36, 137, 255, 255, 0, 0, 233, 251, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "entity0_brush13",
+"primitive": 3,
+"uv_scale": Vector4(94, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 255, 255, 255, 191, 0, 0, 255, 255, 0, 0, 255, 191, 0, 0, 255, 255, 255, 255, 255, 191, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_6pxrr")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_jfihr"]
+data = PackedVector3Array(121.6, 0.8, -72.8, 124, 0.8, -75.2, 121.6, 12.8, -72.8, 121.6, 12.8, -72.8, 124, 0.8, -75.2, 124, 12.8, -75.2, 121.6, 12.7998, -72.8, 124, 12.7998, -72.8, 121.6, 0.8, -72.8, 121.6, 0.8, -72.8, 124, 12.7998, -72.8, 124, 0.8, -72.8, 121.6, 0.8, -72.8, 124, 0.8, -72.8, 124, 0.8, -75.2, 121.6, 12.8, -72.8, 124, 12.8, -75.2, 124, 12.8, -72.8, 124, 0.8, -75.2, 124, 0.8, -72.8, 124, 12.8, -75.2, 124, 12.8, -75.2, 124, 0.8, -72.8, 124, 12.8, -72.8)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_iqofm"]
+_surfaces = [{
+"aabb": AABB(121.6, 0.8, -87.2, 2.4, 12, 2.4),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0)
+}, {
+"aabb": AABB(121.6, 0.8, -87.2, 2.4, 1.00136e-05, 2.4),
+"format": 34896613377,
+"index_count": 3,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 3,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(121.6, 12.8, -87.2, 2.4, 9.53674e-06, 2.4),
+"format": 34896613377,
+"index_count": 3,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 3,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0)
+}, {
+"aabb": AABB(121.6, 0.8, -87.2, 2.4, 12, 7.62939e-06),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(124, 0.8, -87.2, 7.62939e-06, 12, 2.40001),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "entity0_brush14",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_efmkr"]
+resource_name = "entity0_brush14"
+_surfaces = [{
+"aabb": AABB(121.6, 0.8, -87.2, 2.4, 12, 2.4),
+"attribute_data": PackedByteArray(255, 255, 0, 0, 121, 252, 0, 0, 255, 255, 36, 137, 121, 252, 36, 137),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("5_1h1le"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(109, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 130, 90, 255, 127, 130, 90, 255, 127, 130, 90, 255, 127, 130, 90, 255, 127)
+}, {
+"aabb": AABB(121.6, 0.8, -87.2, 2.4, 1.00136e-05, 2.4),
+"attribute_data": PackedByteArray(255, 255, 140, 253, 121, 252, 255, 255, 255, 255, 255, 255),
+"format": 34896613399,
+"index_count": 3,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(109, 157, 0, 0),
+"vertex_count": 3,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 170, 42, 255, 255, 0, 0, 255, 255, 170, 42, 255, 255, 0, 0, 0, 0, 170, 42, 84, 85, 84, 85, 84, 85, 84, 85, 84, 85, 84, 85)
+}, {
+"aabb": AABB(121.6, 12.8, -87.2, 2.4, 9.53674e-06, 2.4),
+"attribute_data": PackedByteArray(255, 255, 140, 253, 255, 255, 255, 255, 121, 252, 255, 255),
+"format": 34896613399,
+"index_count": 3,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(109, 157, 0, 0),
+"vertex_count": 3,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 84, 213, 255, 255, 0, 0, 0, 0, 84, 213, 255, 255, 0, 0, 255, 255, 84, 213, 84, 213, 170, 42, 84, 213, 170, 42, 84, 213, 170, 42)
+}, {
+"aabb": AABB(121.6, 0.8, -87.2, 2.4, 12, 7.62939e-06),
+"attribute_data": PackedByteArray(122, 2, 36, 137, 0, 0, 36, 137, 122, 2, 0, 0, 0, 0, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(155, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}, {
+"aabb": AABB(124, 0.8, -87.2, 7.62939e-06, 12, 2.40001),
+"attribute_data": PackedByteArray(121, 252, 36, 137, 121, 252, 0, 0, 255, 255, 36, 137, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "entity0_brush14",
+"primitive": 3,
+"uv_scale": Vector4(109, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 255, 255, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 0, 0, 255, 255, 0, 0, 255, 191, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_iqofm")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ra0to"]
+data = PackedVector3Array(121.6, 12.7998, -87.2, 124, 12.7998, -84.8, 121.6, 0.8, -87.2, 121.6, 0.8, -87.2, 124, 12.7998, -84.8, 124, 0.8, -84.8, 121.6, 0.8, -87.2, 124, 0.8, -84.8, 124, 0.8, -87.2, 121.6, 12.8, -87.2, 124, 12.8, -87.2, 124, 12.8, -84.8, 121.6, 0.8, -87.2, 124, 0.8, -87.2, 121.6, 12.8, -87.2, 121.6, 12.8, -87.2, 124, 0.8, -87.2, 124, 12.8, -87.2, 124, 0.8, -84.8, 124, 12.8, -84.8, 124, 0.8, -87.2, 124, 0.8, -87.2, 124, 12.8, -84.8, 124, 12.8, -87.2)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_s0xkr"]
+_surfaces = [{
+"aabb": AABB(-8.8, 0.8, -87.2, 9.53674e-06, 12, 2.4),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 254, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0)
+}, {
+"aabb": AABB(-8.8, 0.8, -87.2, 2.4, 1.00136e-05, 2.4),
+"format": 34896613377,
+"index_count": 3,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 3,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(-8.8, 12.8, -87.2, 2.4, 9.53674e-06, 2.4),
+"format": 34896613377,
+"index_count": 3,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 3,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0)
+}, {
+"aabb": AABB(-8.8, 0.8, -87.2, 2.4, 12, 7.62939e-06),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/plates",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(-8.8, 0.8, -87.2, 2.4, 12, 2.40001),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "entity0_brush15",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_y5puq"]
+resource_name = "entity0_brush15"
+_surfaces = [{
+"aabb": AABB(-8.8, 0.8, -87.2, 9.53674e-06, 12, 2.4),
+"attribute_data": PackedByteArray(0, 0, 0, 0, 133, 3, 0, 0, 0, 0, 36, 137, 133, 3, 36, 137),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(109, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 255, 191, 0, 0, 254, 255, 255, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 255, 255, 255, 191, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}, {
+"aabb": AABB(-8.8, 0.8, -87.2, 2.4, 1.00136e-05, 2.4),
+"attribute_data": PackedByteArray(255, 255, 255, 255, 255, 255, 137, 252, 22, 221, 255, 255),
+"format": 34896613399,
+"index_count": 3,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(11, 111, 0, 0),
+"vertex_count": 3,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63)
+}, {
+"aabb": AABB(-8.8, 12.8, -87.2, 2.4, 9.53674e-06, 2.4),
+"attribute_data": PackedByteArray(255, 255, 255, 255, 22, 221, 255, 255, 255, 255, 137, 252),
+"format": 34896613399,
+"index_count": 3,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(11, 111, 0, 0),
+"vertex_count": 3,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 255, 127, 255, 191, 255, 127, 255, 191, 255, 127, 255, 191)
+}, {
+"aabb": AABB(-8.8, 0.8, -87.2, 2.4, 12, 7.62939e-06),
+"attribute_data": PackedByteArray(255, 255, 36, 137, 22, 221, 36, 137, 255, 255, 0, 0, 22, 221, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/plates",
+"primitive": 3,
+"uv_scale": Vector4(11, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}, {
+"aabb": AABB(-8.8, 0.8, -87.2, 2.4, 12, 2.40001),
+"attribute_data": PackedByteArray(133, 3, 36, 137, 133, 3, 0, 0, 0, 0, 36, 137, 0, 0, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("5_1h1le"),
+"name": "entity0_brush15",
+"primitive": 3,
+"uv_scale": Vector4(109, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 124, 165, 255, 127, 124, 165, 255, 127, 124, 165, 255, 127, 124, 165, 255, 127)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_s0xkr")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_4utyq"]
+data = PackedVector3Array(-8.8, 12.7998, -87.2, -8.8, 12.7998, -84.8, -8.8, 0.8, -87.2, -8.8, 0.8, -87.2, -8.8, 12.7998, -84.8, -8.8, 0.8, -84.8, -8.8, 0.8, -87.2, -8.8, 0.8, -84.8, -6.4, 0.8, -87.2, -8.8, 12.8, -87.2, -6.4, 12.8, -87.2, -8.8, 12.8, -84.8, -8.8, 0.8, -87.2, -6.4, 0.8, -87.2, -8.8, 12.8, -87.2, -8.8, 12.8, -87.2, -6.4, 0.8, -87.2, -6.4, 12.8, -87.2, -8.8, 0.8, -84.8, -8.8, 12.8, -84.8, -6.4, 0.8, -87.2, -6.4, 0.8, -87.2, -8.8, 12.8, -84.8, -6.4, 12.8, -87.2)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_melwx"]
+_surfaces = [{
+"aabb": AABB(-8.8, 0.8, 0, 9.53674e-06, 12, 2.40001),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(-8.8, 0.8, 2.4, 2.4, 12, 1.00136e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(-8.8, 0.8, 0, 2.4, 1.00136e-05, 2.40001),
+"format": 34896613377,
+"index_count": 3,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 3,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(-8.8, 12.8, 0, 2.4, 9.53674e-06, 2.40001),
+"format": 34896613377,
+"index_count": 3,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0),
+"name": "test/plates",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 3,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0)
+}, {
+"aabb": AABB(-8.8, 0.8, 0, 2.4, 12, 2.4),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "entity0_brush16",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_78a5y"]
+resource_name = "entity0_brush16"
+_surfaces = [{
+"aabb": AABB(-8.8, 0.8, 0, 9.53674e-06, 12, 2.40001),
+"attribute_data": PackedByteArray(255, 255, 36, 137, 255, 127, 36, 137, 255, 255, 0, 0, 255, 127, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(3, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 0, 0, 255, 255, 254, 255, 255, 191, 0, 0, 255, 255, 0, 0, 255, 191, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}, {
+"aabb": AABB(-8.8, 0.8, 2.4, 2.4, 12, 1.00136e-05),
+"attribute_data": PackedByteArray(0, 0, 0, 0, 232, 34, 0, 0, 0, 0, 36, 137, 232, 34, 36, 137),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(11, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 128, 255, 255, 254, 255, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0, 128, 255, 255, 0, 0, 0, 0, 0, 128, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}, {
+"aabb": AABB(-8.8, 0.8, 0, 2.4, 1.00136e-05, 2.40001),
+"attribute_data": PackedByteArray(255, 255, 255, 255, 255, 255, 117, 226, 255, 127, 255, 255),
+"format": 34896613399,
+"index_count": 3,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(3, 13, 0, 0),
+"vertex_count": 3,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 170, 42, 255, 255, 0, 0, 254, 255, 170, 42, 0, 0, 0, 0, 0, 0, 170, 42, 170, 42, 84, 213, 170, 42, 84, 213, 170, 42, 84, 213)
+}, {
+"aabb": AABB(-8.8, 12.8, 0, 2.4, 9.53674e-06, 2.40001),
+"attribute_data": PackedByteArray(255, 255, 255, 255, 255, 127, 255, 255, 255, 255, 117, 226),
+"format": 34896613399,
+"index_count": 3,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/plates",
+"primitive": 3,
+"uv_scale": Vector4(3, 13, 0, 0),
+"vertex_count": 3,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 84, 213, 0, 0, 0, 0, 0, 0, 84, 213, 255, 255, 0, 0, 254, 255, 84, 213, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170)
+}, {
+"aabb": AABB(-8.8, 0.8, 0, 2.4, 12, 2.4),
+"attribute_data": PackedByteArray(255, 127, 36, 137, 255, 255, 36, 137, 255, 127, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("5_1h1le"),
+"name": "entity0_brush16",
+"primitive": 3,
+"uv_scale": Vector4(3, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 129, 218, 255, 127, 129, 218, 255, 127, 129, 218, 255, 127, 129, 218, 255, 127)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_melwx")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_kcfhw"]
+data = PackedVector3Array(-8.8, 0.8, 2.4, -8.8, 0.8, 0, -8.8, 12.8, 2.4, -8.8, 12.8, 2.4, -8.8, 0.8, 0, -8.8, 12.8, 0, -8.8, 12.7998, 2.4, -6.4, 12.7998, 2.4, -8.8, 0.8, 2.4, -8.8, 0.8, 2.4, -6.4, 12.7998, 2.4, -6.4, 0.8, 2.4, -8.8, 0.8, 2.4, -6.4, 0.8, 2.4, -8.8, 0.8, 0, -8.8, 12.8, 2.4, -8.8, 12.8, 0, -6.4, 12.8, 2.4, -8.8, 0.8, 0, -6.4, 0.8, 2.4, -8.8, 12.8, 0, -8.8, 12.8, 0, -6.4, 0.8, 2.4, -6.4, 12.8, 2.4)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_31r5k"]
+_surfaces = [{
+"aabb": AABB(6.4, 0.8, 0, 2.4, 12, 2.40001),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(6.4, 0.8, 2.4, 2.4, 12, 1.00136e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(6.4, 0.8, 0, 2.4, 1.00136e-05, 2.40001),
+"format": 34896613377,
+"index_count": 3,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 3,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(6.4, 12.8, 0, 2.4, 9.53674e-06, 2.40001),
+"format": 34896613377,
+"index_count": 3,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 3,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0)
+}, {
+"aabb": AABB(8.8, 0.8, 0, 9.53674e-06, 12, 2.4),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "entity0_brush17",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_inv1q"]
+resource_name = "entity0_brush17"
+_surfaces = [{
+"aabb": AABB(6.4, 0.8, 0, 2.4, 12, 2.40001),
+"attribute_data": PackedByteArray(0, 0, 36, 137, 255, 127, 36, 137, 0, 0, 0, 0, 255, 127, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("5_1h1le"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(3, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 124, 165, 255, 255, 124, 165, 255, 255, 124, 165, 255, 255, 124, 165)
+}, {
+"aabb": AABB(6.4, 0.8, 2.4, 2.4, 12, 1.00136e-05),
+"attribute_data": PackedByteArray(22, 221, 0, 0, 255, 255, 0, 0, 22, 221, 36, 137, 255, 255, 36, 137),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(11, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 128, 255, 255, 254, 255, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0, 128, 255, 255, 0, 0, 0, 0, 0, 128, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}, {
+"aabb": AABB(6.4, 0.8, 0, 2.4, 1.00136e-05, 2.40001),
+"attribute_data": PackedByteArray(22, 221, 255, 255, 255, 255, 255, 255, 255, 255, 50, 179),
+"format": 34896613399,
+"index_count": 3,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(11, 5, 0, 0),
+"vertex_count": 3,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 255, 63, 255, 255, 0, 0, 254, 255, 255, 63, 255, 255, 0, 0, 0, 0, 255, 63, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127)
+}, {
+"aabb": AABB(6.4, 12.8, 0, 2.4, 9.53674e-06, 2.40001),
+"attribute_data": PackedByteArray(22, 221, 255, 255, 255, 255, 50, 179, 255, 255, 255, 255),
+"format": 34896613399,
+"index_count": 3,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(11, 5, 0, 0),
+"vertex_count": 3,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 254, 255, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}, {
+"aabb": AABB(8.8, 0.8, 0, 9.53674e-06, 12, 2.4),
+"attribute_data": PackedByteArray(255, 127, 36, 137, 0, 0, 36, 137, 255, 127, 0, 0, 0, 0, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "entity0_brush17",
+"primitive": 3,
+"uv_scale": Vector4(3, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 255, 255, 255, 191, 0, 0, 255, 255, 0, 0, 255, 191, 0, 0, 255, 255, 255, 255, 255, 191, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_31r5k")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_lafl3"]
+data = PackedVector3Array(6.4, 0.8, 2.4, 8.8, 0.8, 0, 6.4, 12.8, 2.4, 6.4, 12.8, 2.4, 8.8, 0.8, 0, 8.8, 12.8, 0, 6.4, 12.7998, 2.4, 8.8, 12.7998, 2.4, 6.4, 0.8, 2.4, 6.4, 0.8, 2.4, 8.8, 12.7998, 2.4, 8.8, 0.8, 2.4, 6.4, 0.8, 2.4, 8.8, 0.8, 2.4, 8.8, 0.8, 0, 6.4, 12.8, 2.4, 8.8, 12.8, 0, 8.8, 12.8, 2.4, 8.8, 0.8, 0, 8.8, 0.8, 2.4, 8.8, 12.8, 0, 8.8, 12.8, 0, 8.8, 0.8, 2.4, 8.8, 12.8, 2.4)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_x1nlj"]
+_surfaces = [{
+"aabb": AABB(8.8, 0, -72.8, 1.6, 12.8, 1.60001),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(8.8, 0, -71.2, 0.8, 12.8, 7.62939e-06),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(8.8, 0, -72.8, 2.4, 1e-05, 1.60001),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 85, 85, 0, 0, 254, 255, 0, 0, 170, 170, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(8.8, 12.8, -72.8, 2.4, 9.53674e-06, 1.6),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(170, 170, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 85, 85, 0, 0, 255, 255, 0, 0)
+}, {
+"aabb": AABB(10.4, 0, -72.8, 0.799999, 12.8, 7.62939e-06),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(9.6, 0, -72.8, 1.6, 12.8, 1.60001),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "entity0_brush18",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_d37h5"]
+resource_name = "entity0_brush18"
+_surfaces = [{
+"aabb": AABB(8.8, 0, -72.8, 1.6, 12.8, 1.60001),
+"attribute_data": PackedByteArray(46, 253, 72, 146, 255, 255, 72, 146, 46, 253, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("5_1h1le"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(91, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 124, 165, 255, 255, 124, 165, 255, 255, 124, 165, 255, 255, 124, 165)
+}, {
+"aabb": AABB(8.8, 0, -71.2, 0.8, 12.8, 7.62939e-06),
+"attribute_data": PackedByteArray(84, 245, 0, 0, 255, 255, 0, 0, 84, 245, 72, 146, 255, 255, 72, 146),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(12, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 128, 255, 255, 254, 255, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0, 128, 255, 255, 0, 0, 0, 0, 0, 128, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}, {
+"aabb": AABB(8.8, 0, -72.8, 2.4, 1e-05, 1.60001),
+"attribute_data": PackedByteArray(145, 228, 224, 2, 181, 237, 224, 2, 218, 246, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(14, 89, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 255, 63, 85, 85, 0, 0, 254, 255, 255, 63, 170, 170, 0, 0, 0, 0, 255, 63, 255, 255, 0, 0, 0, 0, 255, 63, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127)
+}, {
+"aabb": AABB(8.8, 12.8, -72.8, 2.4, 9.53674e-06, 1.6),
+"attribute_data": PackedByteArray(218, 246, 0, 0, 255, 255, 0, 0, 145, 228, 224, 2, 181, 237, 224, 2),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(14, 89, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(170, 170, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 255, 255, 255, 191, 85, 85, 0, 0, 255, 255, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}, {
+"aabb": AABB(10.4, 0, -72.8, 0.799999, 12.8, 7.62939e-06),
+"attribute_data": PackedByteArray(218, 246, 72, 146, 255, 255, 72, 146, 218, 246, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(14, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}, {
+"aabb": AABB(9.6, 0, -72.8, 1.6, 12.8, 1.60001),
+"attribute_data": PackedByteArray(46, 253, 0, 0, 255, 255, 0, 0, 46, 253, 72, 146, 255, 255, 72, 146),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "entity0_brush18",
+"primitive": 3,
+"uv_scale": Vector4(91, 14, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 255, 159, 255, 255, 254, 255, 0, 0, 255, 159, 0, 0, 0, 0, 254, 255, 255, 159, 255, 255, 0, 0, 0, 0, 255, 159, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_x1nlj")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_s2fr0"]
+data = PackedVector3Array(8.8, 0, -71.2, 10.4, 0, -72.8, 8.8, 12.8, -71.2, 8.8, 12.8, -71.2, 10.4, 0, -72.8, 10.4, 12.8, -72.8, 8.8, 12.7998, -71.2, 9.6, 12.7998, -71.2, 8.8, 0, -71.2, 8.8, 0, -71.2, 9.6, 12.7998, -71.2, 9.6, 0, -71.2, 8.8, 0, -71.2, 9.6, 0, -71.2, 10.4, 0, -72.8, 10.4, 0, -72.8, 9.6, 0, -71.2, 11.2, 0, -72.8, 10.4, 12.8, -72.8, 11.2, 12.8, -72.8, 8.8, 12.8, -71.2, 8.8, 12.8, -71.2, 11.2, 12.8, -72.8, 9.6, 12.8, -71.2, 10.4, 0, -72.8, 11.2, 0, -72.8, 10.4, 12.8, -72.8, 10.4, 12.8, -72.8, 11.2, 0, -72.8, 11.2, 12.8, -72.8, 9.6, 12.7998, -71.2, 11.2, 12.7998, -72.8, 9.6, 0, -71.2, 9.6, 0, -71.2, 11.2, 12.7998, -72.8, 11.2, 0, -72.8)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_d7lyo"]
+_surfaces = [{
+"aabb": AABB(9.6, 12.8, -72.8, 9.53674e-06, 0.8, 0.800011),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(9.6, 12.8, -72, 0.8, 0.80001, 7.62939e-06),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(9.6, 12.8, -72.8, 0.8, 9.53674e-06, 0.800011),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(9.6, 13.6, -72.8, 0.8, 9.53674e-06, 0.800003),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0)
+}, {
+"aabb": AABB(9.6, 12.8, -72.8, 0.8, 0.8, 7.62939e-06),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(10.4, 12.8, -72.8, 9.53674e-06, 0.80001, 0.800011),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "entity0_brush19",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_oi2tq"]
+resource_name = "entity0_brush19"
+_surfaces = [{
+"aabb": AABB(9.6, 12.8, -72.8, 9.53674e-06, 0.8, 0.800011),
+"attribute_data": PackedByteArray(150, 254, 136, 8, 255, 255, 136, 8, 150, 254, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(91, 15, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127)
+}, {
+"aabb": AABB(9.6, 12.8, -72, 0.8, 0.80001, 7.62939e-06),
+"attribute_data": PackedByteArray(38, 246, 0, 0, 255, 255, 0, 0, 38, 246, 136, 8, 255, 255, 136, 8),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(13, 15, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 128, 255, 255, 254, 255, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0, 128, 255, 255, 0, 0, 0, 0, 0, 128, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}, {
+"aabb": AABB(9.6, 12.8, -72.8, 0.8, 9.53674e-06, 0.800011),
+"attribute_data": PackedByteArray(38, 246, 112, 1, 255, 255, 112, 1, 38, 246, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(13, 89, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 255, 63, 255, 255, 0, 0, 254, 255, 255, 63, 0, 0, 0, 0, 0, 0, 255, 63, 255, 255, 0, 0, 0, 0, 255, 63, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127)
+}, {
+"aabb": AABB(9.6, 13.6, -72.8, 0.8, 9.53674e-06, 0.800003),
+"attribute_data": PackedByteArray(38, 246, 0, 0, 255, 255, 0, 0, 38, 246, 112, 1, 255, 255, 112, 1),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(13, 89, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 255, 255, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}, {
+"aabb": AABB(9.6, 12.8, -72.8, 0.8, 0.8, 7.62939e-06),
+"attribute_data": PackedByteArray(38, 246, 136, 8, 255, 255, 136, 8, 38, 246, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "test/wall_3",
+"primitive": 3,
+"uv_scale": Vector4(13, 15, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}, {
+"aabb": AABB(10.4, 12.8, -72.8, 9.53674e-06, 0.80001, 0.800011),
+"attribute_data": PackedByteArray(150, 254, 0, 0, 255, 255, 0, 0, 150, 254, 136, 8, 255, 255, 136, 8),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("3_ipaq1"),
+"name": "entity0_brush19",
+"primitive": 3,
+"uv_scale": Vector4(91, 15, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 255, 191, 0, 0, 254, 255, 0, 0, 255, 191, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_d7lyo")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_6xb8t"]
+data = PackedVector3Array(9.6, 12.8, -72, 9.6, 12.8, -72.8, 9.6, 13.6, -72, 9.6, 13.6, -72, 9.6, 12.8, -72.8, 9.6, 13.6, -72.8, 9.6, 13.6, -72, 10.4, 13.6, -72, 9.6, 12.8, -72, 9.6, 12.8, -72, 10.4, 13.6, -72, 10.4, 12.8, -72, 9.6, 12.8, -72, 10.4, 12.8, -72, 9.6, 12.8, -72.8, 9.6, 12.8, -72.8, 10.4, 12.8, -72, 10.4, 12.8, -72.8, 9.6, 13.6, -72.8, 10.4, 13.6, -72.8, 9.6, 13.6, -72, 9.6, 13.6, -72, 10.4, 13.6, -72.8, 10.4, 13.6, -72, 9.6, 12.8, -72.8, 10.4, 12.8, -72.8, 9.6, 13.6, -72.8, 9.6, 13.6, -72.8, 10.4, 12.8, -72.8, 10.4, 13.6, -72.8, 10.4, 13.6, -72, 10.4, 13.6, -72.8, 10.4, 12.8, -72, 10.4, 12.8, -72, 10.4, 13.6, -72.8, 10.4, 12.8, -72.8)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_m4b1s"]
+_surfaces = [{
+"aabb": AABB(8.8, 0, -72.8, 9.53674e-06, 0.8, 1.60001),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/metalic_floor",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(8.8, 0, -71.2, 1.6, 0.80001, 7.62939e-06),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/metalic_floor",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(8.8, 0, -72.8, 1.6, 1e-05, 1.60001),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/metalic_floor",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(8.8, 0.8, -72.8, 1.6, 1.00136e-05, 1.6),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/metalic_floor",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0)
+}, {
+"aabb": AABB(8.8, 0, -72.8, 1.6, 0.8, 7.62939e-06),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "test/metalic_floor",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0)
+}, {
+"aabb": AABB(10.4, 0, -72.8, 9.53674e-06, 0.80001, 1.60001),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"name": "entity0_brush20",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_58skj"]
+resource_name = "entity0_brush20"
+_surfaces = [{
+"aabb": AABB(8.8, 0, -72.8, 9.53674e-06, 0.8, 1.60001),
+"attribute_data": PackedByteArray(255, 127, 62, 253, 255, 127, 255, 255, 255, 255, 62, 253, 255, 255, 255, 255),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("4_lrh0k"),
+"name": "test/metalic_floor",
+"primitive": 3,
+"uv_scale": Vector4(1, 93, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 170, 42, 0, 0, 0, 0, 0, 0, 170, 42, 0, 0, 255, 255, 254, 255, 170, 42, 0, 0, 255, 255, 0, 0, 170, 42, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213)
+}, {
+"aabb": AABB(8.8, 0, -71.2, 1.6, 0.80001, 7.62939e-06),
+"attribute_data": PackedByteArray(255, 255, 238, 238, 255, 255, 255, 255, 255, 127, 238, 238, 255, 127, 255, 255),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("4_lrh0k"),
+"name": "test/metalic_floor",
+"primitive": 3,
+"uv_scale": Vector4(1, 15, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 255, 191, 255, 255, 254, 255, 0, 0, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255)
+}, {
+"aabb": AABB(8.8, 0, -72.8, 1.6, 1e-05, 1.60001),
+"attribute_data": PackedByteArray(46, 253, 238, 238, 46, 253, 255, 255, 255, 255, 238, 238, 255, 255, 255, 255),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("4_lrh0k"),
+"name": "test/metalic_floor",
+"primitive": 3,
+"uv_scale": Vector4(91, 15, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 170, 42, 255, 255, 0, 0, 254, 255, 170, 42, 0, 0, 0, 0, 0, 0, 170, 42, 255, 255, 0, 0, 0, 0, 170, 42, 84, 85, 84, 85, 84, 85, 84, 85, 84, 85, 84, 85, 84, 85, 84, 85)
+}, {
+"aabb": AABB(8.8, 0.8, -72.8, 1.6, 1.00136e-05, 1.6),
+"attribute_data": PackedByteArray(255, 255, 238, 238, 255, 255, 255, 255, 46, 253, 238, 238, 46, 253, 255, 255),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("4_lrh0k"),
+"name": "test/metalic_floor",
+"primitive": 3,
+"uv_scale": Vector4(91, 15, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 84, 213, 255, 255, 0, 0, 0, 0, 84, 213, 0, 0, 0, 0, 255, 255, 84, 213, 255, 255, 0, 0, 255, 255, 84, 213, 84, 213, 170, 42, 84, 213, 170, 42, 84, 213, 170, 42, 84, 213, 170, 42)
+}, {
+"aabb": AABB(8.8, 0, -72.8, 1.6, 0.8, 7.62939e-06),
+"attribute_data": PackedByteArray(255, 127, 238, 238, 255, 127, 255, 255, 255, 255, 238, 238, 255, 255, 255, 255),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("4_lrh0k"),
+"name": "test/metalic_floor",
+"primitive": 3,
+"uv_scale": Vector4(1, 15, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 191, 255, 191, 255, 191, 255, 191, 255, 191, 255, 191, 255, 191, 255, 191)
+}, {
+"aabb": AABB(10.4, 0, -72.8, 9.53674e-06, 0.80001, 1.60001),
+"attribute_data": PackedByteArray(255, 255, 62, 253, 255, 255, 255, 255, 255, 127, 62, 253, 255, 127, 255, 255),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("4_lrh0k"),
+"name": "entity0_brush20",
+"primitive": 3,
+"uv_scale": Vector4(1, 93, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 84, 213, 0, 0, 254, 255, 0, 0, 84, 213, 0, 0, 0, 0, 254, 255, 84, 213, 0, 0, 0, 0, 0, 0, 84, 213, 170, 42, 170, 42, 170, 42, 170, 42, 170, 42, 170, 42, 170, 42, 170, 42)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_m4b1s")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_n0ynm"]
+data = PackedVector3Array(8.8, 0, -71.2, 8.8, 0, -72.8, 8.8, 0.8, -71.2, 8.8, 0.8, -71.2, 8.8, 0, -72.8, 8.8, 0.8, -72.8, 8.8, 0.8, -71.2, 10.4, 0.8, -71.2, 8.8, 0, -71.2, 8.8, 0, -71.2, 10.4, 0.8, -71.2, 10.4, 0, -71.2, 8.8, 0, -71.2, 10.4, 0, -71.2, 8.8, 0, -72.8, 8.8, 0, -72.8, 10.4, 0, -71.2, 10.4, 0, -72.8, 8.8, 0.8, -72.8, 10.4, 0.8, -72.8, 8.8, 0.8, -71.2, 8.8, 0.8, -71.2, 10.4, 0.8, -72.8, 10.4, 0.8, -71.2, 8.8, 0, -72.8, 10.4, 0, -72.8, 8.8, 0.8, -72.8, 8.8, 0.8, -72.8, 10.4, 0, -72.8, 10.4, 0.8, -72.8, 10.4, 0.8, -71.2, 10.4, 0.8, -72.8, 10.4, 0, -71.2, 10.4, 0, -71.2, 10.4, 0.8, -72.8, 10.4, 0, -72.8)
 
 [node name="Level" type="Node3D"]
+
+[node name="LV3" type="Node3D" parent="."]
+
+[node name="entity0_brush0" type="MeshInstance3D" parent="LV3"]
+mesh = SubResource("ArrayMesh_voggo")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LV3/entity0_brush0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LV3/entity0_brush0/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_pxcyj")
+
+[node name="entity0_brush1" type="MeshInstance3D" parent="LV3"]
+mesh = SubResource("ArrayMesh_o7oy7")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LV3/entity0_brush1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LV3/entity0_brush1/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_qdaeb")
+
+[node name="entity0_brush2" type="MeshInstance3D" parent="LV3"]
+mesh = SubResource("ArrayMesh_6avb8")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LV3/entity0_brush2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LV3/entity0_brush2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_8x2hb")
+
+[node name="entity0_brush3" type="MeshInstance3D" parent="LV3"]
+mesh = SubResource("ArrayMesh_tsnje")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LV3/entity0_brush3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LV3/entity0_brush3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_erv7i")
+
+[node name="entity0_brush4" type="MeshInstance3D" parent="LV3"]
+mesh = SubResource("ArrayMesh_hyhb4")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LV3/entity0_brush4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LV3/entity0_brush4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_pwb3w")
+
+[node name="entity0_brush5" type="MeshInstance3D" parent="LV3"]
+mesh = SubResource("ArrayMesh_xtggb")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LV3/entity0_brush5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LV3/entity0_brush5/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_h7vij")
+
+[node name="entity0_brush6" type="MeshInstance3D" parent="LV3"]
+mesh = SubResource("ArrayMesh_f5qbx")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LV3/entity0_brush6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LV3/entity0_brush6/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_mhpww")
+
+[node name="entity0_brush7" type="MeshInstance3D" parent="LV3"]
+mesh = SubResource("ArrayMesh_hcyet")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LV3/entity0_brush7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LV3/entity0_brush7/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_ldomc")
+
+[node name="entity0_brush8" type="MeshInstance3D" parent="LV3"]
+mesh = SubResource("ArrayMesh_gyxcw")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LV3/entity0_brush8"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LV3/entity0_brush8/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_fvu6c")
+
+[node name="entity0_brush9" type="MeshInstance3D" parent="LV3"]
+mesh = SubResource("ArrayMesh_10fat")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LV3/entity0_brush9"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LV3/entity0_brush9/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_5gqs5")
+
+[node name="entity0_brush10" type="MeshInstance3D" parent="LV3"]
+mesh = SubResource("ArrayMesh_sly37")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LV3/entity0_brush10"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LV3/entity0_brush10/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_s7hhg")
+
+[node name="entity0_brush11" type="MeshInstance3D" parent="LV3"]
+mesh = SubResource("ArrayMesh_xllvk")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LV3/entity0_brush11"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LV3/entity0_brush11/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_lujiw")
+
+[node name="entity0_brush12" type="MeshInstance3D" parent="LV3"]
+mesh = SubResource("ArrayMesh_6d7dc")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LV3/entity0_brush12"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LV3/entity0_brush12/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_l6ww3")
+
+[node name="entity0_brush13" type="MeshInstance3D" parent="LV3"]
+mesh = SubResource("ArrayMesh_xeu4s")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LV3/entity0_brush13"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LV3/entity0_brush13/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_jfihr")
+
+[node name="entity0_brush14" type="MeshInstance3D" parent="LV3"]
+mesh = SubResource("ArrayMesh_efmkr")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LV3/entity0_brush14"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LV3/entity0_brush14/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_ra0to")
+
+[node name="entity0_brush15" type="MeshInstance3D" parent="LV3"]
+mesh = SubResource("ArrayMesh_y5puq")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LV3/entity0_brush15"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LV3/entity0_brush15/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_4utyq")
+
+[node name="entity0_brush16" type="MeshInstance3D" parent="LV3"]
+mesh = SubResource("ArrayMesh_78a5y")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LV3/entity0_brush16"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LV3/entity0_brush16/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_kcfhw")
+
+[node name="entity0_brush17" type="MeshInstance3D" parent="LV3"]
+mesh = SubResource("ArrayMesh_inv1q")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LV3/entity0_brush17"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LV3/entity0_brush17/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_lafl3")
+
+[node name="entity0_brush18" type="MeshInstance3D" parent="LV3"]
+mesh = SubResource("ArrayMesh_d37h5")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LV3/entity0_brush18"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LV3/entity0_brush18/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_s2fr0")
+
+[node name="entity0_brush19" type="MeshInstance3D" parent="LV3"]
+mesh = SubResource("ArrayMesh_oi2tq")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LV3/entity0_brush19"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LV3/entity0_brush19/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_6xb8t")
+
+[node name="entity0_brush20" type="MeshInstance3D" parent="LV3"]
+mesh = SubResource("ArrayMesh_58skj")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LV3/entity0_brush20"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LV3/entity0_brush20/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_n0ynm")
+
+[node name="StartButton" parent="." instance=ExtResource("4_j7aja")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 114, 1.7129, -80)
+chalange_time = 8
+
+[node name="Player" parent="." instance=ExtResource("5_b2c7e")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 120.941, 2, -81.3214)
+
+[node name="goo" type="Node3D" parent="."]
+
+[node name="GooPad" parent="goo" instance=ExtResource("8_rpmtj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 1, -80)
+speed_boost_duration = 20
+
+[node name="GooPad2" parent="goo" instance=ExtResource("8_rpmtj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 1, -81)
+speed_boost_duration = 20
+
+[node name="GooPad3" parent="goo" instance=ExtResource("8_rpmtj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 1, -82)
+speed_boost_duration = 20
+
+[node name="GooPad4" parent="goo" instance=ExtResource("8_rpmtj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 1, -83)
+speed_boost_duration = 20
+
+[node name="GooPad5" parent="goo" instance=ExtResource("8_rpmtj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 1, -84)
+speed_boost_duration = 20
+
+[node name="GooPad6" parent="goo" instance=ExtResource("8_rpmtj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 1, -85)
+speed_boost_duration = 20
+
+[node name="GooPad7" parent="goo" instance=ExtResource("8_rpmtj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 1, -79)
+speed_boost_duration = 20
+
+[node name="GooPad8" parent="goo" instance=ExtResource("8_rpmtj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 1, -78)
+speed_boost_duration = 20
+
+[node name="GooPad9" parent="goo" instance=ExtResource("8_rpmtj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 1, -77)
+speed_boost_duration = 20
+
+[node name="GooPad10" parent="goo" instance=ExtResource("8_rpmtj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 1, -76)
+speed_boost_duration = 20
+
+[node name="GooPad11" parent="goo" instance=ExtResource("8_rpmtj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 1, -75)
+speed_boost_duration = 20
+
+[node name="GooPad12" parent="goo" instance=ExtResource("8_rpmtj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 1, -75)
+speed_boost_duration = 20
+
+[node name="GooPad13" parent="goo" instance=ExtResource("8_rpmtj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 109.836, 1, -81)
+speed_boost_duration = 20
+
+[node name="GooPad14" parent="goo" instance=ExtResource("8_rpmtj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 109.836, 1, -82)
+speed_boost_duration = 20
+
+[node name="GooPad21" parent="goo" instance=ExtResource("8_rpmtj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 109.836, 1, -83)
+speed_boost_duration = 20
+
+[node name="GooPad22" parent="goo" instance=ExtResource("8_rpmtj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 109.836, 1, -80)
+speed_boost_duration = 20
+
+[node name="GooPad23" parent="goo" instance=ExtResource("8_rpmtj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 109.836, 1, -76)
+speed_boost_duration = 20
+
+[node name="GooPad24" parent="goo" instance=ExtResource("8_rpmtj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 109.836, 1, -76)
+speed_boost_duration = 20
+
+[node name="GooPad15" parent="goo" instance=ExtResource("8_rpmtj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 109.836, 1, -84)
+speed_boost_duration = 20
+
+[node name="GooPad16" parent="goo" instance=ExtResource("8_rpmtj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 109.836, 1, -85)
+speed_boost_duration = 20
+
+[node name="GooPad17" parent="goo" instance=ExtResource("8_rpmtj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 109.836, 1, -79)
+speed_boost_duration = 20
+
+[node name="GooPad18" parent="goo" instance=ExtResource("8_rpmtj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 109.836, 1, -78)
+speed_boost_duration = 20
+
+[node name="GooPad19" parent="goo" instance=ExtResource("8_rpmtj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 109.836, 1, -77)
+speed_boost_duration = 20
+
+[node name="GooPad20" parent="goo" instance=ExtResource("8_rpmtj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 109.836, 1, -75)
+speed_boost_duration = 20
+
+[node name="EndDoor" parent="." instance=ExtResource("2_ohgbc")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.0528469, 5.47567)
