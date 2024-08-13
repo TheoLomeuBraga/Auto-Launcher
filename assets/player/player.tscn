@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://caxk4nani1ncw"]
+[gd_scene load_steps=15 format=3 uid="uid://caxk4nani1ncw"]
 
 [ext_resource type="Script" path="res://assets/player/player.gd" id="1_gwrmj"]
 [ext_resource type="PackedScene" uid="uid://mw5tk1f72870" path="res://assets/reverse_cannon/reverse_cannon.tscn" id="2_r0ka8"]
 [ext_resource type="PackedScene" uid="uid://bwunewjk1qb5t" path="res://menus/pause/pause.tscn" id="2_spixy"]
 [ext_resource type="Script" path="res://generic_scripts/chalange_timer.gd" id="4_j2dtt"]
 [ext_resource type="AudioStream" uid="uid://nwiyuuotoi8i" path="res://sfx/jump_2.ogg" id="5_qrndv"]
+[ext_resource type="AudioStream" uid="uid://bqri3yo2p4f0i" path="res://sfx/hit_floor.ogg" id="6_1jnud"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_57xbc"]
 friction = 0.0
@@ -119,6 +120,7 @@ script = ExtResource("4_j2dtt")
 stream = ExtResource("5_qrndv")
 
 [node name="hit_floor_sfx" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_qrndv")
+stream = ExtResource("6_1jnud")
+volume_db = -10.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

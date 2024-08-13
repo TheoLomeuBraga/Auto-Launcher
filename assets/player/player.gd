@@ -62,6 +62,8 @@ func _process(delta):
 		
 	
 
+var in_floor_last_frame := true
+
 var rng = RandomNumberGenerator.new()
 
 func movement_plugin(delta):
@@ -74,7 +76,10 @@ func movement_plugin(delta):
 		jump(jump_power)
 		$jump_sfx.pitch_scale = rng.randf_range(0.5,1.2)
 		$jump_sfx.play()
-		
+	
+	if in_floor and not in_floor_last_frame:
+		$hit_floor_sfx.pitch_scale = rng.randf_range(0.5,0.75)
+		$hit_floor_sfx.playing = in_floor
 	
 	if speed_boost_duration > 0:
 		speed_boost_duration -= delta
@@ -84,6 +89,7 @@ func movement_plugin(delta):
 		speed = 3.0
 	
 	$Label.text = "ms: " + str(int(linear_velocity.length()))
+	in_floor_last_frame = in_floor
 	
 func fail():
 	Global.load_sceane()
