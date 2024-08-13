@@ -16,7 +16,7 @@ dest_files=["res://.godot/imported/LV4.obj-0983692595a6c90d2ea1b11a500bb7f2.scn"
 nodes/root_type=""
 nodes/root_name=""
 nodes/apply_root_scale=true
-nodes/root_scale=1.0
+nodes/root_scale=0.05
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
@@ -29,6 +29,25 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"test/goal_texture": {
+"use_external/enabled": true,
+"use_external/path": "res://sceanes/LV4/test_goal_texture.tres"
+},
+"test/metalic_floor": {
+"use_external/enabled": true,
+"use_external/path": "res://sceanes/LV4/test_metalic_floor.tres"
+},
+"test/plates": {
+"use_external/enabled": true,
+"use_external/path": "res://sceanes/LV4/test_plates.tres"
+},
+"test/wall_2": {
+"use_external/enabled": true,
+"use_external/path": "res://sceanes/LV4/test_wall_2.tres"
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
