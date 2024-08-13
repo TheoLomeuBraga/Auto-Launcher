@@ -3,7 +3,7 @@ extends BaseGun
 var player : RigidBody3D
 
 @export var power := 10
-@export var max_speed := 50
+@export var max_speed := 30
 
 var time_next_charge = 0
 

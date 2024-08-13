@@ -3243,3 +3243,4 @@ speed_boost_duration = 20
 
 [node name="EndDoor" parent="." instance=ExtResource("2_ohgbc")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.0528469, 5.47567)
+next_sceane = "res://sceanes/LV4/level.tscn"
