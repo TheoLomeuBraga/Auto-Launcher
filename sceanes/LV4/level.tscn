@@ -1,4 +1,4 @@
-[gd_scene load_steps=111 format=3 uid="uid://dvdmdh6tkf167"]
+[gd_scene load_steps=113 format=3 uid="uid://dvdmdh6tkf167"]
 
 [ext_resource type="PackedScene" uid="uid://bksog7w31x2ou" path="res://assets/end_door/end_door.tscn" id="1_llj5b"]
 [ext_resource type="Material" uid="uid://bcr1tprvvvd1j" path="res://sceanes/LV4/test_wall_2.tres" id="2_8wyue"]
@@ -8,6 +8,8 @@
 [ext_resource type="Material" uid="uid://dt1gtmn1r2va7" path="res://sceanes/LV4/test_goal_texture.tres" id="5_kh7si"]
 [ext_resource type="PackedScene" uid="uid://caxk4nani1ncw" path="res://assets/player/player.tscn" id="7_w47al"]
 [ext_resource type="PackedScene" uid="uid://twr8rw1agar3" path="res://assets/start_button/start_button.tscn" id="8_0irst"]
+[ext_resource type="PackedScene" uid="uid://b3g7jsxqlxquq" path="res://assets/movement_pads/goo_pad.tscn" id="9_ahf7p"]
+[ext_resource type="PackedScene" uid="uid://ddt1cty7aio7t" path="res://assets/boost_recharger/boost_recharger.tscn" id="10_vvwi6"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_s1q2j"]
 _surfaces = [{
@@ -4943,6 +4945,7 @@ data = PackedVector3Array(-9.6, -2.9333, 26.3999, -9.6, 0.7999, 20.8, -9.6, 6.4,
 
 [node name="EndDoor" parent="." instance=ExtResource("1_llj5b")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.0541499, -5.55477)
+next_sceane = "res://sceanes/LV5/LV5.tscn"
 
 [node name="LV4" type="Node3D" parent="."]
 
@@ -5259,6 +5262,125 @@ transform = Transform3D(241.542, 0, 0, 0, 1, 0, 0, 0, 29561.4, 65.7408, -21, 12.
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 103.456, 12.2995, 123.322)
 
 [node name="StartButton" parent="." instance=ExtResource("8_0irst")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.332, 12, 116.23)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.332, 12.1634, 116.23)
 
 [node name="goo" type="Node3D" parent="."]
+
+[node name="GooPad2" parent="goo" instance=ExtResource("9_ahf7p")]
+transform = Transform3D(7.43862, 0, 0, 0, 1, 0, 0, 0, 1.05199, 104.735, 11.2, 113.754)
+speed_boost_duration = 10
+
+[node name="GooPad" parent="goo" instance=ExtResource("9_ahf7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.7039, 11.2, 113.244)
+speed_boost_duration = 10
+
+[node name="GooPad3" parent="goo" instance=ExtResource("9_ahf7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.08, 11.2, 114.092)
+speed_boost_duration = 10
+
+[node name="GooPad5" parent="goo" instance=ExtResource("9_ahf7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.0294, 11.2, 114.466)
+speed_boost_duration = 10
+
+[node name="GooPad6" parent="goo" instance=ExtResource("9_ahf7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111.14, 11.2, 113.192)
+speed_boost_duration = 10
+
+[node name="GooPad7" parent="goo" instance=ExtResource("9_ahf7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 110.686, 11.2, 114.145)
+speed_boost_duration = 10
+
+[node name="GooPad8" parent="goo" instance=ExtResource("9_ahf7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 109.581, 11.2, 112.774)
+speed_boost_duration = 10
+
+[node name="GooPad9" parent="goo" instance=ExtResource("9_ahf7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 107.217, 11.2, 114.3)
+speed_boost_duration = 10
+
+[node name="GooPad10" parent="goo" instance=ExtResource("9_ahf7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 103.547, 11.2, 112.819)
+speed_boost_duration = 10
+
+[node name="GooPad11" parent="goo" instance=ExtResource("9_ahf7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100.908, 11.2, 112.93)
+speed_boost_duration = 10
+
+[node name="GooPad12" parent="goo" instance=ExtResource("9_ahf7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 106.767, 11.2, 112.889)
+speed_boost_duration = 10
+
+[node name="GooPad13" parent="goo" instance=ExtResource("9_ahf7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 105.457, 11.2, 112.344)
+speed_boost_duration = 10
+
+[node name="GooPad14" parent="goo" instance=ExtResource("9_ahf7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100.471, 11.2, 114.93)
+speed_boost_duration = 10
+
+[node name="GooPad15" parent="goo" instance=ExtResource("9_ahf7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101.792, 11.2, 114.635)
+speed_boost_duration = 10
+
+[node name="GooPad16" parent="goo" instance=ExtResource("9_ahf7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 103.197, 11.2, 114.803)
+speed_boost_duration = 10
+
+[node name="GooPad17" parent="goo" instance=ExtResource("9_ahf7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.843, 11.2, 114.901)
+speed_boost_duration = 10
+
+[node name="GooPad18" parent="goo" instance=ExtResource("9_ahf7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 106.09, 11.2, 114.928)
+speed_boost_duration = 10
+
+[node name="GooPad19" parent="goo" instance=ExtResource("9_ahf7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 102.086, 11.2, 112.068)
+speed_boost_duration = 10
+
+[node name="GooPad20" parent="goo" instance=ExtResource("9_ahf7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.6769, 11.2, 112.317)
+speed_boost_duration = 10
+
+[node name="GooPad21" parent="goo" instance=ExtResource("9_ahf7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108.344, 11.2, 112.821)
+speed_boost_duration = 10
+
+[node name="GooPad22" parent="goo" instance=ExtResource("9_ahf7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108.253, 11.2, 114.763)
+speed_boost_duration = 10
+
+[node name="GooPad23" parent="goo" instance=ExtResource("9_ahf7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 109.461, 11.2, 114.763)
+speed_boost_duration = 10
+
+[node name="GooPad4" parent="goo" instance=ExtResource("9_ahf7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.573, 11.2, 113.313)
+speed_boost_duration = 10
+
+[node name="BoostRecharger" parent="." instance=ExtResource("10_vvwi6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 105.008, 11.2, 17.4636)
+
+[node name="BoostRecharger5" parent="." instance=ExtResource("10_vvwi6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.0084, 11.2, 17.4636)
+
+[node name="BoostRecharger9" parent="." instance=ExtResource("10_vvwi6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.0084, 7.2, 17.4636)
+
+[node name="BoostRecharger7" parent="." instance=ExtResource("10_vvwi6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.0084, 11.2, 13.4636)
+
+[node name="BoostRecharger8" parent="." instance=ExtResource("10_vvwi6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.0084, 11.2, 21.4636)
+
+[node name="BoostRecharger6" parent="." instance=ExtResource("10_vvwi6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.0084, 14.2, 17.4636)
+
+[node name="BoostRecharger2" parent="." instance=ExtResource("10_vvwi6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 105.008, 12.2, 65.4636)
+
+[node name="BoostRecharger3" parent="." instance=ExtResource("10_vvwi6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 109.008, 12.2, 65.4636)
+
+[node name="BoostRecharger4" parent="." instance=ExtResource("10_vvwi6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101.008, 12.2, 65.4636)
