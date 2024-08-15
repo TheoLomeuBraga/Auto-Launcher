@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://drmci2wnxmy02"]
 
-[ext_resource type="Texture2D" uid="uid://d1r2xe4gqsg75" path="res://textures/steel.png" id="1_umasf"]
+[ext_resource type="Texture2D" uid="uid://b0cobvt21rmti" path="res://textures/steel.png" id="1_umasf"]
 
 [resource]
 resource_name = "test/steel"

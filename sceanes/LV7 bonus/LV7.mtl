@@ -1,0 +1,15 @@
+newmtl test/asphalt
+map_Kd textures/test/asphalt.png
+
+newmtl test/defout_floor
+map_Kd textures/test/defout_floor.png
+
+newmtl test/grass
+map_Kd textures/test/grass.png
+
+newmtl test/grass_1
+map_Kd textures/test/grass_1.png
+
+newmtl test/wood
+map_Kd textures/test/wood.png
+

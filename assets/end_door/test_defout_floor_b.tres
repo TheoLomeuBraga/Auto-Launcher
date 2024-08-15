@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bbbgpqrswppmn"]
 
-[ext_resource type="Texture2D" uid="uid://tmwm0to1b3qe" path="res://textures/defout_floor_b.png" id="1_g7212"]
+[ext_resource type="Texture2D" uid="uid://dwesfia0bwoox" path="res://textures/defout_floor_b.png" id="1_g7212"]
 
 [resource]
 resource_name = "test/defout_floor_b"

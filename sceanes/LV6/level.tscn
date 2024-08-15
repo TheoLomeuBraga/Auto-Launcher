@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://cwrm8n66nd4p5"]
+[gd_scene load_steps=50 format=3 uid="uid://cwrm8n66nd4p5"]
 
 [ext_resource type="Material" uid="uid://bi0irrq0kd8kf" path="res://sceanes/LV6/test_wall_2.tres" id="1_k0tyg"]
 [ext_resource type="PackedScene" uid="uid://bksog7w31x2ou" path="res://assets/end_door/end_door.tscn" id="2_gedmi"]
@@ -7,8 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://caxk4nani1ncw" path="res://assets/player/player.tscn" id="3_eikdc"]
 [ext_resource type="Material" uid="uid://dfsgwf20gdith" path="res://sceanes/LV6/test_goal_texture.tres" id="4_cvgbs"]
 [ext_resource type="PackedScene" uid="uid://dj0frhniv780a" path="res://assets/death_zone/death_zone.tscn" id="4_hkigx"]
+[ext_resource type="PackedScene" uid="uid://b3g7jsxqlxquq" path="res://assets/movement_pads/goo_pad.tscn" id="8_psk2e"]
+[ext_resource type="PackedScene" uid="uid://twr8rw1agar3" path="res://assets/start_button/start_button.tscn" id="9_n5v2b"]
+[ext_resource type="PackedScene" uid="uid://clu8ehfhatrhf" path="res://assets/movement_pads/jump_pad.tscn" id="10_cdtt8"]
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_cgo7l"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_0oxqx"]
 _surfaces = [{
 "aabb": AABB(-3.2, -91.2, -3.2, 1.00136e-05, 92, 10.4),
 "format": 34896613377,
@@ -72,7 +75,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_qghsu"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_g6xwf"]
 resource_name = "entity0_brush0"
 _surfaces = [{
 "aabb": AABB(-3.2, -91.2, -3.2, 1.00136e-05, 92, 10.4),
@@ -112,14 +115,14 @@ _surfaces = [{
 "vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 255, 63, 255, 255, 0, 0, 254, 255, 255, 63, 0, 0, 0, 0, 0, 0, 255, 63, 255, 255, 0, 0, 0, 0, 255, 63, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127)
 }, {
 "aabb": AABB(-3.2, 0.8, -3.2, 161.6, 1.00136e-05, 10.4),
-"attribute_data": PackedByteArray(105, 125, 158, 198, 255, 255, 158, 198, 105, 125, 255, 255, 255, 255, 255, 255),
+"attribute_data": PackedByteArray(105, 125, 185, 104, 255, 255, 185, 104, 105, 125, 255, 255, 255, 255, 255, 255),
 "format": 34896613399,
 "index_count": 6,
 "index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
 "material": ExtResource("2_skmvs"),
 "name": "test/wall_2",
 "primitive": 3,
-"uv_scale": Vector4(19.8, 2.9, 0, 0),
+"uv_scale": Vector4(198, 11, 0, 0),
 "vertex_count": 4,
 "vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 255, 255, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
 }, {
@@ -148,12 +151,12 @@ _surfaces = [{
 "vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 255, 191, 0, 0, 254, 255, 0, 0, 255, 191, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0)
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_cgo7l")
+shadow_mesh = SubResource("ArrayMesh_0oxqx")
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7g721"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_phpkc"]
 data = PackedVector3Array(-3.2, -91.2, 7.1999, -3.2, -91.2, -3.2, -3.2, 0.8, 7.1999, -3.2, 0.8, 7.1999, -3.2, -91.2, -3.2, -3.2, 0.8, -3.2, -3.2, 0.7986, 7.2, 158.4, 0.7986, 7.2, -3.2, -91.2, 7.2, -3.2, -91.2, 7.2, 158.4, 0.7986, 7.2, 158.4, -91.2, 7.2, -3.2, -91.2, 7.1999, 158.4, -91.2, 7.1999, -3.2, -91.2, -3.2, -3.2, -91.2, -3.2, 158.4, -91.2, 7.1999, 158.4, -91.2, -3.2, -3.2, 0.8, -3.2, 158.4, 0.8, -3.2, -3.2, 0.8, 7.2, -3.2, 0.8, 7.2, 158.4, 0.8, -3.2, 158.4, 0.8, 7.2, -3.2, -91.2, -3.2, 158.4, -91.2, -3.2, -3.2, 0.8, -3.2, -3.2, 0.8, -3.2, 158.4, -91.2, -3.2, 158.4, 0.8, -3.2, 158.4, 0.7986, 7.1999, 158.4, 0.7986, -3.2, 158.4, -91.2, 7.1999, 158.4, -91.2, 7.1999, 158.4, 0.7986, -3.2, 158.4, -91.2, -3.2)
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_6nnor"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_kpgp4"]
 _surfaces = [{
 "aabb": AABB(-4, 7.2, -3.2, 1.00136e-05, 0.8, 95.2),
 "format": 34896613377,
@@ -217,7 +220,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_qlcfh"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_2igrp"]
 resource_name = "entity0_brush1"
 _surfaces = [{
 "aabb": AABB(-4, 7.2, -3.2, 1.00136e-05, 0.8, 95.2),
@@ -293,12 +296,12 @@ _surfaces = [{
 "vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 255, 191, 0, 0, 254, 255, 0, 0, 255, 191, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0)
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_6nnor")
+shadow_mesh = SubResource("ArrayMesh_kpgp4")
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_oqtqp"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_0rsab"]
 data = PackedVector3Array(-4, 7.2, 91.9986, -4, 7.2, -3.2, -4, 8, 91.9986, -4, 8, 91.9986, -4, 7.2, -3.2, -4, 8, -3.2, -4, 8, 92, 158.4, 8, 92, -4, 7.2, 92, -4, 7.2, 92, 158.4, 8, 92, 158.4, 7.2, 92, -4, 7.2, 91.9986, 158.4, 7.2, 91.9986, -4, 7.2, -3.2, -4, 7.2, -3.2, 158.4, 7.2, 91.9986, 158.4, 7.2, -3.2, -4, 8, -3.2, 158.4, 8, -3.2, -4, 8, 92, -4, 8, 92, 158.4, 8, -3.2, 158.4, 8, 92, -4, 7.2, -3.2, 158.4, 7.2, -3.2, -4, 8, -3.2, -4, 8, -3.2, 158.4, 7.2, -3.2, 158.4, 8, -3.2, 158.4, 8, 91.9986, 158.4, 8, -3.2, 158.4, 7.2, 91.9986, 158.4, 7.2, 91.9986, 158.4, 8, -3.2, 158.4, 7.2, -3.2)
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_4oy8n"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_ge5n4"]
 _surfaces = [{
 "aabb": AABB(-4, -91.2, -3.2, 1.00136e-05, 98.4, 95.2),
 "format": 34896613377,
@@ -362,7 +365,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_ivht0"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_7vqi6"]
 resource_name = "entity0_brush2"
 _surfaces = [{
 "aabb": AABB(-4, -91.2, -3.2, 1.00136e-05, 98.4, 95.2),
@@ -438,12 +441,12 @@ _surfaces = [{
 "vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 255, 191, 0, 0, 254, 255, 0, 0, 255, 191, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0)
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_4oy8n")
+shadow_mesh = SubResource("ArrayMesh_ge5n4")
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_grh85"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_c1yqy"]
 data = PackedVector3Array(-4, -91.2, 91.9986, -4, -91.2, -3.2, -4, 7.2, 91.9986, -4, 7.2, 91.9986, -4, -91.2, -3.2, -4, 7.2, -3.2, -4, 7.1985, 92, -3.2, 7.1985, 92, -4, -91.2, 92, -4, -91.2, 92, -3.2, 7.1985, 92, -3.2, -91.2, 92, -4, -91.2, 91.9986, -3.2, -91.2, 91.9986, -4, -91.2, -3.2, -4, -91.2, -3.2, -3.2, -91.2, 91.9986, -3.2, -91.2, -3.2, -4, 7.2, -3.2, -3.2, 7.2, -3.2, -4, 7.2, 92, -4, 7.2, 92, -3.2, 7.2, -3.2, -3.2, 7.2, 92, -4, -91.2, -3.2, -3.2, -91.2, -3.2, -4, 7.2, -3.2, -4, 7.2, -3.2, -3.2, -91.2, -3.2, -3.2, 7.2, -3.2, -3.2, 7.1985, 91.9986, -3.2, 7.1985, -3.2, -3.2, -91.2, 91.9986, -3.2, -91.2, 91.9986, -3.2, 7.1985, -3.2, -3.2, -91.2, -3.2)
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_5mv1j"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_a3v2l"]
 _surfaces = [{
 "aabb": AABB(3.2, 0.8, -3.2, 1.00136e-05, 6.4, 10.4),
 "format": 34896613377,
@@ -507,7 +510,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_jmq83"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_ee2ja"]
 resource_name = "entity0_brush3"
 _surfaces = [{
 "aabb": AABB(3.2, 0.8, -3.2, 1.00136e-05, 6.4, 10.4),
@@ -583,12 +586,12 @@ _surfaces = [{
 "vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 255, 191, 0, 0, 254, 255, 0, 0, 255, 191, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0)
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_5mv1j")
+shadow_mesh = SubResource("ArrayMesh_a3v2l")
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_v8pn8"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_u4fc1"]
 data = PackedVector3Array(3.2, 0.8, 7.1999, 3.2, 0.8, -3.2, 3.2, 7.2, 7.1999, 3.2, 7.2, 7.1999, 3.2, 0.8, -3.2, 3.2, 7.2, -3.2, 3.2, 7.1999, 7.2, 158.4, 7.1999, 7.2, 3.2, 0.8, 7.2, 3.2, 0.8, 7.2, 158.4, 7.1999, 7.2, 158.4, 0.8, 7.2, 3.2, 0.8, 7.1999, 158.4, 0.8, 7.1999, 3.2, 0.8, -3.2, 3.2, 0.8, -3.2, 158.4, 0.8, 7.1999, 158.4, 0.8, -3.2, 3.2, 7.2, -3.2, 158.4, 7.2, -3.2, 3.2, 7.2, 7.2, 3.2, 7.2, 7.2, 158.4, 7.2, -3.2, 158.4, 7.2, 7.2, 3.2, 0.8, -3.2, 158.4, 0.8, -3.2, 3.2, 7.2, -3.2, 3.2, 7.2, -3.2, 158.4, 0.8, -3.2, 158.4, 7.2, -3.2, 158.4, 7.1999, 7.1999, 158.4, 7.1999, -3.2, 158.4, 0.8, 7.1999, 158.4, 0.8, 7.1999, 158.4, 7.1999, -3.2, 158.4, 0.8, -3.2)
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_f3b3g"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_jpkkc"]
 _surfaces = [{
 "aabb": AABB(-4, -91.2, 92, 1.00136e-05, 99.2, 0.800011),
 "format": 34896613377,
@@ -652,7 +655,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_mvmtt"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_mga3v"]
 resource_name = "entity0_brush4"
 _surfaces = [{
 "aabb": AABB(-4, -91.2, 92, 1.00136e-05, 99.2, 0.800011),
@@ -728,12 +731,12 @@ _surfaces = [{
 "vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 255, 191, 0, 0, 254, 255, 0, 0, 255, 191, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0)
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_f3b3g")
+shadow_mesh = SubResource("ArrayMesh_jpkkc")
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_b7wf1"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_pbjnp"]
 data = PackedVector3Array(-4, -91.2, 92.8, -4, -91.2, 92, -4, 8, 92.8, -4, 8, 92.8, -4, -91.2, 92, -4, 8, 92, -4, 7.9985, 92.8, 158.4, 7.9985, 92.8, -4, -91.2, 92.8, -4, -91.2, 92.8, 158.4, 7.9985, 92.8, 158.4, -91.2, 92.8, -4, -91.2, 92.8, 158.4, -91.2, 92.8, -4, -91.2, 92, -4, -91.2, 92, 158.4, -91.2, 92.8, 158.4, -91.2, 92, -4, 8, 92, 158.4, 8, 92, -4, 8, 92.8, -4, 8, 92.8, 158.4, 8, 92, 158.4, 8, 92.8, -4, -91.2, 92, 158.4, -91.2, 92, -4, 8, 92, -4, 8, 92, 158.4, -91.2, 92, 158.4, 8, 92, 158.4, 7.9985, 92.8, 158.4, 7.9985, 92, 158.4, -91.2, 92.8, 158.4, -91.2, 92.8, 158.4, 7.9985, 92, 158.4, -91.2, 92)
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_rlua0"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_le4b4"]
 _surfaces = [{
 "aabb": AABB(158.4, -91.2, -3.2, 1.52588e-05, 99.2, 96),
 "format": 34896613377,
@@ -797,7 +800,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_gxnsh"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_qeju6"]
 resource_name = "entity0_brush5"
 _surfaces = [{
 "aabb": AABB(158.4, -91.2, -3.2, 1.52588e-05, 99.2, 96),
@@ -873,12 +876,12 @@ _surfaces = [{
 "vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 255, 191, 0, 0, 254, 255, 0, 0, 255, 191, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0)
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_rlua0")
+shadow_mesh = SubResource("ArrayMesh_le4b4")
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_51o0w"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_gp4wo"]
 data = PackedVector3Array(158.4, -91.2, 92.7985, 158.4, -91.2, -3.2, 158.4, 8, 92.7985, 158.4, 8, 92.7985, 158.4, -91.2, -3.2, 158.4, 8, -3.2, 158.4, 7.9985, 92.8, 159.2, 7.9985, 92.8, 158.4, -91.2, 92.8, 158.4, -91.2, 92.8, 159.2, 7.9985, 92.8, 159.2, -91.2, 92.8, 158.4, -91.2, 92.7985, 159.2, -91.2, 92.7985, 158.4, -91.2, -3.2, 158.4, -91.2, -3.2, 159.2, -91.2, 92.7985, 159.2, -91.2, -3.2, 158.4, 8, -3.2, 159.2, 8, -3.2, 158.4, 8, 92.8, 158.4, 8, 92.8, 159.2, 8, -3.2, 159.2, 8, 92.8, 158.4, -91.2, -3.2, 159.2, -91.2, -3.2, 158.4, 8, -3.2, 158.4, 8, -3.2, 159.2, -91.2, -3.2, 159.2, 8, -3.2, 159.2, 7.9985, 92.7985, 159.2, 7.9985, -3.2, 159.2, -91.2, 92.7985, 159.2, -91.2, 92.7985, 159.2, 7.9985, -3.2, 159.2, -91.2, -3.2)
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_mkywp"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_8tg4a"]
 _surfaces = [{
 "aabb": AABB(152, -58.4, 7.2, 1.52588e-05, 0.799999, 84.8),
 "format": 34896613377,
@@ -942,7 +945,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_ohvsn"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_4b28q"]
 resource_name = "entity0_brush6"
 _surfaces = [{
 "aabb": AABB(152, -58.4, 7.2, 1.52588e-05, 0.799999, 84.8),
@@ -1018,12 +1021,12 @@ _surfaces = [{
 "vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 255, 191, 0, 0, 254, 255, 0, 0, 255, 191, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0)
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_mkywp")
+shadow_mesh = SubResource("ArrayMesh_8tg4a")
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_y4uek"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7foxs"]
 data = PackedVector3Array(152, -58.4, 91.9987, 152, -58.4, 7.2, 152, -57.6, 91.9987, 152, -57.6, 91.9987, 152, -58.4, 7.2, 152, -57.6, 7.2, 152, -57.6, 92, 158.4, -57.6, 92, 152, -58.4, 92, 152, -58.4, 92, 158.4, -57.6, 92, 158.4, -58.4, 92, 152, -58.4, 91.9987, 158.4, -58.4, 91.9987, 152, -58.4, 7.2, 152, -58.4, 7.2, 158.4, -58.4, 91.9987, 158.4, -58.4, 7.2, 152, -57.6, 7.2, 158.4, -57.6, 7.2, 152, -57.6, 92, 152, -57.6, 92, 158.4, -57.6, 7.2, 158.4, -57.6, 92, 152, -58.4, 7.2, 158.4, -58.4, 7.2, 152, -57.6, 7.2, 152, -57.6, 7.2, 158.4, -58.4, 7.2, 158.4, -57.6, 7.2, 158.4, -57.6, 91.9987, 158.4, -57.6, 7.2, 158.4, -58.4, 91.9987, 158.4, -58.4, 91.9987, 158.4, -57.6, 7.2, 158.4, -58.4, 7.2)
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_wn6m3"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_iw25m"]
 _surfaces = [{
 "aabb": AABB(3.2, -39.2, 7.2, 1.00136e-05, 0.799999, 6.4),
 "format": 34896613377,
@@ -1087,7 +1090,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_i2lak"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_bfxas"]
 resource_name = "entity0_brush7"
 _surfaces = [{
 "aabb": AABB(3.2, -39.2, 7.2, 1.00136e-05, 0.799999, 6.4),
@@ -1163,12 +1166,12 @@ _surfaces = [{
 "vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 0, 0, 254, 255, 255, 255, 255, 191, 0, 0, 0, 0, 255, 255, 255, 191, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0)
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_wn6m3")
+shadow_mesh = SubResource("ArrayMesh_iw25m")
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_tk0t8"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_x227s"]
 data = PackedVector3Array(3.2, -39.2, 7.2, 3.2, -38.4, 7.2, 3.2, -39.2, 13.6, 3.2, -39.2, 13.6, 3.2, -38.4, 7.2, 3.2, -38.4, 13.6, 3.2, -39.2003, 13.5999, 152, -58.4, 13.5999, 3.2, -39.2003, 7.2, 3.2, -39.2003, 7.2, 152, -58.4, 13.5999, 152, -58.4, 7.2, 3.2, -38.4003, 13.6, 152, -57.6001, 13.6, 3.2, -39.2002, 13.6, 3.2, -39.2002, 13.6, 152, -57.6001, 13.6, 152, -58.4, 13.6, 3.2, -39.2002, 7.2, 152, -58.4, 7.2, 3.2, -38.4, 7.2, 3.2, -38.4, 7.2, 152, -58.4, 7.2, 152, -57.6001, 7.2, 3.2, -38.4003, 7.2, 152, -57.6, 7.2, 3.2, -38.4003, 13.6, 3.2, -38.4003, 13.6, 152, -57.6, 7.2, 152, -57.6, 13.6, 152, -57.6, 7.2, 152, -58.4, 7.2, 152, -57.6, 13.6, 152, -57.6, 13.6, 152, -58.4, 7.2, 152, -58.4, 13.6)
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_aebjt"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_qrm3l"]
 _surfaces = [{
 "aabb": AABB(-3.2, -39.2, 7.2, 1.00136e-05, 0.799999, 6.40001),
 "format": 34896613377,
@@ -1232,7 +1235,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_u8t5e"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_82ykj"]
 resource_name = "entity0_brush8"
 _surfaces = [{
 "aabb": AABB(-3.2, -39.2, 7.2, 1.00136e-05, 0.799999, 6.40001),
@@ -1308,12 +1311,12 @@ _surfaces = [{
 "vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 255, 191, 0, 0, 254, 255, 0, 0, 255, 191, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0)
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_aebjt")
+shadow_mesh = SubResource("ArrayMesh_qrm3l")
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_xd2y2"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_c1c8s"]
 data = PackedVector3Array(-3.2, -39.2, 13.5999, -3.2, -39.2, 7.2, -3.2, -38.4, 13.5999, -3.2, -38.4, 13.5999, -3.2, -39.2, 7.2, -3.2, -38.4, 7.2, -3.2, -38.4, 13.6, 3.2, -38.4, 13.6, -3.2, -39.2, 13.6, -3.2, -39.2, 13.6, 3.2, -38.4, 13.6, 3.2, -39.2, 13.6, -3.2, -39.2, 13.5999, 3.2, -39.2, 13.5999, -3.2, -39.2, 7.2, -3.2, -39.2, 7.2, 3.2, -39.2, 13.5999, 3.2, -39.2, 7.2, -3.2, -38.4, 7.2, 3.2, -38.4, 7.2, -3.2, -38.4, 13.6, -3.2, -38.4, 13.6, 3.2, -38.4, 7.2, 3.2, -38.4, 13.6, -3.2, -39.2, 7.2, 3.2, -39.2, 7.2, -3.2, -38.4, 7.2, -3.2, -38.4, 7.2, 3.2, -39.2, 7.2, 3.2, -38.4, 7.2, 3.2, -38.4, 13.5999, 3.2, -38.4, 7.2, 3.2, -39.2, 13.5999, 3.2, -39.2, 13.5999, 3.2, -38.4, 7.2, 3.2, -39.2, 7.2)
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_5iiys"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_0qy0w"]
 _surfaces = [{
 "aabb": AABB(-3.2, 0, 7.2, 1.00136e-05, 0.8, 6.40001),
 "format": 34896613377,
@@ -1377,7 +1380,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_j3ta8"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_5yen1"]
 resource_name = "entity0_brush9"
 _surfaces = [{
 "aabb": AABB(-3.2, 0, 7.2, 1.00136e-05, 0.8, 6.40001),
@@ -1453,12 +1456,12 @@ _surfaces = [{
 "vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 255, 191, 0, 0, 254, 255, 0, 0, 255, 191, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0)
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_5iiys")
+shadow_mesh = SubResource("ArrayMesh_0qy0w")
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_gi5ca"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_3acwr"]
 data = PackedVector3Array(-3.2, 0, 13.5999, -3.2, 0, 7.2, -3.2, 0.8, 13.5999, -3.2, 0.8, 13.5999, -3.2, 0, 7.2, -3.2, 0.8, 7.2, -3.2, 0.8, 13.6, 3.2, 0.8, 13.6, -3.2, 0, 13.6, -3.2, 0, 13.6, 3.2, 0.8, 13.6, 3.2, 0, 13.6, -3.2, 0, 13.5999, 3.2, 0, 13.5999, -3.2, 0, 7.2, -3.2, 0, 7.2, 3.2, 0, 13.5999, 3.2, 0, 7.2, -3.2, 0.8, 7.2, 3.2, 0.8, 7.2, -3.2, 0.8, 13.6, -3.2, 0.8, 13.6, 3.2, 0.8, 7.2, 3.2, 0.8, 13.6, -3.2, 0, 7.2, 3.2, 0, 7.2, -3.2, 0.8, 7.2, -3.2, 0.8, 7.2, 3.2, 0, 7.2, 3.2, 0.8, 7.2, 3.2, 0.8, 13.5999, 3.2, 0.8, 7.2, 3.2, 0, 13.5999, 3.2, 0, 13.5999, 3.2, 0.8, 7.2, 3.2, 0, 7.2)
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_6kcpr"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_6tnr0"]
 _surfaces = [{
 "aabb": AABB(-3.2, 0, 13.6, 1.00136e-05, 7.2, 0.80001),
 "format": 34896613377,
@@ -1522,7 +1525,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_u17x1"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_hnmxl"]
 resource_name = "entity0_brush10"
 _surfaces = [{
 "aabb": AABB(-3.2, 0, 13.6, 1.00136e-05, 7.2, 0.80001),
@@ -1598,12 +1601,12 @@ _surfaces = [{
 "vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 255, 191, 0, 0, 254, 255, 0, 0, 255, 191, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0)
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_6kcpr")
+shadow_mesh = SubResource("ArrayMesh_6tnr0")
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_kkgq2"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_1as6t"]
 data = PackedVector3Array(-3.2, 0, 14.4, -3.2, 0, 13.6, -3.2, 7.2, 14.4, -3.2, 7.2, 14.4, -3.2, 0, 13.6, -3.2, 7.2, 13.6, -3.2, 7.1999, 14.4, 3.2, 7.1999, 14.4, -3.2, 0, 14.4, -3.2, 0, 14.4, 3.2, 7.1999, 14.4, 3.2, 0, 14.4, -3.2, 0, 14.4, 3.2, 0, 14.4, -3.2, 0, 13.6, -3.2, 0, 13.6, 3.2, 0, 14.4, 3.2, 0, 13.6, -3.2, 7.2, 13.6, 3.2, 7.2, 13.6, -3.2, 7.2, 14.4, -3.2, 7.2, 14.4, 3.2, 7.2, 13.6, 3.2, 7.2, 14.4, -3.2, 0, 13.6, 3.2, 0, 13.6, -3.2, 7.2, 13.6, -3.2, 7.2, 13.6, 3.2, 0, 13.6, 3.2, 7.2, 13.6, 3.2, 7.1999, 14.4, 3.2, 7.1999, 13.6, 3.2, 0, 14.4, 3.2, 0, 14.4, 3.2, 7.1999, 13.6, 3.2, 0, 13.6)
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_wnq8w"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_2o55l"]
 _surfaces = [{
 "aabb": AABB(3.2, 0, 7.2, 1.00136e-05, 0.8, 6.4),
 "format": 34896613377,
@@ -1667,7 +1670,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_i4dkn"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_6w5h3"]
 resource_name = "entity0_brush11"
 _surfaces = [{
 "aabb": AABB(3.2, 0, 7.2, 1.00136e-05, 0.8, 6.4),
@@ -1743,12 +1746,12 @@ _surfaces = [{
 "vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 0, 0, 254, 255, 255, 255, 255, 191, 0, 0, 0, 0, 255, 255, 255, 191, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0)
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_wnq8w")
+shadow_mesh = SubResource("ArrayMesh_2o55l")
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_27fln"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_mmlu4"]
 data = PackedVector3Array(3.2, 0, 7.2, 3.2, 0.8, 7.2, 3.2, 0, 13.6, 3.2, 0, 13.6, 3.2, 0.8, 7.2, 3.2, 0.8, 13.6, 3.2, -0.0003, 13.5999, 152, -19.2, 13.5999, 3.2, -0.0003, 7.2, 3.2, -0.0003, 7.2, 152, -19.2, 13.5999, 152, -19.2, 7.2, 3.2, 0.7997, 13.6, 152, -18.4001, 13.6, 3.2, -0.0002, 13.6, 3.2, -0.0002, 13.6, 152, -18.4001, 13.6, 152, -19.2, 13.6, 3.2, -0.0002, 7.2, 152, -19.2, 7.2, 3.2, 0.8, 7.2, 3.2, 0.8, 7.2, 152, -19.2, 7.2, 152, -18.4001, 7.2, 3.2, 0.7997, 7.2, 152, -18.4, 7.2, 3.2, 0.7997, 13.6, 3.2, 0.7997, 13.6, 152, -18.4, 7.2, 152, -18.4, 13.6, 152, -18.4, 7.2, 152, -19.2, 7.2, 152, -18.4, 13.6, 152, -18.4, 13.6, 152, -19.2, 7.2, 152, -19.2, 13.6)
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_6kfeu"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_jmfd8"]
 _surfaces = [{
 "aabb": AABB(152, -19.2, 7.2, 1.52588e-05, 0.800001, 6.40001),
 "format": 34896613377,
@@ -1812,7 +1815,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_j57q5"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_oie0h"]
 resource_name = "entity0_brush12"
 _surfaces = [{
 "aabb": AABB(152, -19.2, 7.2, 1.52588e-05, 0.800001, 6.40001),
@@ -1888,138 +1891,211 @@ _surfaces = [{
 "vertex_data": PackedByteArray(0, 0, 254, 255, 254, 255, 255, 191, 0, 0, 254, 255, 0, 0, 255, 191, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0)
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_6kfeu")
+shadow_mesh = SubResource("ArrayMesh_jmfd8")
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_3wc15"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ss36m"]
 data = PackedVector3Array(152, -19.2, 13.5999, 152, -19.2, 7.2, 152, -18.4, 13.5999, 152, -18.4, 13.5999, 152, -19.2, 7.2, 152, -18.4, 7.2, 152, -18.4, 13.6, 158.4, -18.4, 13.6, 152, -19.2, 13.6, 152, -19.2, 13.6, 158.4, -18.4, 13.6, 158.4, -19.2, 13.6, 152, -19.2, 13.5999, 158.4, -19.2, 13.5999, 152, -19.2, 7.2, 152, -19.2, 7.2, 158.4, -19.2, 13.5999, 158.4, -19.2, 7.2, 152, -18.4, 7.2, 158.4, -18.4, 7.2, 152, -18.4, 13.6, 152, -18.4, 13.6, 158.4, -18.4, 7.2, 158.4, -18.4, 13.6, 152, -19.2, 7.2, 158.4, -19.2, 7.2, 152, -18.4, 7.2, 152, -18.4, 7.2, 158.4, -19.2, 7.2, 158.4, -18.4, 7.2, 158.4, -18.4, 13.5999, 158.4, -18.4, 7.2, 158.4, -19.2, 13.5999, 158.4, -19.2, 13.5999, 158.4, -18.4, 7.2, 158.4, -19.2, 7.2)
 
 [node name="Level" type="Node3D"]
 
 [node name="EndDoor" parent="." instance=ExtResource("2_gedmi")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.08267, -6)
-next_sceane = "res://sceanes/LV1/level.tscn"
+next_sceane = "res://sceanes/LV7 bonus/LV7.tscn"
 
 [node name="Player" parent="." instance=ExtResource("3_eikdc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 154.271, -56.3956, 88.4888)
 
 [node name="DeathZone" parent="." instance=ExtResource("4_hkigx")]
-transform = Transform3D(951.625, 0, 0, 0, 1, 0, 0, 0, 365.768, 105.01, -90.348, 53.9772)
+transform = Transform3D(951.625, 0, 0, 0, 1, 0, 0, 0, 365.768, 105.01, -60.348, 53.9772)
+
+[node name="goo" type="Node3D" parent="."]
+
+[node name="GooPad" parent="goo" instance=ExtResource("8_psk2e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 153.181, -57.6, 79.9607)
+speed_boost_duration = 7
+
+[node name="GooPad2" parent="goo" instance=ExtResource("8_psk2e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 154.181, -57.6, 79.9607)
+speed_boost_duration = 7
+
+[node name="GooPad3" parent="goo" instance=ExtResource("8_psk2e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 155.181, -57.6, 79.9607)
+speed_boost_duration = 7
+
+[node name="GooPad4" parent="goo" instance=ExtResource("8_psk2e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 156.181, -57.6, 79.9607)
+speed_boost_duration = 7
+
+[node name="GooPad5" parent="goo" instance=ExtResource("8_psk2e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 157.181, -57.6, 79.9607)
+speed_boost_duration = 7
+
+[node name="StartButton" parent="." instance=ExtResource("9_n5v2b")]
+transform = Transform3D(0.6, 0, 0, 0, 0.9, 0, 0, 0, 1, 155, -56, 82)
+chalange_time = 25
+
+[node name="JumpPad" parent="." instance=ExtResource("10_cdtt8")]
+transform = Transform3D(2.32002, 0, 0, 0, 1, 0, 0, 0, 2.64472, 0.439869, -38.4209, 10.384)
+jump_direction = Vector3(0, 25, 25)
+jump_redirect = true
+
+[node name="JumpPad2" parent="." instance=ExtResource("10_cdtt8")]
+transform = Transform3D(5.4, 0, 0, 0, -4.37114e-08, 6, 0, -1, -2.62268e-07, 4, -24, 92)
+jump_direction = Vector3(50, 25, -50)
+
+[node name="goo2" type="Node3D" parent="."]
+
+[node name="GooPad" parent="goo2" instance=ExtResource("8_psk2e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 156, -18.4169, 11)
+speed_boost_duration = 10
+
+[node name="GooPad3" parent="goo2" instance=ExtResource("8_psk2e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 156, -18.4169, 9)
+speed_boost_duration = 10
+
+[node name="GooPad4" parent="goo2" instance=ExtResource("8_psk2e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 156, -18.4169, 10)
+speed_boost_duration = 10
+
+[node name="GooPad2" parent="goo2" instance=ExtResource("8_psk2e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 155, -18.4169, 11)
+speed_boost_duration = 10
+
+[node name="GooPad5" parent="goo2" instance=ExtResource("8_psk2e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 155, -18.4169, 9)
+speed_boost_duration = 10
+
+[node name="GooPad6" parent="goo2" instance=ExtResource("8_psk2e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 155, -18.4169, 10)
+speed_boost_duration = 10
+
+[node name="GooPad7" parent="goo2" instance=ExtResource("8_psk2e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 157, -18.4169, 11)
+speed_boost_duration = 10
+
+[node name="GooPad8" parent="goo2" instance=ExtResource("8_psk2e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 157, -18.4169, 9)
+speed_boost_duration = 10
+
+[node name="GooPad9" parent="goo2" instance=ExtResource("8_psk2e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 157, -18.4169, 10)
+speed_boost_duration = 10
 
 [node name="LV6" type="Node3D" parent="."]
 
 [node name="entity0_brush0" type="MeshInstance3D" parent="LV6"]
-mesh = SubResource("ArrayMesh_qghsu")
+mesh = SubResource("ArrayMesh_g6xwf")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="LV6/entity0_brush0"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LV6/entity0_brush0/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_7g721")
+shape = SubResource("ConcavePolygonShape3D_phpkc")
 
 [node name="entity0_brush1" type="MeshInstance3D" parent="LV6"]
-mesh = SubResource("ArrayMesh_qlcfh")
+mesh = SubResource("ArrayMesh_2igrp")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="LV6/entity0_brush1"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LV6/entity0_brush1/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_oqtqp")
+shape = SubResource("ConcavePolygonShape3D_0rsab")
 
 [node name="entity0_brush2" type="MeshInstance3D" parent="LV6"]
-mesh = SubResource("ArrayMesh_ivht0")
+mesh = SubResource("ArrayMesh_7vqi6")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="LV6/entity0_brush2"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LV6/entity0_brush2/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_grh85")
+shape = SubResource("ConcavePolygonShape3D_c1yqy")
 
 [node name="entity0_brush3" type="MeshInstance3D" parent="LV6"]
-mesh = SubResource("ArrayMesh_jmq83")
+mesh = SubResource("ArrayMesh_ee2ja")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="LV6/entity0_brush3"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LV6/entity0_brush3/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_v8pn8")
+shape = SubResource("ConcavePolygonShape3D_u4fc1")
 
 [node name="entity0_brush4" type="MeshInstance3D" parent="LV6"]
-mesh = SubResource("ArrayMesh_mvmtt")
+mesh = SubResource("ArrayMesh_mga3v")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="LV6/entity0_brush4"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LV6/entity0_brush4/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_b7wf1")
+shape = SubResource("ConcavePolygonShape3D_pbjnp")
 
 [node name="entity0_brush5" type="MeshInstance3D" parent="LV6"]
-mesh = SubResource("ArrayMesh_gxnsh")
+mesh = SubResource("ArrayMesh_qeju6")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="LV6/entity0_brush5"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LV6/entity0_brush5/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_51o0w")
+shape = SubResource("ConcavePolygonShape3D_gp4wo")
 
 [node name="entity0_brush6" type="MeshInstance3D" parent="LV6"]
-mesh = SubResource("ArrayMesh_ohvsn")
+mesh = SubResource("ArrayMesh_4b28q")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="LV6/entity0_brush6"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LV6/entity0_brush6/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_y4uek")
+shape = SubResource("ConcavePolygonShape3D_7foxs")
 
 [node name="entity0_brush7" type="MeshInstance3D" parent="LV6"]
-mesh = SubResource("ArrayMesh_i2lak")
+mesh = SubResource("ArrayMesh_bfxas")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="LV6/entity0_brush7"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LV6/entity0_brush7/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_tk0t8")
+shape = SubResource("ConcavePolygonShape3D_x227s")
 
 [node name="entity0_brush8" type="MeshInstance3D" parent="LV6"]
-mesh = SubResource("ArrayMesh_u8t5e")
+mesh = SubResource("ArrayMesh_82ykj")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="LV6/entity0_brush8"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LV6/entity0_brush8/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_xd2y2")
+shape = SubResource("ConcavePolygonShape3D_c1c8s")
 
 [node name="entity0_brush9" type="MeshInstance3D" parent="LV6"]
-mesh = SubResource("ArrayMesh_j3ta8")
+mesh = SubResource("ArrayMesh_5yen1")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="LV6/entity0_brush9"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LV6/entity0_brush9/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_gi5ca")
+shape = SubResource("ConcavePolygonShape3D_3acwr")
 
 [node name="entity0_brush10" type="MeshInstance3D" parent="LV6"]
-mesh = SubResource("ArrayMesh_u17x1")
+mesh = SubResource("ArrayMesh_hnmxl")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="LV6/entity0_brush10"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LV6/entity0_brush10/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_kkgq2")
+shape = SubResource("ConcavePolygonShape3D_1as6t")
 
 [node name="entity0_brush11" type="MeshInstance3D" parent="LV6"]
-mesh = SubResource("ArrayMesh_i4dkn")
+mesh = SubResource("ArrayMesh_6w5h3")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="LV6/entity0_brush11"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LV6/entity0_brush11/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_27fln")
+shape = SubResource("ConcavePolygonShape3D_mmlu4")
 
 [node name="entity0_brush12" type="MeshInstance3D" parent="LV6"]
-mesh = SubResource("ArrayMesh_j57q5")
+mesh = SubResource("ArrayMesh_oie0h")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="LV6/entity0_brush12"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LV6/entity0_brush12/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_3wc15")
+shape = SubResource("ConcavePolygonShape3D_ss36m")
